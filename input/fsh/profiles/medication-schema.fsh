@@ -130,14 +130,48 @@ Id: poc-medication
 Title: "MedicationPoC"
 Description: "Simplified medication profile. Not for actual implementation"
 
+* identifier 0..1
+  * ^short = "Pakendi kood (pakendipõhisel retseptil)"
 * doseForm 1..1
+* totalVolume 1..1 
+* totalVolume only SimpleQuantity
+  * value 1..1
+    * ^short = "Ühikute koguhulk"
+  * unit 0..0
+  * system 0..1
+  * code 1..1
+    * ^short = "Ühikute koguhulga ühik"
+* extension contains number-of-packages named numberOfPackages 0..1
+  * ^short = "Pakendite arv (TK)"  
 * ingredient 1..*
   * item 1..1 
   * item only Reference(Substance)
   * isActive 1..1
     * value = true
+  * strengthRatio 1..1
+    * ^short = "Toimeaine tugevus"
+
+  * strengthCodeableConcept 0..0
+  * strengthQuantity 0..0
 * extension contains medicinal-product-name named name 0..1
-* extension contains medicinal-product-classification named classification 1..1
+* extension[name]
+  * ^short = "Ravimpreparaadi nimi"
+* extension contains medicinal-product-classification named atc 1..1
+* extension[atc]
+  * ^short = "ATC kood"
+* extension contains size-of-item named sizeOfItem 0..1
+* extension[sizeOfItem]
+  * valueQuantity 1..1
+    * ^short = "Tüki suurus"
+    * unit 0..0
+    * system 1..1
+    * code 1..1
+      * ^short = "Tüki suuruse ühik"
+* code 0..0
+* status 0..0
+* marketingAuthorizationHolder 0..0
+* batch 0..0
+* definition 0..0
 
 Profile: PoCPractitioner
 Parent: Practitioner
