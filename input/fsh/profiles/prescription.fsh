@@ -98,6 +98,7 @@ Description: "Simplified prescription profile. Not for actual implementation. In
 * extension[reimbursementRate]
   * ^short = "Soodustuse määr protsentides (0-100)"
 
+
 * basedOn 0..0
 * priorPrescription 0..0
 * groupIdentifier 0..0
@@ -158,7 +159,6 @@ Description: "Simplified medication profile. Not for actual implementation"
 * extension contains medicinal-product-name named name 0..1
 * extension[name]
   * ^short = "Ravimpreparaadi nimi"
-  * ^maxLength = 500
 * extension contains medicinal-product-classification named atc 1..1
 * extension[atc]
   * ^short = "ATC kood"

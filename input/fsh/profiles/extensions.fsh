@@ -2,6 +2,8 @@ Extension: MedicinalProductName
 Id: medicinal-product-name
 Description: "Registered name for the medicinal product."
 * value[x] only string
+* valueString 1..1
+  * ^maxLength = 500
 
 
 Extension: MedicinalProductClassification
@@ -22,4 +24,7 @@ Description: "Size of medicinal product item (3ml)."
 Extension: ReimbursementRate
 Id: reimbursement-rate
 Description: "Reimbursement rate"
-* value[x] only unsignedInt 
+* value[x] only unsignedInt
+* valueUnsignedInt
+  * ^minValueUnsignedInt = 0
+  * ^maxValueUnsignedInt = 100 
