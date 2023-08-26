@@ -20,7 +20,8 @@ Description: "Simplified prescription profile. Not for actual implementation. In
   * ^short = "Patsient"
 * medication only Reference(PoCMedicationPrescribed)
   * ^short = "Ravim"
-* requester only Reference(PoCPractitioner)
+  * concept 0..0
+* requester only Reference(PoCPractitionerRole)
 * reason 1..1
   * ^short = "Diagnoos (RHK-10)"
 * reason.reference 0..0
@@ -41,6 +42,7 @@ Description: "Simplified prescription profile. Not for actual implementation. In
         * value 1..1
         * system 0..0
         * code 0..0
+        * comparator 0..0
       * boundsRange 0..0
       * boundsPeriod 0..0
       * count 0..0
@@ -121,7 +123,8 @@ Description: "Simplified prescription profile. Not for actual implementation. In
   * dispenserInstruction 0..0
   * doseAdministrationAid 0..0
 * eventHistory 0..0
-
+* contained 0..0
+* modifierExtension 0..0
 
 
 Profile: PoCMedicationPrescribed
@@ -159,7 +162,8 @@ Description: "Simplified medication profile. Not for actual implementation"
 * extension contains size-of-item named sizeOfItem 0..1
 * extension[sizeOfItem]
   * valueQuantity 1..1
-    * ^short = "Tüki suurus"
+    * value 1..1
+      * ^short = "Tüki suurus"
     * unit 0..0
     * system 1..1
     * code 1..1
@@ -170,9 +174,75 @@ Description: "Simplified medication profile. Not for actual implementation"
 * batch 0..0
 * definition 0..0
 
-Profile: PoCPractitioner
-Parent: Practitioner
-Id: poc-practitioner
-Title: "PractitionerPoC"
-Description: "Simplified practitioner profile. Not for actual implementation."
 
+Profile: PoCPractitionerRole
+Parent: EEBasePractitionerRole
+Id: poc-practitioner-role
+Title: "PractitionerRolePoC"
+Description: "Simplified profile for practitioner+organization. Not for actual implementation."
+
+* contained 0..0
+* modifierExtension 0..0
+* extension 0..0
+* active = true
+* period 0..0
+* practitioner
+  * reference 0..0
+  * type 0..0
+  * identifier 1..1
+    * use 0..0
+    * type 0..0
+    * system = "https://fhir.ee/sid/pro/est/pho"
+    * value 1..1
+      * ^short = "Arsti kood"
+    * period 0..0
+    * assigner 0..0
+  * display 0..1
+    * ^short = "Arsti nimi (retsepti vaatamise päringus)"
+* organization
+  * reference 0..0
+  * type 0..0
+  * identifier 1..1
+    * use 0..0
+    * type 0..0
+    * system = "https://fhir.ee/sid/org/est/br"
+    * value 1..1
+      * ^short = "TTO kood (äriregistris)"
+    * period 0..0
+    * assigner 0..0
+  * display 0..1
+    * ^short = "TTO nimi (retsepti vaatamise päringus)"
+* code 0..0
+* specialty 1..1
+* specialty[eriala] 1..1
+  * ^short = "Eriala"
+* location 0..0
+* healthcareService 0..0
+* contact
+  * purpose 0..0
+  * name 0..0
+  * address 0..0
+  * organization 0..0
+  * period 0..0
+  * telecom ^slicing.discriminator.type = #pattern
+  * telecom ^slicing.discriminator.path = "$this"
+  * telecom ^slicing.rules = #closed
+  * telecom contains phone 0..1 and email 0..1
+  * telecom[phone]
+    * system = #phone
+    * use = #work
+    * value 1..1
+    * ^short = "Arsti telefon"
+    * rank 0..0
+    * period 0..0
+  * telecom[email]
+    * system = #email
+    * use = #work
+    * value 1..1
+    * ^short = "Arsti email"
+    * rank 0..0
+    * period 0..0
+* characteristic 0..0
+* communication 0..0
+* availability 0..0
+* endpoint 0..0
