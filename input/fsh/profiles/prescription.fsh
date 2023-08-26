@@ -17,11 +17,12 @@ Description: "Simplified prescription profile. Not for actual implementation. In
 * authoredOn 1..1 
   * ^short = "Retsepti koostamise kuupäev"
 * subject only Reference(PoCPatientVerified) 
-  * ^short = "Patsient"
+  * ^short = "Patsient (loogiline referents MPI patsiendile?)"
 * medication only Reference(PoCMedicationPrescribed)
   * ^short = "Ravim"
   * concept 0..0
 * requester only Reference(PoCPractitionerRole)
+  * ^short = "Väljakirjutanud arst (loogiline referents registrikirjele?)"
 * reason 1..1
   * ^short = "Diagnoos (RHK-10)"
 * reason.reference 0..0
@@ -36,15 +37,14 @@ Description: "Simplified prescription profile. Not for actual implementation. In
   * timing 1..1
     * event 0..0
     * repeat 0..1
-      * boundsDuration 0..1 
+      * bounds[x] 0..1
+      * boundsDuration 1..1 
         * ^short = "Ravikuuri pikkus päevades"
         * unit 0..0
         * value 1..1
         * system 0..0
         * code 0..0
         * comparator 0..0
-      * boundsRange 0..0
-      * boundsPeriod 0..0
       * count 0..0
       * countMax 0..0
       * duration 0..0
@@ -75,9 +75,7 @@ Description: "Simplified prescription profile. Not for actual implementation. In
       * value 1..1
       * system 1..1
       * code 1..1
-    * rateRatio 0..0
-    * rateRange 0..0
-    * rateQuantity 0..0
+    * rate[x] 0..0
   * maxDosePerPeriod 0..0
   * maxDosePerAdministration 0..0
   * maxDosePerLifetime 0..0
@@ -86,17 +84,19 @@ Description: "Simplified prescription profile. Not for actual implementation. In
   // slicida
 * note 0..1 
   * ^short = "Arsti selgitused"
-  * authorReference 0..0
-  * authorString 0..0
+  * author[x] 0..0
   * time 0..0
   * text 1..1
     * ^short = "Arsti selgitused tekstina"
 * dispenseRequest.validityPeriod 1..1
   * ^short = "Retsepti kehtivusaeg"
 * substitution
-  * allowedCodeableConcept 0..0
+  * allowedBoolean 1..1
   * reason 0..1 
     * ^short = "Asendamatuse põhjus"
+* extension contains reimbursement-rate named reimbursementRate 1..1
+* extension[reimbursementRate]
+  * ^short = "Soodustuse määr protsentides (0-100)"
 
 * basedOn 0..0
 * priorPrescription 0..0
@@ -107,6 +107,7 @@ Description: "Simplified prescription profile. Not for actual implementation. In
 * encounter 0..0
 * supportingInformation 0..0
 * reported 0..0
+* performer 0..0
 * performerType 0..0
 * device 0..0
 * recorder 0..0
@@ -145,6 +146,7 @@ Description: "Simplified medication profile. Not for actual implementation"
   * code 1..1
     * ^short = "Ühikute koguhulga ühik"
 * extension contains number-of-packages named numberOfPackages 0..1
+* extension[numberOfPackages]
   * ^short = "Pakendite arv (TK)"  
 * ingredient 1..*
   * item 1..1 
@@ -156,6 +158,7 @@ Description: "Simplified medication profile. Not for actual implementation"
 * extension contains medicinal-product-name named name 0..1
 * extension[name]
   * ^short = "Ravimpreparaadi nimi"
+  * ^maxLength = 500
 * extension contains medicinal-product-classification named atc 1..1
 * extension[atc]
   * ^short = "ATC kood"
@@ -195,10 +198,12 @@ Description: "Simplified profile for practitioner+organization. Not for actual i
     * system = "https://fhir.ee/sid/pro/est/pho"
     * value 1..1
       * ^short = "Arsti kood"
+      * ^maxLength = 20
     * period 0..0
     * assigner 0..0
   * display 0..1
     * ^short = "Arsti nimi (retsepti vaatamise päringus)"
+    * ^maxLength = 1000
 * organization
   * reference 0..0
   * type 0..0
@@ -208,14 +213,17 @@ Description: "Simplified profile for practitioner+organization. Not for actual i
     * system = "https://fhir.ee/sid/org/est/br"
     * value 1..1
       * ^short = "TTO kood (äriregistris)"
+      * ^maxLength = 20
     * period 0..0
     * assigner 0..0
   * display 0..1
     * ^short = "TTO nimi (retsepti vaatamise päringus)"
+    * ^maxLength = 1000
 * code 0..0
 * specialty 1..1
 * specialty[eriala] 1..1
   * ^short = "Eriala"
+  * text 0..0
 * location 0..0
 * healthcareService 0..0
 * contact

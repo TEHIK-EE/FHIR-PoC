@@ -18,3 +18,8 @@ Extension: SizeOfItem
 Id: size-of-item
 Description: "Size of medicinal product item (3ml)."
 * value[x] only SimpleQuantity
+
+Extension: ReimbursementRate
+Id: reimbursement-rate
+Description: "Reimbursement rate"
+* value[x] only unsignedInt 
