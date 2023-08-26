@@ -150,9 +150,6 @@ Description: "Simplified medication profile. Not for actual implementation"
     * value = true
   * strengthRatio 1..1
     * ^short = "Toimeaine tugevus"
-
-  * strengthCodeableConcept 0..0
-  * strengthQuantity 0..0
 * extension contains medicinal-product-name named name 0..1
 * extension[name]
   * ^short = "Ravimpreparaadi nimi"
