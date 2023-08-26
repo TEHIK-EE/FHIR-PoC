@@ -8,12 +8,13 @@ Usage: #example
 * intent = #order
 * authoredOn = "2023-08-22"
 * subject = Reference(katipiiriylene)
-* medication.reference = Reference(sodiumenoxaparine)
+* medication.reference = Reference(naatriumenoksapariin)
 * requester = Reference(prescriberKatre)
 * reason.concept.coding.code = #I22
 * reason.concept.coding.system = "https://fhir.ee/rhk10"
 * courseOfTherapyType.coding.code = #p
 * courseOfTherapyType.coding.display = "Pidev"
+* courseOfTherapyType.coding.system = "https://fhir.ee/ravikuuri-tyyp"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
@@ -30,7 +31,7 @@ Usage: #example
 
 * extension[reimbursementRate].valueUnsignedInt = 50
 
-Instance: sodiumenoxaparine
+Instance: naatriumenoksapariin
 InstanceOf: PoCMedicationPrescribed
 Description: "Enoxaparine sodium as a generic product on prescription"
 Usage: #example
