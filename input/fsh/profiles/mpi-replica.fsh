@@ -18,7 +18,7 @@ Profile: PoCPatientVerified
 Parent: PoCPatient
 Id: poc-patient-verified
 Title: "PatientVerifiedPoC"
-Description: "Retseptsioonis identifitseeritud MPI Patsient. MPI profiili replica."
+Description: "Verified Patient. MPI profile replica."
 * ^publisher = "HL7 Estonia"
 * name 1..* MS
 * name[official] 1.. MS

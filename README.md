@@ -1,19 +1,11 @@
-Empty IG
+UPTIS FHIR Proof of Concept
 ---
-This is an empty IG
-<br> </br>
-###
-### Publication
-This ImplementationGuide is published in the following locations:
 
-Continuous Build: __http://build.fhir.org/ig/<handle>/<repo>/branches/main/index.html__  
-Canonical / permanent URL: 
-<br> </br>
+This IG gathers some simplified examples of FHIR profiles for testing certain general aspects of FHIR implementation.  
+The profiles are not complete, and are not representing actual services. The aim of the profiles is to be as closed/constrained as possible, with an exception of extensions which are allowed, but should be ignored by the receiver unless explicitly defined in the IG.  
 
-### Issues
-Issues and change requests are managed here:  
+The IG is not for implementation.
 
-Issues:  __https://github.com/<handle>/<repo>/issues__  
-Kanban board:  __https://github.com/<handle>/<repo>/projects/1__  
+Continuous Build: __http://build.fhir.org/ig/TEHIK-EE/FHIR-PoC/branches/master/index.html__  
 
----
+

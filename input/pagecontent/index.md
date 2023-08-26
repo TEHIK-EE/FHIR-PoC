@@ -1,8 +1,9 @@
 ### About
 
-Profiilide hulgas on EEBase, MPI ja Ravimiskeemi lihtsustatud profiilid.
-Eemaldatud on teatud kontrollid, mis ei mõjuta andmebaasiskeemi, kuid tõstaks IG keerukust (nt seos kindlate loenditega).
-Näited vastavad profiilidele ja peaksid olema loogiliselt korrektsed.
+* IG sisaldab profiile, mis on seotud digiretseptiga. Profiilid on insipireeritud tänasest toimivast digiretsepti teenusest, kuid ei ole täielikud.  
+* Eemaldatud on teatud piirangud, mis ei mõjuta andmebaasiskeemi, kuid tõstaks IG keerukust (nt seos kindlate loenditega). Samuti puuduvad mõned andmeväljad.  
+* Patsiendi ja arsti/apteekri jaoks kasutatakse MPI ja EEBase profiile, kusjuures MPI patsiendi profiil on replitseeritud sellesse juhendisse, kuid EEBase on kasutusel läbi viitamise/päriluse.  
+* Näited vastavad profiilidele ja peaksid olema loogiliselt korrektsed.
 
 ### References
 
