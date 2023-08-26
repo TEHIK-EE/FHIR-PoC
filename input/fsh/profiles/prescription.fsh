@@ -38,7 +38,7 @@ Description: "Simplified prescription profile. Not for actual implementation. In
     * event 0..0
     * repeat 0..1
       * bounds[x] 0..1
-      * boundsDuration 1..1 
+      * boundsDuration 0..1 
         * ^short = "Ravikuuri pikkus päevades"
         * unit 0..0
         * value 1..1
@@ -144,7 +144,7 @@ Description: "Simplified medication profile. Not for actual implementation"
     * ^short = "Ühikute koguhulk"
   * unit 0..0
   * system 0..1
-  * code 1..1
+  * code 0..1
     * ^short = "Ühikute koguhulga ühik"
 * extension contains number-of-packages named numberOfPackages 0..1
 * extension[numberOfPackages]

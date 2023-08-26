@@ -40,8 +40,8 @@ Description: "Simplified profile for practitioner+organization. Not for actual i
     * ^short = "TTO nimi (retsepti vaatamise päringus)"
     * ^maxLength = 1000
 * code 0..0
-* specialty 1..1
-* specialty[eriala] 1..1
+* specialty 0..1
+* specialty[eriala] 0..1
   * ^short = "Eriala"
   * text 0..0
 * location 0..0
@@ -53,7 +53,7 @@ Description: "Simplified profile for practitioner+organization. Not for actual i
   * organization 0..0
   * period 0..0
   * telecom ^slicing.discriminator.type = #pattern
-  * telecom ^slicing.discriminator.path = "$this"
+  * telecom ^slicing.discriminator.path = system
   * telecom ^slicing.rules = #closed
   * telecom contains phone 0..1 and email 0..1
   * telecom[phone]
