@@ -6,6 +6,6 @@ The profiles are not complete, and are not representing actual services. The aim
 
 The IG is not for implementation.
 
-Continuous Build: __http://build.fhir.org/ig/TEHIK-EE/FHIR-PoC/branches/master/index.html__  
+Continuous Build: __http://build.fhir.org/ig/TEHIK-EE/FHIR-PoC/branches/medschema-sandbox/index.html__  
 
 
