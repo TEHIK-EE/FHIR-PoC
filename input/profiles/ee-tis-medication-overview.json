@@ -1,0 +1,174 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-medication-overview",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-medication-overview",
+  "version": "1.0.0",
+  "name": "EETISMedicationOverview",
+  "status": "draft",
+  "date": "2023-10-09T12:26:20.921315+00:00",
+  "description": "Ravimiskeem. Medication Overview gathers together all resources related to patient's prescribed and dispensed medication.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle",
+        "path": "Bundle",
+        "short": "Ravimiskeem",
+        "definition": "Ravimiskeem koosneb ravimiskeemiridadest. A container for a collection of resources."
+      },
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "fixedCode": "document"
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Bundle.entry:medicationsStatementEntry",
+        "path": "Bundle.entry",
+        "sliceName": "medicationsStatementEntry"
+      },
+      {
+        "id": "Bundle.entry:medicationsStatementEntry.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Resource",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:compositionEntry",
+        "path": "Bundle.entry",
+        "sliceName": "compositionEntry"
+      },
+      {
+        "id": "Bundle.entry:compositionEntry.resource",
+        "path": "Bundle.entry.resource",
+        "alias": [
+          "MedicationStatement"
+        ],
+        "type": [
+          {
+            "code": "Resource",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-request"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event"
+          },
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration"
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:practitionerEntry",
+        "path": "Bundle.entry",
+        "sliceName": "practitionerEntry"
+      },
+      {
+        "id": "Bundle.entry:practitionerEntry.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Resource",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:practitionerRoleEntry",
+        "path": "Bundle.entry",
+        "sliceName": "practitionerRoleEntry"
+      },
+      {
+        "id": "Bundle.entry:practitionerRoleEntry.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Resource",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:organizationEntry",
+        "path": "Bundle.entry",
+        "sliceName": "organizationEntry"
+      },
+      {
+        "id": "Bundle.entry:organizationEntry.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Resource",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:patientEntry",
+        "path": "Bundle.entry",
+        "sliceName": "patientEntry"
+      },
+      {
+        "id": "Bundle.entry:deviceEntry",
+        "path": "Bundle.entry",
+        "sliceName": "deviceEntry"
+      },
+      {
+        "id": "Bundle.entry:deviceEntry.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Resource",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-device-tjt"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:medicationEntry",
+        "path": "Bundle.entry",
+        "sliceName": "medicationEntry"
+      },
+      {
+        "id": "Bundle.entry:pharmacyLocationEntry",
+        "path": "Bundle.entry",
+        "sliceName": "pharmacyLocationEntry"
+      }
+    ]
+  }
+}

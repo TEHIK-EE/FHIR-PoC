@@ -1,0 +1,87 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-medication-list",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-medication-list",
+  "version": "1.0.0",
+  "name": "EETISMedicationList",
+  "status": "draft",
+  "date": "2023-11-07T08:27:12.1572694+00:00",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "List",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/List",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "List",
+        "path": "List",
+        "short": "List of patient's medication"
+      },
+      {
+        "id": "List.contained",
+        "path": "List.contained",
+        "max": "0"
+      },
+      {
+        "id": "List.title",
+        "path": "List.title",
+        "short": "Ravimiskeem"
+      },
+      {
+        "id": "List.subject",
+        "path": "List.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/EEBasePatient"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "List.encounter",
+        "path": "List.encounter",
+        "max": "0"
+      },
+      {
+        "id": "List.source",
+        "path": "List.source",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-device-tjt",
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner",
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "List.entry.item",
+        "path": "List.entry.item",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

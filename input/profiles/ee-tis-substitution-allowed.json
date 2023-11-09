@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-substitution-allowed",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-substitution-allowed",
+  "name": "ExtensionEETISSubstitutionAllowed",
+  "status": "draft",
+  "date": "2023-11-09T07:13:13.2413582+00:00",
+  "description": "Asendamine lubatud. Reason for not allowing the substitution of medication.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationStatement"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Asendamise mitte-lubamine",
+        "definition": "Reason for not allowing the substitution of medication."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-substitution-allowed"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Asendamatuse põhjus",
+        "definition": "Reason for not allowing the substitution of medication.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Asendamatuse põhjus",
+          "valueSet": "https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus"
+        }
+      },
+      {
+        "id": "Extension.value[x].coding",
+        "path": "Extension.value[x].coding",
+        "binding": {
+          "strength": "preferred",
+          "description": "Asendamatuse põhjus",
+          "valueSet": "https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus"
+        }
+      }
+    ]
+  }
+}

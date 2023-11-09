@@ -1,0 +1,67 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-discount-rate",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-discount-rate",
+  "version": "1.0.0",
+  "name": "ExtensionEETISDiscountRate",
+  "status": "draft",
+  "date": "2023-11-09T07:13:13.2413582+00:00",
+  "description": "Soodustuse määr. For representation of the discount rate of prescription medicine.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationRequest"
+    },
+    {
+      "type": "element",
+      "expression": "MedicationDispense"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "0 | 50 | 75 | 90 | 100",
+        "definition": "Ravimi soodustuse määr protsentides Retseptikeskuse loendist \"Soodustuste määrad\" ."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-discount-rate"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Soodustuse määrad loend",
+        "definition": "ValueSet form ePrescription Centre representing the discount rates of prescription medicines.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Discount rate",
+          "valueSet": "https://fhir.ee/CodeSystem/retsepti-soodustuse-maar"
+        }
+      },
+      {
+        "id": "Extension.value[x].coding",
+        "path": "Extension.value[x].coding",
+        "short": "LOEND. Code defined by a terminology system",
+        "binding": {
+          "strength": "preferred",
+          "description": "Soodustuse määr retseptikeskusest",
+          "valueSet": "https://fhir.ee/CodeSystem/retsepti-soodustuse-maar"
+        }
+      }
+    ]
+  }
+}

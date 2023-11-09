@@ -1,0 +1,162 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-device-tjt",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-device-tjt",
+  "version": "1.0.0",
+  "name": "EETISDeviceTJT",
+  "status": "draft",
+  "date": "2023-09-28T10:15:30.0319461+00:00",
+  "description": "Tervisejuhtimise töölaud (TJT). TJT as a device resource represents the software (microservice) where data is formed/exchanged independently without human intervention.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Device.identifier",
+        "path": "Device.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Device.displayName",
+        "path": "Device.displayName",
+        "fixedString": "TJT"
+      },
+      {
+        "id": "Device.definition",
+        "path": "Device.definition",
+        "max": "0"
+      },
+      {
+        "id": "Device.udiCarrier",
+        "path": "Device.udiCarrier",
+        "max": "0"
+      },
+      {
+        "id": "Device.status",
+        "path": "Device.status",
+        "fixedCode": "active"
+      },
+      {
+        "id": "Device.availabilityStatus",
+        "path": "Device.availabilityStatus",
+        "max": "0"
+      },
+      {
+        "id": "Device.biologicalSourceEvent",
+        "path": "Device.biologicalSourceEvent",
+        "max": "0"
+      },
+      {
+        "id": "Device.manufacturer",
+        "path": "Device.manufacturer",
+        "max": "0"
+      },
+      {
+        "id": "Device.manufactureDate",
+        "path": "Device.manufactureDate",
+        "max": "0"
+      },
+      {
+        "id": "Device.expirationDate",
+        "path": "Device.expirationDate",
+        "max": "0"
+      },
+      {
+        "id": "Device.lotNumber",
+        "path": "Device.lotNumber",
+        "max": "0"
+      },
+      {
+        "id": "Device.serialNumber",
+        "path": "Device.serialNumber",
+        "max": "0"
+      },
+      {
+        "id": "Device.name",
+        "path": "Device.name",
+        "short": "Tervisejuhtimise töölaud"
+      },
+      {
+        "id": "Device.name.value",
+        "path": "Device.name.value",
+        "fixedString": "TJT"
+      },
+      {
+        "id": "Device.name.display",
+        "path": "Device.name.display",
+        "short": "TJT"
+      },
+      {
+        "id": "Device.modelNumber",
+        "path": "Device.modelNumber",
+        "max": "0"
+      },
+      {
+        "id": "Device.partNumber",
+        "path": "Device.partNumber",
+        "max": "0"
+      },
+      {
+        "id": "Device.conformsTo",
+        "path": "Device.conformsTo",
+        "max": "0"
+      },
+      {
+        "id": "Device.property",
+        "path": "Device.property",
+        "max": "0"
+      },
+      {
+        "id": "Device.mode",
+        "path": "Device.mode",
+        "max": "0"
+      },
+      {
+        "id": "Device.cycle",
+        "path": "Device.cycle",
+        "max": "0"
+      },
+      {
+        "id": "Device.duration",
+        "path": "Device.duration",
+        "max": "0"
+      },
+      {
+        "id": "Device.owner",
+        "path": "Device.owner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Device.location",
+        "path": "Device.location",
+        "max": "0"
+      },
+      {
+        "id": "Device.gateway",
+        "path": "Device.gateway",
+        "max": "0"
+      },
+      {
+        "id": "Device.safety",
+        "path": "Device.safety",
+        "max": "0"
+      },
+      {
+        "id": "Device.parent",
+        "path": "Device.parent",
+        "max": "0"
+      }
+    ]
+  }
+}

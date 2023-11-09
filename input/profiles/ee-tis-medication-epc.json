@@ -1,0 +1,281 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-medication-epc",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  },
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-medication-epc",
+  "version": "1.0.0",
+  "name": "EETISMedicationEPC",
+  "status": "draft",
+  "date": "2023-11-09T07:13:13.2413582+00:00",
+  "publisher": "TEHIK",
+  "contact": [
+    {
+      "name": "TEHIK",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.tehik.ee"
+        },
+        {
+          "system": "email",
+          "value": "fhir@tehik.ee"
+        }
+      ]
+    },
+    {
+      "name": "Rutt Lindström",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "rutt.lindstrom@tehik.ee",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Medication resource as it is presented today in Estonian e-Prescription center. Used on prescriptions and dispensations.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "EE",
+          "display": "Estonia"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "mapping": [
+    {
+      "identity": "script10.6",
+      "uri": "http://ncpdp.org/SCRIPT10_6",
+      "name": "Mapping to NCPDP SCRIPT 10.6"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 V2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication.extension",
+        "path": "Medication.extension",
+        "slicing": {
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Medication.extension:classification",
+        "path": "Medication.extension",
+        "sliceName": "classification",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.extension:classification.value[x]",
+        "path": "Medication.extension.value[x]",
+        "binding": {
+          "strength": "preferred",
+          "description": "ATC",
+          "valueSet": "https://fhir.ee/CodeSystem/atc"
+        }
+      },
+      {
+        "id": "Medication.extension:sizeOfItem",
+        "path": "Medication.extension",
+        "sliceName": "sizeOfItem",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-size-of-item"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.extension:name",
+        "path": "Medication.extension",
+        "sliceName": "name",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.identifier",
+        "path": "Medication.identifier",
+        "short": "Pakendi kood (pakendipõhisel retseptil)",
+        "max": "1"
+      },
+      {
+        "id": "Medication.code",
+        "path": "Medication.code",
+        "max": "0"
+      },
+      {
+        "id": "Medication.status",
+        "path": "Medication.status",
+        "max": "0"
+      },
+      {
+        "id": "Medication.marketingAuthorizationHolder",
+        "path": "Medication.marketingAuthorizationHolder",
+        "max": "0"
+      },
+      {
+        "id": "Medication.doseForm",
+        "path": "Medication.doseForm",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://fhir.ee/CodeSystem/ravimvormid"
+        }
+      },
+      {
+        "id": "Medication.doseForm.coding",
+        "path": "Medication.doseForm.coding",
+        "binding": {
+          "strength": "preferred",
+          "description": "Ravimvormide loend",
+          "valueSet": "http://fhir.ee/CodeSystem/ravimvormid"
+        }
+      },
+      {
+        "id": "Medication.totalVolume",
+        "path": "Medication.totalVolume",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.totalVolume.value",
+        "path": "Medication.totalVolume.value",
+        "short": "Ühikute koguhulk",
+        "min": 1
+      },
+      {
+        "id": "Medication.totalVolume.unit",
+        "path": "Medication.totalVolume.unit",
+        "max": "0"
+      },
+      {
+        "id": "Medication.totalVolume.code",
+        "path": "Medication.totalVolume.code",
+        "short": "Ühikute koguhulga ühik"
+      },
+      {
+        "id": "Medication.ingredient",
+        "path": "Medication.ingredient",
+        "min": 1
+      },
+      {
+        "id": "Medication.ingredient.item.concept",
+        "path": "Medication.ingredient.item.concept",
+        "binding": {
+          "strength": "preferred",
+          "description": "Toimeainete loend",
+          "valueSet": "https://fhir.ee/CodeSystem/toimeained"
+        }
+      },
+      {
+        "id": "Medication.ingredient.item.reference",
+        "path": "Medication.ingredient.item.reference",
+        "max": "0"
+      },
+      {
+        "id": "Medication.ingredient.isActive",
+        "path": "Medication.ingredient.isActive",
+        "min": 1
+      },
+      {
+        "id": "Medication.ingredient.isActive.value",
+        "path": "Medication.ingredient.isActive.value",
+        "patternBoolean": true
+      },
+      {
+        "id": "Medication.ingredient.strength[x]",
+        "path": "Medication.ingredient.strength[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.strength[x]:strengthRatio",
+        "path": "Medication.ingredient.strength[x]",
+        "sliceName": "strengthRatio",
+        "short": "Toimeaine tugevus",
+        "min": 1,
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ]
+      },
+      {
+        "id": "Medication.batch",
+        "path": "Medication.batch",
+        "max": "0"
+      },
+      {
+        "id": "Medication.definition",
+        "path": "Medication.definition",
+        "max": "0"
+      }
+    ]
+  }
+}

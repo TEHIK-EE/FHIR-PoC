@@ -1,0 +1,386 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-medication-dispense",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-medication-dispense",
+  "version": "1.0.0",
+  "name": "EETISMedicationDispense",
+  "status": "draft",
+  "date": "2023-10-03T08:34:28.0214782+00:00",
+  "description": "Väljamüük. When the medication prescribed is dispensed in pharmacy.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationDispense",
+        "path": "MedicationDispense",
+        "short": "Ravimi väljamüük patsiendile."
+      },
+      {
+        "id": "MedicationDispense.contained",
+        "path": "MedicationDispense.contained",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.extension:extensionTISDiscountRate",
+        "path": "MedicationDispense.extension",
+        "sliceName": "extensionTISDiscountRate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-discount-rate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:extensionTISDiscountRate.value[x]",
+        "path": "MedicationDispense.extension.value[x]",
+        "short": "SOODUSMÄÄR. LOEND. Value of extension"
+      },
+      {
+        "id": "MedicationDispense.extension:extensionEETISBuyerEPC",
+        "path": "MedicationDispense.extension",
+        "sliceName": "extensionEETISBuyerEPC",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-buyer-epc"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:extensionEETISBuyerEPC.value[x]",
+        "path": "MedicationDispense.extension.value[x]",
+        "short": "OSTJA ISIKUKOOD"
+      },
+      {
+        "id": "MedicationDispense.identifier",
+        "path": "MedicationDispense.identifier",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.basedOn",
+        "path": "MedicationDispense.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.partOf",
+        "path": "MedicationDispense.partOf",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.notPerformedReason",
+        "path": "MedicationDispense.notPerformedReason",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.statusChanged",
+        "path": "MedicationDispense.statusChanged",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.category",
+        "path": "MedicationDispense.category",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.medication",
+        "path": "MedicationDispense.medication",
+        "short": "Väljastatud ravim",
+        "type": [
+          {
+            "code": "CodeableReference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.medication.concept",
+        "path": "MedicationDispense.medication.concept",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.medication.reference",
+        "path": "MedicationDispense.medication.reference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.subject",
+        "path": "MedicationDispense.subject",
+        "short": "Patsient, kellele ravim väljastatakse",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/EEBasePatient"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.encounter",
+        "path": "MedicationDispense.encounter",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.supportingInformation",
+        "path": "MedicationDispense.supportingInformation",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.performer",
+        "path": "MedicationDispense.performer",
+        "short": "Väljastuse teostaja",
+        "definition": "Kes väljastas ravimi patsiendile. Indicates who or what performed the event.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.performer.function",
+        "path": "MedicationDispense.performer.function",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.performer.actor",
+        "path": "MedicationDispense.performer.actor",
+        "short": "Proviisor või farmatseut, kellel on õigus väljastada ravimit",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.location",
+        "path": "MedicationDispense.location",
+        "short": "Apteegi tegevuskoha kood",
+        "definition": "APTEEK ja SELLE KOOD KUS RAVIM VÄLJASTATI. The principal physical location where the dispense was performed.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-pharmacy-location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.location.identifier",
+        "path": "MedicationDispense.location.identifier",
+        "short": "APTEEGI TEGEVUSKOHA KOOD. Logical reference, when literal reference is not known"
+      },
+      {
+        "id": "MedicationDispense.authorizingPrescription",
+        "path": "MedicationDispense.authorizingPrescription",
+        "short": "Retsept, mille alusel ravim väljastati patsiendile.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-request"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.type",
+        "path": "MedicationDispense.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.quantity",
+        "path": "MedicationDispense.quantity",
+        "short": "Väljastatud ravimi kogus",
+        "definition": "Pakendite arv, mis väljastati. The amount of medication that has been dispensed. Includes unit of measure.",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.quantity.unit",
+        "path": "MedicationDispense.quantity.unit",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.quantity.system",
+        "path": "MedicationDispense.quantity.system",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.quantity.code",
+        "path": "MedicationDispense.quantity.code",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.daysSupply",
+        "path": "MedicationDispense.daysSupply",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.recorded",
+        "path": "MedicationDispense.recorded",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.whenPrepared",
+        "path": "MedicationDispense.whenPrepared",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.whenHandedOver",
+        "path": "MedicationDispense.whenHandedOver",
+        "short": "Väljastamise aeg",
+        "definition": "Kuupäev ja kellaaeg, millal ravim anti üle patsiendile, või tema esindajale. The time the dispensed product was provided to the patient or their representative.",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.destination",
+        "path": "MedicationDispense.destination",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.receiver",
+        "path": "MedicationDispense.receiver",
+        "short": "KUI RAVIMI OSTAB VÄLJA KEEGI TEINE KUI SEE, KELLELE RAVIM ON VÄLJAKIRJUTATUD EI KASUTATA SEDA VAID ExtensionEETISBuyerEPC.  Who collected the medication or where the medication was delivered",
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.receiver.identifier",
+        "path": "MedicationDispense.receiver.identifier",
+        "short": "OSTJA ISIKUKOOD. Logical reference, when literal reference is not known",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.receiver.identifier.system",
+        "path": "MedicationDispense.receiver.identifier.system",
+        "min": 1,
+        "fixedUri": "https://fhir.ee/ValueSet/ee-patient-identity"
+      },
+      {
+        "id": "MedicationDispense.note",
+        "path": "MedicationDispense.note",
+        "short": "Kommentaar väljastuse kohta.",
+        "definition": "Kommentaari saab lisada ainult see, kes teostas ravimi väljastuse apteegis. Extra information about the dispense that could not be conveyed in the other attributes.",
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.note.author[x]",
+        "path": "MedicationDispense.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.renderedDosageInstruction",
+        "path": "MedicationDispense.renderedDosageInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction",
+        "path": "MedicationDispense.dosageInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.sequence",
+        "path": "MedicationDispense.dosageInstruction.sequence",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.additionalInstruction",
+        "path": "MedicationDispense.dosageInstruction.additionalInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.patientInstruction",
+        "path": "MedicationDispense.dosageInstruction.patientInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.timing",
+        "path": "MedicationDispense.dosageInstruction.timing",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.asNeeded",
+        "path": "MedicationDispense.dosageInstruction.asNeeded",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.asNeededFor",
+        "path": "MedicationDispense.dosageInstruction.asNeededFor",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.site",
+        "path": "MedicationDispense.dosageInstruction.site",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.route",
+        "path": "MedicationDispense.dosageInstruction.route",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.method",
+        "path": "MedicationDispense.dosageInstruction.method",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.doseAndRate",
+        "path": "MedicationDispense.dosageInstruction.doseAndRate",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.maxDosePerPeriod",
+        "path": "MedicationDispense.dosageInstruction.maxDosePerPeriod",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.maxDosePerAdministration",
+        "path": "MedicationDispense.dosageInstruction.maxDosePerAdministration",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.maxDosePerLifetime",
+        "path": "MedicationDispense.dosageInstruction.maxDosePerLifetime",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.substitution",
+        "path": "MedicationDispense.substitution",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.eventHistory",
+        "path": "MedicationDispense.eventHistory",
+        "max": "0"
+      }
+    ]
+  }
+}

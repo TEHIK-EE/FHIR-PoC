@@ -1,0 +1,93 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-lock-status",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-lock-status",
+  "version": "1.0.0",
+  "name": "ExtensionEETISLockStatus",
+  "status": "draft",
+  "date": "2023-10-03T10:47:00.9373224+00:00",
+  "description": "Broneering retseptil. When pharmacy locks the prescription for ordering unauthorized medication for patient.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationRequest"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Broneering retseptil.",
+        "definition": "Kasutatakse juhul kui on tegemist müügiloata ravimi retseptiga, mis on saanud positiivse otsuse ning ootab apteegis tellitavat ravimit. \r\n\r\nWhen pharmacy locks the prescription for ordering unauthorized medication for patient."
+      },
+      {
+        "id": "Extension.extension:lockStatus",
+        "path": "Extension.extension",
+        "sliceName": "lockStatus",
+        "short": "Broneeritud apteegis"
+      },
+      {
+        "id": "Extension.extension:lockStatus.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "lockStatus"
+      },
+      {
+        "id": "Extension.extension:lockStatus.value[x]",
+        "path": "Extension.extension.value[x]",
+        "definition": "True - prescription is locked for certain pharmacy.\r\nFalse - prescription is not locked.",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:lockOwner",
+        "path": "Extension.extension",
+        "sliceName": "lockOwner",
+        "short": "Broneeringu teinud apteek",
+        "definition": "Pharmacy who locked the prescription for ordering unauthorized medication.\r\n\r\nMay be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+      },
+      {
+        "id": "Extension.extension:lockOwner.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "lockOwner"
+      },
+      {
+        "id": "Extension.extension:lockOwner.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-lock-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "max": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-prescription-authorization",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization",
+  "name": "ExtensionEETISPrescriptionAuthorization",
+  "status": "draft",
+  "date": "2023-11-09T07:13:13.2413582+00:00",
+  "description": "Volituse liik. Defines the authorization of the prescription.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationRequest"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Volituse liik.",
+        "definition": "Defines the authorization of the prescription."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "label": "VOLITUSE LIIK",
+        "short": "avalik | privaatne | volitatud",
+        "definition": "Prescription can be public, private or authorized.",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Volituse liik",
+          "valueSet": "https://fhir.ee/CodeSystem/retsepti-volituse-liik"
+        }
+      },
+      {
+        "id": "Extension.value[x].coding",
+        "path": "Extension.value[x].coding",
+        "binding": {
+          "strength": "preferred",
+          "description": "Volituse liik",
+          "valueSet": "https://fhir.ee/CodeSystem/retsepti-volituse-liik"
+        }
+      }
+    ]
+  }
+}

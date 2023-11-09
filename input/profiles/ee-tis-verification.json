@@ -1,0 +1,119 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-verification",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-verification",
+  "name": "ExtensionEETISVerification",
+  "status": "draft",
+  "date": "2023-11-09T06:42:19.3737723+00:00",
+  "description": "Kinnitamine. Verification of MedicationStatement.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationStatement"
+    },
+    {
+      "type": "element",
+      "expression": "Composition"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Kinnitamine.",
+        "definition": "Verification of MedicationStatement.",
+        "condition": [
+          "ele-1"
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 2,
+        "max": "2"
+      },
+      {
+        "id": "Extension.extension:verificationTime",
+        "path": "Extension.extension",
+        "sliceName": "verificationTime",
+        "short": "kinnitamise aeg",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:verificationTime.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "verificationTime"
+      },
+      {
+        "id": "Extension.extension:verificationTime.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "kinnitamise aeg",
+        "definition": "When the MedicationStatement is verified.",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:verificationAuthor",
+        "path": "Extension.extension",
+        "sliceName": "verificationAuthor",
+        "short": "kinnitaja",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:verificationAuthor.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "verificationAuthor"
+      },
+      {
+        "id": "Extension.extension:verificationAuthor.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Ravimiskeemi Kinnitaja",
+        "definition": "Practitioner who verifies the latest changes in Medication Statement.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "fixedReference": {
+          "reference": "https://fhir.ee/StructureDefinition/ee-tis-practitioner",
+          "type": "StructureDefinition"
+        }
+      },
+      {
+        "id": "Extension.extension:verificationAuthor.value[x].reference",
+        "path": "Extension.extension.value[x].reference",
+        "fixedString": "https://fhir.ee/StructureDefinition/EEBasePractitioner"
+      },
+      {
+        "id": "Extension.extension:verificationAuthor.value[x].type",
+        "path": "Extension.extension.value[x].type",
+        "fixedUri": "https://fhir.ee/StructureDefinition/EEBasePractitioner"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-verification"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0",
+        "mustHaveValue": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-buyer-epc",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-buyer-epc",
+  "name": "ExtensionEETISBuyerEPC",
+  "status": "draft",
+  "date": "2023-10-03T10:47:00.9373224+00:00",
+  "description": "Ostja. When someone other than the subject of prescription buys medication.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationDispense"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Ostja. Keegi teine kui see, kellele ravim välja kirjutati.",
+        "definition": "Identity code of the buyer of medicine when the buyer is someone else than the subject of prescription."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-buyer-epc"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Ostja isikukood.",
+        "definition": "Value can be string or identifier from EEBaseIdentitySystem.",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "Identifier"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Identity System",
+          "valueSet": "https://fhir.ee/ValueSet/ee-identity-system"
+        }
+      }
+    ]
+  }
+}

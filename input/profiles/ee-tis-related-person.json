@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-related-person",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-related-person",
+  "version": "1.0.0",
+  "name": "EETISRelatedPerson",
+  "status": "draft",
+  "date": "2023-09-28T10:15:30.0319461+00:00",
+  "description": "Seotud isik. Related person can be involved in patient's care process without being a healthcare proffessional.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "RelatedPerson",
+  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-related-person",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RelatedPerson.contained",
+        "path": "RelatedPerson.contained",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.identifier",
+        "path": "RelatedPerson.identifier",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "RelatedPerson.telecom",
+        "path": "RelatedPerson.telecom",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.gender",
+        "path": "RelatedPerson.gender",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.birthDate",
+        "path": "RelatedPerson.birthDate",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.address",
+        "path": "RelatedPerson.address",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.photo",
+        "path": "RelatedPerson.photo",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.period",
+        "path": "RelatedPerson.period",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.communication",
+        "path": "RelatedPerson.communication",
+        "max": "0"
+      }
+    ]
+  }
+}

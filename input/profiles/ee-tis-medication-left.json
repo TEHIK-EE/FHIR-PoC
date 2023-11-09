@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-medication-left",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-medication-left",
+  "version": "1.0.0",
+  "name": "ExtensionEETISMedicationLeft",
+  "status": "draft",
+  "date": "2023-10-03T10:47:00.9373224+00:00",
+  "description": "Jääk. Extension describing how much medication is left on prescription.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationStatement"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Jääk.",
+        "definition": "Jääk. Extension describing how much medication is left on prescription."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-medication-left"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Ravimi jääk ravimiskeemi real.",
+        "definition": "How much medication is left on one MedicationStatement. Value is to be calculated.",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      }
+    ]
+  }
+}

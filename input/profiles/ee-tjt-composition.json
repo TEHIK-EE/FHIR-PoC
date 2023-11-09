@@ -1,0 +1,311 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tjt-composition",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-composition",
+  "version": "1.0.0",
+  "name": "EETISComposition",
+  "status": "draft",
+  "date": "2023-10-06T07:47:06.0452062+00:00",
+  "description": "Kokkuvõte. This resource gathers together all resources needed to form a document for Medication Overview bundle.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.category",
+        "path": "Composition.category",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/EEBasePatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.encounter",
+        "path": "Composition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Composition.useContext",
+        "path": "Composition.useContext",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-device-tjt"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Ravimiskeem"
+      },
+      {
+        "id": "Composition.note.author[x]",
+        "path": "Composition.note.author[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+            ]
+          },
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Composition.note.time",
+        "path": "Composition.note.time",
+        "min": 1
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "short": "KES KINNITAS RAVIMISKEEMI. ARST. Attests to accuracy of composition",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.attester.mode",
+        "path": "Composition.attester.mode",
+        "fixedCodeableConcept": {
+          "text": "professional"
+        }
+      },
+      {
+        "id": "Composition.attester.party",
+        "path": "Composition.attester.party",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role",
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner",
+              "https://fhir.ee/StructureDefinition/ee-tis-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "short": "SYSTEEM SORTEERIB? Order of section entries",
+        "fixedCodeableConcept": {
+          "text": "system"
+        }
+      },
+      {
+        "id": "Composition.section.entry",
+        "path": "Composition.section.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "reference"
+            }
+          ],
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:medicationStatementEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "medicationStatementEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:medicationDispenseEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "medicationDispenseEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-dispense"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:medicationRequestEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "medicationRequestEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-request"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:patientEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "patientEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/EEBasePatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:medicationEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "medicationEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:practitionerEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "practitionerEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:practitionerRoleEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "practitionerRoleEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:organizationEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "organizationEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:relatedPersonEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "relatedPersonEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-related-person"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:pharmacyLocationEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "pharmacyLocationEntry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-pharmacy-location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry:deviceEntry",
+        "path": "Composition.section.entry",
+        "sliceName": "deviceEntry"
+      },
+      {
+        "id": "Composition.section.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      }
+    ]
+  }
+}

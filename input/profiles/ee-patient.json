@@ -1,0 +1,16 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-patient",
+  "url": "https://fhir.ee/StructureDefinition/EEBasePatient",
+  "version": "1.0.0",
+  "name": "EEBasePatient",
+  "status": "draft",
+  "date": "2023-09-28T10:15:30.0319461+00:00",
+  "description": "Patsient. Patient is the subject of the medication overview.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-patient",
+  "derivation": "constraint"
+}

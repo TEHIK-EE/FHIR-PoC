@@ -1,0 +1,706 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-medication-request",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-medication-request",
+  "version": "1.0.0",
+  "name": "EETISMedicationRequest",
+  "status": "draft",
+  "date": "2023-11-09T13:41:41.3302684+00:00",
+  "description": "Retsept. This is a prescription of a medicine.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationRequest.meta",
+        "path": "MedicationRequest.meta"
+      },
+      {
+        "id": "MedicationRequest.meta.lastUpdated",
+        "path": "MedicationRequest.meta.lastUpdated",
+        "example": [
+          {
+            "label": "ajanäidis",
+            "valueInstant": "2023-09-25T12:12:12+00:01"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.contained",
+        "path": "MedicationRequest.contained",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.extension:discountRate",
+        "path": "MedicationRequest.extension",
+        "sliceName": "discountRate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-discount-rate"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Soodustuse määr loend",
+          "valueSet": "https://fhir.ee/CodeSystem/retsepti-soodustuse-maar"
+        }
+      },
+      {
+        "id": "MedicationRequest.extension:prescriptionAuthorization",
+        "path": "MedicationRequest.extension",
+        "sliceName": "prescriptionAuthorization",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:courseOfTherapyType",
+        "path": "MedicationRequest.extension",
+        "sliceName": "courseOfTherapyType",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-course-of-therapy-type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:lockStatus",
+        "path": "MedicationRequest.extension",
+        "sliceName": "lockStatus",
+        "short": "Broneeritud müügiloata ravimi taotluse jaoks.",
+        "definition": "Kasutatakse AINULT müügiloata ravimi taotluse retsepti broneerimise puhul.",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-lock-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.extension:extensionEETISMarketingRequest",
+        "path": "MedicationRequest.extension",
+        "sliceName": "extensionEETISMarketingRequest",
+        "short": "Müügiloata ravimi taotluse tarvis.",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-marketing-request"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.identifier",
+        "path": "MedicationRequest.identifier",
+        "short": "Retsepti number.",
+        "definition": "Retsepti unikaalne identifikaator. Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.",
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.identifier.assigner",
+        "path": "MedicationRequest.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.basedOn",
+        "path": "MedicationRequest.basedOn",
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.priorPrescription",
+        "path": "MedicationRequest.priorPrescription",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.status",
+        "path": "MedicationRequest.status",
+        "definition": "Kui tegemist on müügiloata ravimi taotlusega, on status \"on-hold\" ning extension lockStatus alt täpsustus, milline apteek retesepti broneeris. \r\n\r\nA code specifying the current state of the order.  Generally, this will be active or completed state."
+      },
+      {
+        "id": "MedicationRequest.statusReason",
+        "path": "MedicationRequest.statusReason",
+        "short": "ANNULLEERIMISE PÕHJUS. LOEND. Reason for current status",
+        "definition": "Kui retsept annulleeritakse, kasutatakse statust \"cancelled\" ning valitakse põhjus loendist \"Annulleerimise põhjuse\".\r\n\r\nCaptures the reason for the current state of the MedicationRequest.",
+        "binding": {
+          "strength": "required",
+          "description": "Annulleerimise põhjus",
+          "valueSet": "http://fhir.ee/ValueSet/medicationrequest-cancelled-status-reason"
+        }
+      },
+      {
+        "id": "MedicationRequest.intent",
+        "path": "MedicationRequest.intent",
+        "definition": "Tavaline retsept on \"order\", müügiloata ravimi retsept on alguses \"proposal\". \r\n\r\nWhether the request is a proposal, plan, or an original order."
+      },
+      {
+        "id": "MedicationRequest.category",
+        "path": "MedicationRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "RETSEPTI LIIK/DOK TYYP. Grouping or category of medication request",
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.category:prescriptionCategory",
+        "path": "MedicationRequest.category",
+        "sliceName": "prescriptionCategory",
+        "short": "tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept",
+        "definition": "RETSEPTI LIIK. An arbitrary categorization or grouping of the medication request.  It could be used for indicating where meds are intended to be administered, eg. in an inpatient setting or in a patient's home, or a legal category of the medication.",
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "description": "Retsepti liigi loend",
+          "valueSet": "http://fhir.ee/CodeSystem/retsepti-liik"
+        }
+      },
+      {
+        "id": "MedicationRequest.category:repeatCategory",
+        "path": "MedicationRequest.category",
+        "sliceName": "repeatCategory",
+        "short": "1-kordne | 2-kordne | 3-kordne",
+        "definition": "KORDSUS. LOEND.  An arbitrary categorization or grouping of the medication request.  It could be used for indicating where meds are intended to be administered, eg. in an inpatient setting or in a patient's home, or a legal category of the medication.",
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "description": "Retsepti kordsuse loend",
+          "valueSet": "http://fhir.ee/CodeSystem/retsepti-kordsus"
+        }
+      },
+      {
+        "id": "MedicationRequest.priority",
+        "path": "MedicationRequest.priority",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.doNotPerform",
+        "path": "MedicationRequest.doNotPerform",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.medication",
+        "path": "MedicationRequest.medication",
+        "type": [
+          {
+            "code": "CodeableReference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.medication.concept",
+        "path": "MedicationRequest.medication.concept",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.medication.reference",
+        "path": "MedicationRequest.medication.reference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.subject",
+        "path": "MedicationRequest.subject",
+        "short": "Patsient, kellele retsept on välja kirjutatud",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-patient"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.informationSource",
+        "path": "MedicationRequest.informationSource",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-patient",
+              "https://fhir.ee/StructureDefinition/ee-practitioner",
+              "https://fhir.ee/StructureDefinition/ee-practitioner-role",
+              "https://fhir.ee/StructureDefinition/ee-related-person",
+              "https://fhir.ee/StructureDefinition/ee-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.encounter",
+        "path": "MedicationRequest.encounter",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.authoredOn",
+        "path": "MedicationRequest.authoredOn",
+        "short": "Koostamise aeg",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.requester",
+        "path": "MedicationRequest.requester",
+        "short": "Kes tegi retsepti.",
+        "definition": "Who/What requested the Request. The individual, organization, or device that initiated the request and has responsibility for its activation.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role",
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.reported",
+        "path": "MedicationRequest.reported",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.performerType",
+        "path": "MedicationRequest.performerType",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.performer",
+        "path": "MedicationRequest.performer",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.device",
+        "path": "MedicationRequest.device",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder",
+        "path": "MedicationRequest.recorder",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.reason",
+        "path": "MedicationRequest.reason",
+        "short": "DIAGNOOS. Reason or indication for ordering or not ordering the medication",
+        "definition": "Diagnoosikood RHK-10 järgi. \r\n\r\nThe reason or the indication for ordering or not ordering the medication.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.reason.concept",
+        "path": "MedicationRequest.reason.concept",
+        "binding": {
+          "strength": "preferred",
+          "description": "RHK-10",
+          "valueSet": "https://fhir.ee/CodeSystem/rhk-10"
+        }
+      },
+      {
+        "id": "MedicationRequest.reason.reference",
+        "path": "MedicationRequest.reason.reference",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.courseOfTherapyType",
+        "path": "MedicationRequest.courseOfTherapyType",
+        "short": "pidev | fikseeritud | vajadusel | muutuv | ühekordne",
+        "definition": "Loend retseptikeskusest, mis kirjeldab ravikuuri tüüpi. \r\n\r\nThe description of the overall pattern of the administration of the medication to the patient.",
+        "binding": {
+          "strength": "required",
+          "description": "RAVIKUURI TÜÜP",
+          "valueSet": "http://fhir.ee/ValueSet/ravikuuri-tyyp"
+        }
+      },
+      {
+        "id": "MedicationRequest.courseOfTherapyType.coding",
+        "path": "MedicationRequest.courseOfTherapyType.coding",
+        "short": "pidev | fikseeritud | vajadusel | muutuv | ühekordne"
+      },
+      {
+        "id": "MedicationRequest.insurance",
+        "path": "MedicationRequest.insurance",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.note",
+        "path": "MedicationRequest.note",
+        "short": "Kommentaar",
+        "definition": "Kommentaari saab lisada ainult sama inimene, kes koostas retsepti.\r\n\r\nExtra information about the prescription that could not be conveyed by the other attributes.",
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.note.author[x]",
+        "path": "MedicationRequest.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.note.time",
+        "path": "MedicationRequest.note.time",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.renderedDosageInstruction",
+        "path": "MedicationRequest.renderedDosageInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.effectiveDosePeriod",
+        "path": "MedicationRequest.effectiveDosePeriod",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction",
+        "path": "MedicationRequest.dosageInstruction",
+        "short": "ANNUSTAMINE. Specific instructions for how the medication should be taken",
+        "definition": "Täpne annustamisjuhis, kuidas määratud ravimit tuleb võtta.\r\n\r\nIndicates how the medication is/was taken or should be taken by the patient.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Dosage",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-dosage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.sequence",
+        "path": "MedicationRequest.dosageInstruction.sequence",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.additionalInstruction",
+        "path": "MedicationRequest.dosageInstruction.additionalInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.event",
+        "path": "MedicationRequest.dosageInstruction.timing.event",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.countMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.countMax",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.durationMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.durationMax",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+        "short": "Mitu korda (ajaühikus). Indicates the number of repetitions that should occur within a period. I.e. Event occurs frequency times per period"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.frequencyMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.frequencyMax",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.period",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.period",
+        "short": "(mitu korda) aja(ühikus). The duration to which the frequency applies. I.e. Event occurs frequency times per period"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.periodMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.periodMax",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
+        "definition": "T(mitu korda aja)ühikus. he units of time for the period in UCUM units\nNormal practice is to use the 'mo' code as a calendar month when calculating the next occurrence."
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.dayOfWeek",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.dayOfWeek",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.when",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.when",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.offset",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.offset",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.code",
+        "path": "MedicationRequest.dosageInstruction.timing.code",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.asNeeded",
+        "path": "MedicationRequest.dosageInstruction.asNeeded",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.site",
+        "path": "MedicationRequest.dosageInstruction.site",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.route",
+        "path": "MedicationRequest.dosageInstruction.route",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.method",
+        "path": "MedicationRequest.dosageInstruction.method",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.type",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "sliceName": "doseQuantity",
+        "short": "RAVIMI KOGUS ÜHE KASUTUSKORRA AJAL. Amount of medication per dose",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].value",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].unit",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].system",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].code",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "sliceName": "doseRange",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerAdministration",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerAdministration",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerLifetime",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerLifetime",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest",
+        "path": "MedicationRequest.dispenseRequest",
+        "definition": "Täpne info ravimi väljamüügi kohta. \r\n\r\nIndicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department."
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.id",
+        "path": "MedicationRequest.dispenseRequest.id",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.initialFill",
+        "path": "MedicationRequest.dispenseRequest.initialFill",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.dispenseInterval",
+        "path": "MedicationRequest.dispenseRequest.dispenseInterval",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.validityPeriod",
+        "path": "MedicationRequest.dispenseRequest.validityPeriod",
+        "short": "RETSEPTI KEHTIVUS AEG. Time period supply is authorized for",
+        "definition": "Periood väljakirjutamise hetkest alates, mil on võimalik ravimit välja osta.\r\n\r\nThis indicates the validity period of a prescription (stale dating the Prescription).",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+        "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.quantity",
+        "path": "MedicationRequest.dispenseRequest.quantity",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+        "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.dispenser",
+        "path": "MedicationRequest.dispenseRequest.dispenser",
+        "definition": "KASUTATAKSE AINULT MÜÜGILOATA RAVIMI APTEEGI BRONEERIMISE PUHUL. Indicates the intended performing Organization that will dispense the medication as specified by the prescriber.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-organization"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.dispenserInstruction",
+        "path": "MedicationRequest.dispenseRequest.dispenserInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.doseAdministrationAid",
+        "path": "MedicationRequest.dispenseRequest.doseAdministrationAid",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.substitution",
+        "path": "MedicationRequest.substitution",
+        "short": "Asendamine. Any restrictions on medication substitution"
+      },
+      {
+        "id": "MedicationRequest.substitution.allowed[x]",
+        "path": "MedicationRequest.substitution.allowed[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "definition": "Kas asendamine on keelatud.\r\n\r\nTrue if the prescriber allows a different drug to be dispensed from what was prescribed.",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.substitution.reason",
+        "path": "MedicationRequest.substitution.reason",
+        "short": "LOEND. Why should (not) substitution be made",
+        "definition": "Asendamatuse põhjus (loend). \r\n\r\nIndicates the reason for the substitution, or why substitution must or must not be performed.",
+        "binding": {
+          "strength": "preferred",
+          "description": "Asendamine keelatud loend",
+          "valueSet": "https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus"
+        }
+      },
+      {
+        "id": "MedicationRequest.eventHistory",
+        "path": "MedicationRequest.eventHistory",
+        "max": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-practitioner-role",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role",
+  "version": "1.0.0",
+  "name": "EETISPractitionerRole",
+  "status": "draft",
+  "date": "2023-09-28T10:15:30.0319461+00:00",
+  "description": "Tervishoiutöötaja roll. Certified/licenced practitioner in a certain role in specified organization. E.g doctors working in different places may have different obligations/rights depending on the role they have in that organization.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-practitioner-role",
+  "derivation": "constraint"
+}

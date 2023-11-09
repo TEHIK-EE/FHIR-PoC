@@ -1,0 +1,214 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-marketing-request",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-marketing-request",
+  "name": "ExtensionEETISMarketingRequest",
+  "status": "draft",
+  "date": "2023-11-09T07:13:13.2413582+00:00",
+  "description": "Müügiloata ravimi taotlus. Used for requesting marketing permit for unauthorized medication.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationRequest"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Müügiloata ravimi taotlus.",
+        "definition": "Used for requesting marketing permit for unauthorized medication.",
+        "isModifier": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 2,
+        "mustHaveValue": false
+      },
+      {
+        "id": "Extension.extension:requestNumber",
+        "path": "Extension.extension",
+        "sliceName": "requestNumber",
+        "short": "Müügiloata ravimi taotluse number",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:requestNumber.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "requestNumber"
+      },
+      {
+        "id": "Extension.extension:requestNumber.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Müügiloata ravimi taotluse number",
+        "definition": "Every marketing request has its own unique number.",
+        "type": [
+          {
+            "code": "id"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:requestReason",
+        "path": "Extension.extension",
+        "sliceName": "requestReason",
+        "short": "Müügiloata ravimi taotluse põhjus",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:requestReason.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "requestReason"
+      },
+      {
+        "id": "Extension.extension:requestReason.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Müügiloata ravimi taotluse põhjus",
+        "definition": "List of codes representing the reason for requiring unauthorized medication permit.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Müügiloata ravimi taotluse põhjus",
+          "valueSet": "https://fhir.ee/CodeSystem/myygiloata-ravimi-taotluse-pohjendus"
+        }
+      },
+      {
+        "id": "Extension.extension:requestReason.value[x].coding",
+        "path": "Extension.extension.value[x].coding",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Müügiloata ravimi põhjuse loend",
+          "valueSet": "https://pub.e-tervis.ee/classifications/ER_M%C3%BC%C3%BCgiloata%20taotluse%20p%C3%B5hjendus"
+        }
+      },
+      {
+        "id": "Extension.extension:requestReason.value[x].text",
+        "path": "Extension.extension.value[x].text",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:requestStatus",
+        "path": "Extension.extension",
+        "sliceName": "requestStatus",
+        "short": "Müügiloata ravimi taotluse staatus",
+        "definition": "Status of unauthorized medication request can be positive (true) or negative (false).",
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "description": "Müügiloata ravimi taotluse staatuse loend",
+          "valueSet": "https://fhir.ee/CodeSystem/myygiloata-ravimi-taotluse-staatus"
+        }
+      },
+      {
+        "id": "Extension.extension:requestStatus.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "requestStatus"
+      },
+      {
+        "id": "Extension.extension:requestStatus.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Taotluse otsus.",
+        "definition": "True - taotlus rahuldati. False - taotlust ei rahuldatud. Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:requestDate",
+        "path": "Extension.extension",
+        "sliceName": "requestDate",
+        "short": "Müügiloata ravimi taotluse kuupäev",
+        "definition": "Date when the request was made.\r\n\r\nMay be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:requestDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "requestDate"
+      },
+      {
+        "id": "Extension.extension:requestDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:requestNegDecision",
+        "path": "Extension.extension",
+        "sliceName": "requestNegDecision",
+        "short": "Müügiloata ravimi taotluse negatiivne otsus",
+        "definition": "If requestStatus is negative there has to be a reason explaining the negative decision.\r\n\r\nMay be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "description": "Müügiloata ravimi taotluse negatiivse otsuse loend",
+          "valueSet": "https://fhir.ee/CodeSystem/myygiloata-ravimi-neg-otsuse-pohjendus"
+        }
+      },
+      {
+        "id": "Extension.extension:requestNegDecision.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "requestNegDecision"
+      },
+      {
+        "id": "Extension.extension:requestNegDecision.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Negatiivse otsuse põhjendus. LOEND",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Müügiloata ravimi taotluse keelduva otsuse põhjendused",
+          "valueSet": "https://fhir.ee/CodeSystem/myygiloata-ravimi-neg-otsuse-pohjendus"
+        }
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-marketing-request"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x]:sliceValue",
+        "path": "Extension.value[x]",
+        "sliceName": "sliceValue"
+      }
+    ]
+  }
+}

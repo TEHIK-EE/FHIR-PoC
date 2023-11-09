@@ -1,0 +1,16 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-organization",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-organization",
+  "version": "1.0.0",
+  "name": "EETISOrganization",
+  "status": "draft",
+  "date": "2023-09-28T10:15:30.0319461+00:00",
+  "description": "Asutus. Organization resource is used to refer to a certain identifiable place which is related to persons prescribing or dispensing medication.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-organization",
+  "derivation": "constraint"
+}

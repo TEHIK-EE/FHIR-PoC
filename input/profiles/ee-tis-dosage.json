@@ -1,0 +1,200 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-dosage",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-dosage",
+  "version": "1.0.0",
+  "name": "EETISDosage",
+  "status": "draft",
+  "date": "2023-11-07T12:32:59.1089119+00:00",
+  "description": "Annustamisjuhis. Dosage is for exact representation of what quantity in which units and how often should medication be taken by patient.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Dosage",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Dosage",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Dosage",
+        "path": "Dosage",
+        "short": "Annustamisjuhis"
+      },
+      {
+        "id": "Dosage.sequence",
+        "path": "Dosage.sequence",
+        "short": "JÄRJEKORD. The order of the dosage instructions"
+      },
+      {
+        "id": "Dosage.text",
+        "path": "Dosage.text",
+        "maxLength": 1000
+      },
+      {
+        "id": "Dosage.additionalInstruction",
+        "path": "Dosage.additionalInstruction",
+        "short": "LISAJUHIS. Supplemental instruction or warnings to the patient - e.g. \"with meals\", \"may cause drowsiness\""
+      },
+      {
+        "id": "Dosage.patientInstruction",
+        "path": "Dosage.patientInstruction",
+        "short": "KOMMENTAAR PATSIENDILE. Patient or consumer oriented instructions"
+      },
+      {
+        "id": "Dosage.timing",
+        "path": "Dosage.timing",
+        "short": "ANNUSTAMISE AEG. When medication should be administered"
+      },
+      {
+        "id": "Dosage.timing.repeat",
+        "path": "Dosage.timing.repeat",
+        "short": "ANNUSTAMISE KORDUS. When the event is to occur"
+      },
+      {
+        "id": "Dosage.timing.repeat.bounds[x]",
+        "path": "Dosage.timing.repeat.bounds[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Dosage.timing.repeat.count",
+        "path": "Dosage.timing.repeat.count",
+        "short": "KORDUSED. Number of times to repeat"
+      },
+      {
+        "id": "Dosage.timing.repeat.countMax",
+        "path": "Dosage.timing.repeat.countMax",
+        "short": "MAKSIMAALNE KORDUSTE ARV. Maximum number of times to repeat",
+        "definition": "MAKSIMAALNE KORDUSTE ARV. If present, indicates that the count is a range - so to perform the action between [count] and [countMax] times."
+      },
+      {
+        "id": "Dosage.timing.repeat.duration",
+        "path": "Dosage.timing.repeat.duration",
+        "short": "KESTUS. How long when it happens",
+        "definition": "KESTUS. How long this thing happens for when it happens. If durationMax is present, this element indicates the lower bound of the allowed range of the duration."
+      },
+      {
+        "id": "Dosage.timing.repeat.durationMax",
+        "path": "Dosage.timing.repeat.durationMax",
+        "short": "MAKSIMAALNE KESTUS. How long when it happens (Max)",
+        "definition": "MAKSIMAALNE KESTUS. If present, indicates that the duration is a range - so to perform the action between [duration] and [durationMax] time length."
+      },
+      {
+        "id": "Dosage.timing.repeat.durationUnit",
+        "path": "Dosage.timing.repeat.durationUnit",
+        "definition": "KESTUS ja ÜHIK. The units of time for the duration, in UCUM units\nNormal practice is to use the 'mo' code as a calendar month when calculating the next occurrence."
+      },
+      {
+        "id": "Dosage.timing.repeat.frequency",
+        "path": "Dosage.timing.repeat.frequency",
+        "short": "SAGEDUS. Indicates the number of repetitions that should occur within a period. I.e. Event occurs frequency times per period",
+        "definition": "SAGEDUS. Ühekordse annuse kordsus/annustamiste arv perioodis. The number of times to repeat the action within the specified period. If frequencyMax is present, this element indicates the lower bound of the allowed range of the frequency."
+      },
+      {
+        "id": "Dosage.timing.repeat.frequencyMax",
+        "path": "Dosage.timing.repeat.frequencyMax",
+        "short": "MAKSIMAALNE ANNUSTAMISTE ARV. Event occurs up to frequencyMax times per period",
+        "definition": "MAKSIMAALNE ANNUSTAMISTE ARV. If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range."
+      },
+      {
+        "id": "Dosage.timing.repeat.period",
+        "path": "Dosage.timing.repeat.period",
+        "short": "KUI SAGEDASTI ANNUSTATAKSE JA ÜHIK. The duration to which the frequency applies. I.e. Event occurs frequency times per period",
+        "definition": "KUI SAGEDASTI ANNUSTATAKSE JA ÜHIK. Indicates the duration of time over which repetitions are to occur; e.g. to express \"3 times per day\", 3 would be the frequency and \"1 day\" would be the period. If periodMax is present, this element indicates the lower bound of the allowed range of the period length."
+      },
+      {
+        "id": "Dosage.timing.repeat.periodMax",
+        "path": "Dosage.timing.repeat.periodMax",
+        "short": "MAKSIMAALNE PERIOOD ANNUSTAMISE VAHEL. Upper limit of period (3-4 hours)",
+        "definition": "MAKSIMAALNE PERIOOD ANNUSTAMISE VAHEL. If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as \"do this once every 3-5 days."
+      },
+      {
+        "id": "Dosage.timing.repeat.dayOfWeek",
+        "path": "Dosage.timing.repeat.dayOfWeek",
+        "definition": "NÄDALAPÄEV. If one or more days of week is provided, then the action happens only on the specified day(s)."
+      },
+      {
+        "id": "Dosage.timing.repeat.timeOfDay",
+        "path": "Dosage.timing.repeat.timeOfDay",
+        "definition": "PÄEVA OSA. Specified time of day for action to take place."
+      },
+      {
+        "id": "Dosage.timing.repeat.when",
+        "path": "Dosage.timing.repeat.when",
+        "short": "MILLEGA SEOTUD. Code for time period of occurrence"
+      },
+      {
+        "id": "Dosage.timing.repeat.offset",
+        "path": "Dosage.timing.repeat.offset",
+        "short": "PERIOOD ENNE VÕI PÄRAST. Minutes from event (before or after)"
+      },
+      {
+        "id": "Dosage.asNeeded",
+        "path": "Dosage.asNeeded",
+        "short": "VAJADUSEL. Take \"as needed\""
+      },
+      {
+        "id": "Dosage.asNeededFor",
+        "path": "Dosage.asNeededFor",
+        "max": "1"
+      },
+      {
+        "id": "Dosage.site",
+        "path": "Dosage.site",
+        "short": "KEHAPIIRKOND. Body site to administer to"
+      },
+      {
+        "id": "Dosage.route",
+        "path": "Dosage.route",
+        "short": "MANUSTAMISVIIS. How drug should enter body"
+      },
+      {
+        "id": "Dosage.method",
+        "path": "Dosage.method",
+        "short": "MEETOD. Technique for administering medication"
+      },
+      {
+        "id": "Dosage.doseAndRate",
+        "path": "Dosage.doseAndRate",
+        "short": "ANNUS JA KIIRUS. Amount of medication administered, to be administered or typical amount to be administered"
+      },
+      {
+        "id": "Dosage.doseAndRate.dose[x]",
+        "path": "Dosage.doseAndRate.dose[x]",
+        "short": "RAVIMI KOGUS ANNUSE KOHTA. Amount of medication per dose",
+        "definition": "RAVIMI KOGUS ANNUSE KOHTA. Amount of medication per dose."
+      },
+      {
+        "id": "Dosage.doseAndRate.rate[x]",
+        "path": "Dosage.doseAndRate.rate[x]",
+        "short": "MANUSTAMISE KIIRUS. Amount of medication per unit of time",
+        "definition": "MANUSTAMISE KIIRUS. Amount of medication per unit of time."
+      },
+      {
+        "id": "Dosage.maxDosePerPeriod",
+        "path": "Dosage.maxDosePerPeriod",
+        "short": "MAKSIMAALNE ANNUS PERIOODIS. Upper limit on medication per unit of time",
+        "definition": "MAKSIMAALNE ANNUS PERIOODIS. Upper limit on medication per unit of time."
+      },
+      {
+        "id": "Dosage.maxDosePerAdministration",
+        "path": "Dosage.maxDosePerAdministration",
+        "short": "MAKSIMAALNE ANNUS ÜHE ANNUSTAMISE KOHTA. Upper limit on medication per administration",
+        "definition": "MAKSIMAALNE ANNUS ÜHE ANNUSTAMISE KOHTA. Upper limit on medication per administration."
+      },
+      {
+        "id": "Dosage.maxDosePerLifetime",
+        "path": "Dosage.maxDosePerLifetime",
+        "short": "MAKSIMAALNE ANNUS ELUS. Upper limit on medication per lifetime of the patient",
+        "definition": "MAKSIMAALNE ANNUS ELUS. Upper limit on medication per lifetime of the patient."
+      }
+    ]
+  }
+}

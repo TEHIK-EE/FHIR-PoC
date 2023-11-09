@@ -1,0 +1,80 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-pharmacy-location",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-pharmacy-location",
+  "version": "1.0.0",
+  "name": "EETISPharmacyLocation",
+  "status": "draft",
+  "date": "2023-09-28T10:15:30.0319461+00:00",
+  "description": "Apteegi asukoht. This resource is used when there is a need to specify a certain pharmacy for medication dispensation.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Location.contained",
+        "path": "Location.contained",
+        "max": "0"
+      },
+      {
+        "id": "Location.identifier",
+        "path": "Location.identifier",
+        "short": "APTEEGI TEGEVUSKOHA KOOD. Unique code or number identifying the location to its users"
+      },
+      {
+        "id": "Location.operationalStatus",
+        "path": "Location.operationalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Location.name",
+        "path": "Location.name",
+        "short": "APTEEGI TEGEVUSKOHA NIMI. Name of the location as used by humans"
+      },
+      {
+        "id": "Location.type",
+        "path": "Location.type",
+        "max": "0"
+      },
+      {
+        "id": "Location.position",
+        "path": "Location.position",
+        "max": "0"
+      },
+      {
+        "id": "Location.managingOrganization",
+        "path": "Location.managingOrganization",
+        "short": "APTEEGI ÄRIREGISTRI KOOD. Organization responsible for provisioning and upkeep"
+      },
+      {
+        "id": "Location.partOf",
+        "path": "Location.partOf",
+        "max": "0"
+      },
+      {
+        "id": "Location.characteristic",
+        "path": "Location.characteristic",
+        "max": "0"
+      },
+      {
+        "id": "Location.hoursOfOperation",
+        "path": "Location.hoursOfOperation",
+        "max": "0"
+      },
+      {
+        "id": "Location.virtualService",
+        "path": "Location.virtualService",
+        "max": "0"
+      },
+      {
+        "id": "Location.endpoint",
+        "path": "Location.endpoint",
+        "max": "0"
+      }
+    ]
+  }
+}

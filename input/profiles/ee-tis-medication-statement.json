@@ -1,0 +1,351 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-medication-statement",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-medication-statement",
+  "version": "1.0.0",
+  "name": "EETISMedicationStatement",
+  "status": "draft",
+  "date": "2023-10-02T06:43:11.802244+00:00",
+  "description": "Ravimiskeemi rida. One or more Medication Statements form patient's Medication Overview.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationStatement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationStatement.text",
+        "path": "MedicationStatement.text",
+        "short": "MedicationStatement is part of MedicationOverview representing one treatmentline"
+      },
+      {
+        "id": "MedicationStatement.contained",
+        "path": "MedicationStatement.contained",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.extension:extensionEETISSubstitutionAllowed",
+        "path": "MedicationStatement.extension",
+        "sliceName": "extensionEETISSubstitutionAllowed",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-substitution-allowed"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.extension:extensionEETISPrescriptionValidityTime",
+        "path": "MedicationStatement.extension",
+        "sliceName": "extensionEETISPrescriptionValidityTime",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.extension:extensionEETISMedicationLeft",
+        "path": "MedicationStatement.extension",
+        "sliceName": "extensionEETISMedicationLeft",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-left"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.extension:extensionEETISTotalPrescribedAmount",
+        "path": "MedicationStatement.extension",
+        "sliceName": "extensionEETISTotalPrescribedAmount",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-total-prescribed-amount"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.modifierExtension",
+        "path": "MedicationStatement.modifierExtension",
+        "min": 1
+      },
+      {
+        "id": "MedicationStatement.modifierExtension:extensionTISVerification",
+        "path": "MedicationStatement.modifierExtension",
+        "sliceName": "extensionTISVerification",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-verification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.modifierExtension:extensionTISVerification.extension:verificationAuthor",
+        "path": "MedicationStatement.modifierExtension.extension",
+        "sliceName": "verificationAuthor"
+      },
+      {
+        "id": "MedicationStatement.modifierExtension:extensionTISVerification.extension:verificationAuthor.value[x]",
+        "path": "MedicationStatement.modifierExtension.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.partOf",
+        "path": "MedicationStatement.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.status",
+        "path": "MedicationStatement.status",
+        "definition": "KINNITATUD | KINNITAMATA | A code representing the status of recording the medication statement."
+      },
+      {
+        "id": "MedicationStatement.category",
+        "path": "MedicationStatement.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustHaveValue": true
+      },
+      {
+        "id": "MedicationStatement.category:courseOfTherapyType",
+        "path": "MedicationStatement.category",
+        "sliceName": "courseOfTherapyType",
+        "short": "RAVIKUURI TÜÜP. Type of medication statement",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.ee/CodeSystem/ravikuuri-tyyp"
+        }
+      },
+      {
+        "id": "MedicationStatement.category:courseOfTherapyType.coding",
+        "path": "MedicationStatement.category.coding",
+        "short": "RAVIKUURI TÜÜP. Code defined by a terminology system"
+      },
+      {
+        "id": "MedicationStatement.category:patientReportedCategory",
+        "path": "MedicationStatement.category",
+        "sliceName": "patientReportedCategory",
+        "short": "Patsiendi ütluse põhjal",
+        "definition": "Kui MedicationStatement on seotud retseptiga on selle loendi väärtus by default EI (Type of medication statement (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).",
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://fhir.ee/CodeSystem/patient-reported"
+        }
+      },
+      {
+        "id": "MedicationStatement.medication",
+        "path": "MedicationStatement.medication",
+        "type": [
+          {
+            "code": "CodeableReference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ],
+        "mustHaveValue": true
+      },
+      {
+        "id": "MedicationStatement.medication.concept",
+        "path": "MedicationStatement.medication.concept",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.medication.reference",
+        "path": "MedicationStatement.medication.reference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.subject",
+        "path": "MedicationStatement.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/EEBasePatient"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ],
+        "mustHaveValue": true
+      },
+      {
+        "id": "MedicationStatement.encounter",
+        "path": "MedicationStatement.encounter",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.effective[x]",
+        "path": "MedicationStatement.effective[x]",
+        "short": "Ravimiskeemi rea kehtivus",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.informationSource",
+        "path": "MedicationStatement.informationSource",
+        "short": "Ravimiskeemi rea koostaja",
+        "definition": "AUTOR KES KOOSTAB RAVIMISKEEMI REA (arst). The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner",
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.derivedFrom",
+        "path": "MedicationStatement.derivedFrom",
+        "short": "SEOTUD RETSEPTID. Link to information used to derive the MedicationStatement",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-medication-request"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.reason",
+        "path": "MedicationStatement.reason",
+        "definition": "A concept, Condition or observation that supports why the medication is being/was taken.\r\nDIAGNOOSIKOOD retseptikeskusest"
+      },
+      {
+        "id": "MedicationStatement.reason.concept",
+        "path": "MedicationStatement.reason.concept",
+        "short": "Diagnoosikoodid (RHK-10)"
+      },
+      {
+        "id": "MedicationStatement.reason.reference",
+        "path": "MedicationStatement.reason.reference",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.note",
+        "path": "MedicationStatement.note",
+        "definition": "Provides extra information about the Medication Statement that is not conveyed by the other attributes.\r\nSiia saab kirjutada märkusi ravimiskeemi rea kohta."
+      },
+      {
+        "id": "MedicationStatement.note.author[x]",
+        "path": "MedicationStatement.note.author[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role",
+              "https://fhir.ee/StructureDefinition/ee-tis-practitioner",
+              "https://fhir.ee/StructureDefinition/ee-tis-organization",
+              "https://fhir.ee/StructureDefinition/EEBasePatient",
+              "https://fhir.ee/StructureDefinition/ee-tis-related-person"
+            ]
+          },
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.relatedClinicalInformation",
+        "path": "MedicationStatement.relatedClinicalInformation",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage",
+        "path": "MedicationStatement.dosage",
+        "definition": "Indicates how the medication is/was or should be taken by the patient.\r\nANNUSTAMISEJUHIS",
+        "type": [
+          {
+            "code": "Dosage",
+            "profile": [
+              "https://fhir.ee/StructureDefinition/ee-tis-dosage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.dosage.additionalInstruction",
+        "path": "MedicationStatement.dosage.additionalInstruction",
+        "definition": "VALMISTAMISEJUHIS\r\nSupplemental instructions to the patient on how to take the medication  (e.g. \"with meals\" or\"take half to one hour before food\") or warnings for the patient about the medication (e.g. \"may cause drowsiness\" or \"avoid exposure of skin to direct sunlight or sunlamps\")."
+      },
+      {
+        "id": "MedicationStatement.dosage.maxDosePerAdministration.unit",
+        "path": "MedicationStatement.dosage.maxDosePerAdministration.unit",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.adherence",
+        "path": "MedicationStatement.adherence",
+        "max": "0",
+        "mustHaveValue": true
+      }
+    ]
+  }
+}

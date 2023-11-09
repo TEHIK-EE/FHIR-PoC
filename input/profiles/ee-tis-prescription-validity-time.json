@@ -1,0 +1,47 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ee-tis-prescription-validity-time",
+  "url": "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time",
+  "name": "ExtensionEETISPrescriptionValidityTime",
+  "status": "draft",
+  "date": "2023-10-03T10:47:00.9373224+00:00",
+  "description": "Retsepti kehtivuse aeg. For expressing the validity of the prescription(s) in one MedicationStatement.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationStatement"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Retsepti kehtivuse aeg.",
+        "definition": "For expressing the validity of the prescription(s) in one MedicationStatement."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Retsepti kehtivuse algus",
+        "definition": "Ravimiskeemi reaga seotud retsepti kehtivus (kirjutamise algusaeg).",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}
