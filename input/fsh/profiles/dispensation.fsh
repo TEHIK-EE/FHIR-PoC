@@ -1,4 +1,5 @@
-Profile: PoCDispensation
+/
+*Profile: PoCDispensation
 Parent: MedicationDispense
 Id: poc-dispensation
 Title: "DispensationPoC"
@@ -61,3 +62,4 @@ Description: "Simplified medication profile for dispensation (identifier code on
 * ingredient 0..0
 * batch 0..0
 * definition 0..0
+*/

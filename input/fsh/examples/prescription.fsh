@@ -1,3 +1,4 @@
+/*
 Instance: prescription-1018862239
 InstanceOf: PoCPrescription
 Description: "Generic prescription for enoxaparine sodium"
@@ -61,3 +62,4 @@ Usage: #example
   * value = 0.2
   * code = #ML
   * system = "https://fhir.ee/yhik"
+*/

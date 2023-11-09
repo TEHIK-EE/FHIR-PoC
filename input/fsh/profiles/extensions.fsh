@@ -1,3 +1,4 @@
+/*
 Extension: MedicinalProductName
 Id: medicinal-product-name
 Description: "Registered name for the medicinal product."
@@ -28,3 +29,4 @@ Description: "Reimbursement rate"
 * valueUnsignedInt
   * ^minValueUnsignedInt = 0
   * ^maxValueUnsignedInt = 100 
+  */

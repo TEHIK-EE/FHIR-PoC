@@ -1,3 +1,4 @@
+/*
 Instance: dispensation-1018862239
 InstanceOf: PoCDispensation
 Description: "Dispensation of generic prescription for enoxaparine sodium"
@@ -19,3 +20,4 @@ Usage: #example
 
 * identifier.value = "1020081"
 * identifier.system = "http://ravimiregister.ee/pakendid"
+*/

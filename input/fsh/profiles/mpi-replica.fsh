@@ -1,3 +1,4 @@
+/*
 Profile: PoCPatient
 Parent: EEBasePatient
 Id: poc-patient
@@ -23,3 +24,4 @@ Description: "Verified Patient. MPI profile replica."
 * name 1..* MS
 * name[official] 1.. MS
 * name[official] ^short = "Ametlik nimi"
+*/

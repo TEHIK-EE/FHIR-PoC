@@ -1,3 +1,4 @@
+/*
 Instance: Pharmacist
 InstanceOf: PoCPractitionerRole
 Description: "Pharmacist dispensing"
@@ -28,3 +29,4 @@ Usage: #example
 * contact.telecom[phone].system = #phone
 * contact.telecom[email].value = "testdoktor123@tehik.ee"
 * contact.telecom[email].system = #email
+*/

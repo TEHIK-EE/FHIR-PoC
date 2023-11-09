@@ -1,3 +1,4 @@
+/*
 Instance: PatientKatiPiiriülene
 InstanceOf: PoCPatient
 Description: "Patsient erinevate identifikaatoritega"
@@ -12,3 +13,4 @@ Usage: #example
   * given = "Kati"
   * family = "Piiriülene"
 * gender = #female
+*/

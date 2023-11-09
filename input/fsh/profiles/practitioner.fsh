@@ -1,3 +1,4 @@
+/*
 Profile: PoCPractitionerRole
 Parent: EEBasePractitionerRole
 Id: poc-practitioner-role
@@ -74,3 +75,4 @@ Description: "Simplified profile for practitioner+organization. Not for actual i
 * communication 0..0
 * availability 0..0
 * endpoint 0..0
+*/
