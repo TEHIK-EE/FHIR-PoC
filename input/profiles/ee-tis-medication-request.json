@@ -667,25 +667,6 @@
         "short": "Asendamine. Any restrictions on medication substitution"
       },
       {
-        "id": "MedicationRequest.substitution.allowed[x]",
-        "path": "MedicationRequest.substitution.allowed[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "resolve()"
-            }
-          ],
-          "rules": "open"
-        },
-        "definition": "Kas asendamine on keelatud.\r\n\r\nTrue if the prescriber allows a different drug to be dispensed from what was prescribed.",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
-      },
-      {
         "id": "MedicationRequest.substitution.reason",
         "path": "MedicationRequest.substitution.reason",
         "short": "LOEND. Why should (not) substitution be made",
