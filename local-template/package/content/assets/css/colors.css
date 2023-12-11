@@ -1,26 +1,26 @@
 :root {
 
   --ig-status-text-color: #ffffff; /* 1. IG Title and status text color */
-  --navbar-bg-color: #009eb0; /* 2. Header container color */
-  --footer-bg-color: #646482; /* 3. Footer background color*/
-  --footer-container-bg-color: #646482; /* 4. Footer container color */
-  --stripe-bg-color: #ff5c57; /* 5. Header strip color */
+  --navbar-bg-color: #22595f; /* 2. Header container color */
+  --footer-bg-color: #7b1264; /* 3. Footer background color*/
+  --footer-container-bg-color: #31b372; /* 4. Footer container color */
+  --stripe-bg-color: #ff57e0; /* 5. Header strip color */
 
-  --btn-hover-color: #197e8a;  /* 6. Menu button hover color */
-  --btn-active-color: #197e8a; /* 7. Menu button active color */
-  --btn-text-color: #ffffff; /* 8. Menu button text color */
-  --btn-gradient-start-color: #099eb0; /* 9. Menu item gradient start color */
-  --btn-gradient-end-color: #099eb0; /* 10. Menu item gradient end  color */
-  --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
+  --btn-hover-color: #718a19;  /* 6. Menu button hover color */
+  --btn-active-color: #8a7119; /* 7. Menu button active color */
+  --btn-text-color: #060606; /* 8. Menu button text color */
+  --btn-gradient-start-color: #0c09b0; /* 9. Menu item gradient start color */
+  --btn-gradient-end-color: #89b009; /* 10. Menu item gradient end  color */
+  --btn-gradient-start-color-alpha: #d4286aca; /* 11. Menu item gradient start color (with alpha) */
   --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
   --link-color: #045b64; /* 13. Hyperlink text color */
   --link-hover-color: #099eb0; /* 14. Hyperlink text hover color */
 
-  --publish-box-bg-color: #cbb7ff; /* 15. Publish box background color */
-  --publish-box-border: 1px solid #646482; /* 16.  Publish box border definition */
+  --publish-box-bg-color: #2b88b0; /* 15. Publish box background color */
+  --publish-box-border: 1px solid #13e236; /* 16.  Publish box border definition */
 
-  --toc-box-bg-color: #cbb7ff; /* 17.  TOC box background color */
-  --toc-box-border: 1px solid #646482; /* 18. TOC box border definition */
+  --toc-box-bg-color: #4e20c0; /* 17.  TOC box background color */
+  --toc-box-border: 1px solid #f7f026; /* 18. TOC box border definition */
 
   --stu-note-background-color: #e6e6e6; /* 19. (STU) Note box background color */
   --stu-note-border-left-color: #ff5c57; /* 20. (STU) Note box border color */
@@ -43,7 +43,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0.4em 0;
-  color: #197e8a;
+  color: #8a198a;
 }
 
 p, li {
@@ -55,7 +55,7 @@ table.grid td {
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0.4em 0;
-  color: #197e8a;
+  color: #84198a;
 }
 
 p, li {
