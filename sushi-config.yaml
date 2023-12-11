@@ -124,7 +124,7 @@ dependencies:
 # sub-pages.
 pages:
   index.md:
-    title: Home
+    title: mingetekakoikpekki
   downloads.xml:
   kanapea.md:
   toretore.md:
@@ -150,7 +150,7 @@ pages:
 # To provide a custom menu.xml file, do not include this property and
 # include a `menu.xml` file in input/includes.
 menu:
-  Home: index.html
+  mingetekakoikpekki: index.html
   Artifacts: artifacts.html
   Downloads: downloads.html
   kanapea: kanapea.html
