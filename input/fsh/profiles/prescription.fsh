@@ -8,6 +8,7 @@ Description: "Simplified prescription profile. Not for actual implementation. In
 * identifier 1..1
   * ^short = "Retsepti number"
 * intent.value = #order
+// * intent 0..0
 * status 1..1 
   * ^short = "Retsepti staatus"
 * statusChanged 0..1 
