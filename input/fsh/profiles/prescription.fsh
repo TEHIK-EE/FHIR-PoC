@@ -2,7 +2,7 @@ Profile: PoCPrescription
 Parent: MedicationRequest
 Id: poc-prescription
 Title: "PrescriptionPoC"
-Description: "Simplified prescription profile. Not for actual implementation. Inspired by Estonian national eP."
+Description: "Ma ei saa aru kas see yldse töötab või mitte?!? Simplified prescription profile. Not for actual implementation. Inspired by Estonian national eP."
 * ^status = #draft
 * ^publisher = "TEHIK"
 * identifier 1..1
