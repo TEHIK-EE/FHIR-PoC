@@ -126,7 +126,7 @@ pages:
   index.md:
     title: Home
   downloads.xml:
-  kanapea.xml:
+  kanapea.md:
   toretore.md:
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
