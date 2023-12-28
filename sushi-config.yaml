@@ -39,10 +39,10 @@ publisher:
 
 # ContactDetail is required by the template.
 contact:
-  - name: Rutt Lindström
+  - name: Johannes Holm
     telecom:
       - system: email
-        value: rutt.lindstrom@tehik.ee
+        value: johannes.holm@tehik.ee
         use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
