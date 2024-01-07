@@ -1,7 +1,7 @@
 Logical: EHNprescription
 Parent: Element
 Id: EHNprescription
-Description: "Dataset section from eHN ePrescription and eDispensation guidelines (as is)"
+Description: "ePrescription data from Dataset section of eHN ePrescription and eDispensation guidelines (as is)"
 * ^url = "http://fhir.ee/StructureDefinition/eHNPrescription"
 * patientAdministrativeData 0..* BackboneElement "A1.1. Patient administrative data" "A1.1. Patient administrative data"
   * familyName 0..* string "A.1.1.1 Family name/surname" "The family name/surname/last name of the patient [ISO TS 22220:2011]. This field can contain more than one element or multiple data elements could be present."
