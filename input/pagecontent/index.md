@@ -1,11 +1,10 @@
 ### About
 
-* IG sisaldab profiile, mis on seotud digiretseptiga. Profiilid on insipireeritud tänasest toimivast digiretsepti teenusest, kuid ei ole täielikud.  
-* Eemaldatud on teatud piirangud, mis ei mõjuta andmebaasiskeemi, kuid tõstaks IG keerukust (nt seos kindlate loenditega). Samuti puuduvad mõned andmeväljad.  
-* Patsiendi ja arsti/apteekri jaoks kasutatakse MPI ja EEBase profiile, kusjuures MPI patsiendi profiil on replitseeritud sellesse juhendisse, kuid EEBase on kasutusel läbi viitamise/päriluse.  
-* Näited vastavad profiilidele ja peaksid olema loogiliselt korrektsed.
+Contains eHN datasets as FHIR logical models: as-is versions (with the best guesses at data types and no guesses at cardinalities) and a cleaner version.  
+
+This is just for testing and trying things out. Please do not use any parts of this IG.
 
 ### References
 
-* [FHIR Zulip Chat](https://chat.fhir.org/)
-* SQL on FHIR [Git discussions](https://github.com/FHIR/sql-on-fhir-v2/discussions) ja [juhend](https://build.fhir.org/ig/FHIR/sql-on-fhir-v2/)
+* [eHealth Network Guideline for eP/eD](https://health.ec.europa.eu/system/files/2022-06/ehn_guidelines_eprescriptions_en.pdf)
+* [eHealth Network Guideline for Patient Summary](https://health.ec.europa.eu/system/files/2023-10/ehn_guidelines_patientsummary_en.pdf)
