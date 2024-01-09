@@ -1,6 +1,6 @@
 ### ePrescription
 
-Data set section should correspond to the level that is currently provided in eHN PDF-guidelines. A table for clinical and political level people who want a quick overview of the content of the service. The most important implementation considerations should be provided as comments and guide the reader to the logical data models and more technical documentation.
+Data set section should correspond to the level that is currently provided in eHN PDF-guidelines. A table for clinical and political level people who want a quick overview of the content of the service. The most important implementation considerations should be provided as comments and guide the reader to the logical data models and more technical documentation.  
 
 #### Data Set
 
