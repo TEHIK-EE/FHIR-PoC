@@ -5,7 +5,7 @@ Data set section should correspond to the level that is currently provided in eH
 #### Data Set
 
   
-| Number | Data Element | Description | Implementation consideration |
+| Nr | Element | Description | Implementation consideration |
 |:-----|:-----|:-----|:-----|
 |A1.4|Medicinal Product|....|....|
 |A1.4.1|Name of medicinal product|Brand name of the authorised medicinal product. It has to be noted, that according to Implementing Directive 2012/52/EU additional requirements may apply.|Not applicable for generic prescriptions|
