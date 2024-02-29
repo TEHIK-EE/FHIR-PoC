@@ -125,8 +125,8 @@ dependencies:
 pages:
   index.md:
     title: Home
-  prescription.md:
-    title: eP Guidelines
+  downloads.xml:
+    title: Downloads
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -152,7 +152,7 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  eP Guideline: prescription.html
+  Downloads: downloads.html
 #  Changes: changes.html
 #  History: ../history.html
 
