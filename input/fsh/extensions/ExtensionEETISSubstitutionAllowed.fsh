@@ -14,6 +14,6 @@ Description: "Asendamine lubatud. Reason for not allowing the substitution of me
 * extension[substitutionAllowed].value[x] only boolean
 * extension[substitutionAllowed].value[x] ^definition = "Substitution is by default allowed (true). If substitution is not allowed the reason must be defined."
 * extension[substitutionAllowedReason].value[x] only CodeableConcept
-* extension[substitutionAllowedReason].value[x] from $ravimi-asendamatuse-pohjus (required)
+* extension[substitutionAllowedReason].value[x] from $ravimi-asendamatuse-pohjus-VS (required)
 * extension[substitutionAllowedReason].value[x] ^definition = "If substitution is not allowed one must choose the reason for it from the ValueSet."
 * extension[substitutionAllowedReason].value[x] ^binding.description = "Reason for NOT allowing substitution"

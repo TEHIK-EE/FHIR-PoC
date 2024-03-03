@@ -18,7 +18,7 @@ Description: "Ravimiskeem. Medication Overview gathers together all resources re
     practitionerEntry 0..* and
     practitionerRoleEntry 0..* and
     organizationEntry 0..* and
-    patientEntry 0..* and
+    patientEntry 0..1 and
     deviceEntry 0..* and
     medicationEntry 0..* and
     pharmacyLocationEntry 0..*

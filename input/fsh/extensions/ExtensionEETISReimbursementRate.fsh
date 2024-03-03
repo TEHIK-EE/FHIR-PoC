@@ -15,7 +15,7 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
     reimbursementRate 0..* and
     reimbursementReason 0..*
 * extension[reimbursementRate].value[x] only CodeableConcept
-* extension[reimbursementRate].value[x] from $retsepti-soodustuse-maar_1 (preferred)
+* extension[reimbursementRate].value[x] from $retsepti-soodustuse-maar-VS (preferred)
 * extension[reimbursementRate].value[x] ^short = "Retsepti soodustuse määr"
 * extension[reimbursementRate].value[x] ^binding.description = "0 | 50 | 75 | 90 | 100"
 * extension[reimbursementReason] ^short = "Soodusravimite loetelule vastav tingimus"

@@ -1,15 +1,15 @@
-Profile: EETISReinbursementTaskResponseParameters
+Profile: EETISReimbursementTaskResponseParameters
 Parent: Parameters
-Id: ee-tis-reinbursement-task-response-parameters
-Description: "This resource passes information back to EETISReinbursementTask output about the e-Prescription Centre's answer of allowed reinbursement rates. Also, information about insurance, EU insurance, pension and pension for incapacity for work are passed back."
+Id: ee-tis-reimbursement-task-response-parameters
+Description: "This resource passes information back to EETISReimbursementTask output about the e-Prescription Centre's answer of allowed reimbursement rates. Also, information about insurance, EU insurance, pension and pension for incapacity for work are passed back."
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-05T14:08:48.1446292+00:00"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "value"
 * parameter ^slicing.rules = #open
-* parameter ^short = "Received reinbursement rate from EPC"
-* parameter.name ^short = "Received reinbursement rate from EPC"
+* parameter ^short = "Received reimbursement rate from EPC"
+* parameter.name ^short = "Received reimbursement rate from EPC"
 * parameter.name ^definition = "SOODUSMÄÄR päringu vastusena olenevalt, millised õigused on patsiendil. The name of the parameter (reference to the operation definition)."
 * parameter contains
     insuranceParameter 0..* and
@@ -34,5 +34,5 @@ Description: "This resource passes information back to EETISReinbursementTask ou
 * parameter[incapacityForWorkPensionParameter].name ^short = "Pension for incapacity for work"
 * parameter[incapacityForWorkPensionParameter].value[x] only boolean
 * parameter[reimbursementRateParameter].value[x] only CodeableConcept
-* parameter[reimbursementRateParameter].value[x] from $retsepti-soodustuse-maar_1 (preferred)
+* parameter[reimbursementRateParameter].value[x] from $retsepti-soodustuse-maar-VS (preferred)
 * parameter[reimbursementRateParameter].value[x] ^binding.description = "Soodustuse määr"

@@ -7,7 +7,7 @@ Description: "Kas retsept on \"order\" või \"proposal\". Viimane on müügiloat
 * ^context.type = #element
 * ^context.expression = "MedicationStatement"
 * value[x] only Coding
-* value[x] from $medicationrequest-intent (preferred)
+* value[x] from $medicationrequest-intent-VS (preferred)
 * value[x] ^short = "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
 * value[x] ^definition = "Tavaline retsept on \"order\", müügiloata ravimi retsept on alguses \"proposal\". \r\n\r\nWhether the request is a proposal, plan, or an original order."
 * value[x] ^binding.description = "Intent of prescription"

@@ -16,7 +16,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     ExtensionEETISCancelledStatusReason named extensionEETISCancelledStatusReason 0..* and
     ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..* and
     ExtensionEETISMarketingRequest named extensionEETISMarketingRequest 0..* and
-    ExtensionEETISSubstitutionAllowed named extensionEETISSubstitutionAllowed 0..* and
+    ExtensionEETISSubstitutionAllowed named extensionEETISSubstitutionAllowed 0..1 and
     ExtensionEETISVerification named extensionEETISVerification 0..* and
     ExtensionEETISPrescriptionIntent named extensionEETISPrescriptionIntent 0..*
 * extension[extensionEETISVerification] ^definition = "SIIN ON VÄGIVALDSELT PANDUD REFERENTSI ASEMEL STRING ET SERVERIGA KOOSTÖÖD TEHA.Optional Extension Element - found in all resources."
@@ -30,17 +30,17 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     statementOriginCategory 0..* and
     prescriptionCategory 0..* and
     repeatCategory 0..*
-* category[courseOfTherapyType] from $ravikuuri-tyyp (required)
+* category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
 * category[courseOfTherapyType] ^short = "pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
 * category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND"
-* category[statementOriginCategory] from $statement-origin-category (required)
+* category[statementOriginCategory] from $statement-origin-category-VS (required)
 * category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. VAJAB UUT LOENDIT!!"
 * category[statementOriginCategory] ^definition = "SEE KATEGOORIA DEFINEERIB ÄRA, KAS RAVIMISKEEMI RIDA ON LOODUD RETSEPTIKESKUSE RETSEPTI PEALT VÕI PATSIENDI SÕNUL. (Type of medication statement (for example, drug classification like ATC, where meds would be administered, legal category of the medication.)."
 * category[statementOriginCategory] ^binding.description = "Category defining the origin of MedicationStatement."
-* category[prescriptionCategory] from $retsepti-liik (required)
+* category[prescriptionCategory] from $retsepti-liik-VS (required)
 * category[prescriptionCategory] ^short = "tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND."
-* category[repeatCategory] from $retsepti-kordsus (required)
+* category[repeatCategory] from $retsepti-kordsus-VS (required)
 * category[repeatCategory] ^short = "1-kordne | 2-kordne | 3-kordne | 6-kordne"
 * category[repeatCategory] ^binding.description = "Retsepti kordsus. LOEND."
 * medication only CodeableReference(EETISMedicationEPC)
@@ -60,7 +60,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * derivedFrom ^short = "SEOTUD RETSEPTID. Link to information used to derive the MedicationStatement"
 * derivedFrom ^type.aggregation = #referenced
 * reason ^definition = "A concept, Condition or observation that supports why the medication is being/was taken.\r\nDIAGNOOSIKOOD retseptikeskusest"
-* reason from $rhk10 (preferred)
+* reason from $rhk-10-VS (preferred)
 * reason ^short = "Diagnoosikoodid (RHK-10)"
 //* reason ^binding.description = "Diagnoosikood RHK-10"
 //* reason.reference ..0

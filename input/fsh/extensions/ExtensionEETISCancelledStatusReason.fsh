@@ -8,6 +8,6 @@ Description: "Annulleerimise põhjus. Kui retsept annulleeritakse, tuleb loendis
 * ^context.expression = "MedicationStatement"
 * . ^short = "Annulleerimise põhjus"
 * value[x] only CodeableConcept
-* value[x] from $retsepti-annulleerimise-pohjus (preferred)
+* value[x] from $retsepti-annulleerimise-pohjus-VS (preferred)
 * value[x] ^short = "Annulleerimise põhjus. Loend."
 * value[x] ^binding.description = "Annulleerimise põhjus. Loend."

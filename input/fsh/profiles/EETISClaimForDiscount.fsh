@@ -1,14 +1,14 @@
-Profile: EETISClaimForDiscount
+Profile: EETISClaimForReimbursement
 Parent: Claim
-Id: ee-tis-claim-for-discount
-Description: "This resource is used for asking the National Health Insurance Fund discount for prescription medication. The percent of the discount depends on the medication, age, diagnose etc."
+Id: ee-tis-claim-for-reimbursement
+Description: "This resource is used for asking the National Health Insurance Fund reimbursement for prescription medication. The percent of the reimbursement depends on the medication, age, diagnose etc."
 * ^version = "1.0.0"
 * ^status = #retired
 * ^experimental = true
 * ^date = "2024-02-01T11:50:21.649163+00:00"
 * contained ..0
 * subType 1..
-* subType from $retsepti-soodustuse-maar (preferred)
+* subType from $retsepti-soodustuse-maar-VS (preferred)
 * subType ^short = "Soodustuse määr. Loend."
 * patient only Reference(EETISPatient)
 * enterer 1..
@@ -29,6 +29,6 @@ Description: "This resource is used for asking the National Health Insurance Fun
 * diagnosis 1..1
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from $rhk-10 (preferred)
-* diagnosis.diagnosis[x] ^binding.description = "RHK-10"
+//* diagnosis.diagnosis[x] ^binding.description = "RHK-10"
 * procedure ..0
 * accident ..0

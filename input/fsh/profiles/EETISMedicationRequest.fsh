@@ -70,10 +70,10 @@ Description: "Retsept. This is a prescription of a medicine."
 * reason 1..1
 * reason ^short = "DIAGNOOS. Reason or indication for ordering or not ordering the medication"
 * reason ^definition = "Diagnoosikood RHK-10 järgi. \r\n\r\nThe reason or the indication for ordering or not ordering the medication."
-* reason from $rhk10 (preferred)
+* reason from $rhk-10-VS (preferred)
 * reason ^binding.description = "RHK-10"
 //* reason.reference ..0
-* courseOfTherapyType from $ravikuuri-tyyp (required)
+* courseOfTherapyType from $ravikuuri-tyyp-VS (required)
 * courseOfTherapyType ^short = "pidev | fikseeritud | vajadusel | muutuv | ühekordne"
 * courseOfTherapyType ^definition = "Loend retseptikeskusest, mis kirjeldab ravikuuri tüüpi. \r\n\r\nThe description of the overall pattern of the administration of the medication to the patient."
 * courseOfTherapyType ^binding.description = "RAVIKUURI TÜÜP"
@@ -154,10 +154,10 @@ Description: "Retsept. This is a prescription of a medicine."
 * substitution.allowed[x] ^definition = "Kas asendamine on keelatud.\r\n\r\nTrue if the prescriber allows a different drug to be dispensed from what was prescribed."
 //* substitution.allowedBoolean only boolean
 //* substitution.allowedBoolean ^sliceName = "allowedBoolean"
-* substitution.reason from $ravimi-asendamatuse-pohjus (preferred)
+* substitution.reason from $ravimi-asendamatuse-pohjus-VS (preferred)
 * substitution.reason ^short = "LOEND. Why should (not) substitution be made"
 * substitution.reason ^definition = "Asendamatuse põhjus (loend). \r\n\r\nIndicates the reason for the substitution, or why substitution must or must not be performed."
 * substitution.reason ^binding.description = "Asendamine keelatud loend"
-* substitution.reason.coding from $ravimi-asendamatuse-pohjus (preferred)
+* substitution.reason.coding from $ravimi-asendamatuse-pohjus-VS (preferred)
 * substitution.reason.coding ^binding.description = "Asendamise keelamise loend"
 * eventHistory ..0
