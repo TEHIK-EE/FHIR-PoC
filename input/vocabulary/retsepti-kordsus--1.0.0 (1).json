@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "retsepti-kordsus--1.0.0",
+  "id": "retsepti-kordsus",
   "language": "et",
   "extension": [
     {
@@ -9,23 +9,6 @@
     }
   ],
   "url": "https://fhir.ee/ValueSet/retsepti-kordsus",
-  "identifier": [
-    {
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.1.303"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "version"
-          }
-        ]
-      },
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.1.303.1"
-    }
-  ],
   "version": "1.0.0",
   "name": "RetseptiKordsus",
   "title": "ER_Retsepti kordsus",

@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "retsepti-volituse-liik--1.0.0",
+  "id": "retsepti-volituse-liik",
   "language": "et",
   "extension": [
     {
@@ -8,24 +8,7 @@
       "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsepti-volituse-liik"
     }
   ],
-  "url": "https://fhir.ee/ValueSet/retsepti-volituse-liik",
-  "identifier": [
-    {
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.43"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "version"
-          }
-        ]
-      },
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.43.1"
-    }
-  ],
+  "url": "https://fhir.ee/ValueSet/retsepti-volituse-liik", 
   "version": "1.0.0",
   "name": "RetseptiVolituseLiik",
   "title": "ER_Volituse liik",

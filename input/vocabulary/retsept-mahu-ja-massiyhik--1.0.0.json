@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "id": "retsept-mahu-ja-massiyhik--1.0.0",
+  "id": "retsept-mahu-ja-massiyhik",
   "language": "et",
   "extension": [
     {

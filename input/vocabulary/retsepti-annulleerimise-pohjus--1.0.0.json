@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "id": "retsepti-annulleerimise-pohjus--1.0.0",
+  "id": "retsepti-annulleerimise-pohjus",
   "language": "et",
   "extension": [
     {

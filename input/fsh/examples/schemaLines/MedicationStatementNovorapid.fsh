@@ -22,6 +22,7 @@ Usage: #example
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#V "volitatud"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-intent"
 * extension[=].valueCode = #order
+// Kas intent andmevälja võib code'iks teha nagu on MedicationRequestil?
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-verification"
 * extension[=].extension[0].url = "verificationTime"
 * extension[=].extension[=].valueDateTime = "2023-11-09"

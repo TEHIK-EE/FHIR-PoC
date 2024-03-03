@@ -5,7 +5,7 @@ Usage: #example
 //* implicitRules = "http://hl7.org/fhir/reference"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
-* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#050 "50%"
+* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#50 "50%"
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
@@ -23,7 +23,7 @@ Usage: #example
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 24
 * dosageInstruction.timing.repeat.periodUnit = #h
-* dosageInstruction.doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TABL
+* dosageInstruction.doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TA "tablett"
 * dispenseRequest.validityPeriod.start = "2023-11-07"
 * dispenseRequest.validityPeriod.end = "2023-12-07"
 //* dispenseRequest.dispenser.reference = "https://fhir.ee/StructureDefinition/ee-tis-organization"

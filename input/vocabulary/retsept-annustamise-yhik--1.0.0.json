@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "id": "retsept-annustamise-yhik--1.0.0",
+  "id": "retsept-annustamise-yhik",
   "language": "et",
   "extension": [
     {

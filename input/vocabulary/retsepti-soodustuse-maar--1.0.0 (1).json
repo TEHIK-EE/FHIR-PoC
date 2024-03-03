@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "retsepti-soodustuse-maar--1.0.0",
+  "id": "retsepti-soodustuse-maar",
   "language": "et",
   "extension": [
     {
@@ -9,23 +9,6 @@
     }
   ],
   "url": "https://fhir.ee/ValueSet/retsepti-soodustuse-maar",
-  "identifier": [
-    {
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.47"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "version"
-          }
-        ]
-      },
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.47.1"
-    }
-  ],
   "version": "1.0.0",
   "name": "RetseptiSoodustuseMaar",
   "title": "ER_Soodustuse määr",

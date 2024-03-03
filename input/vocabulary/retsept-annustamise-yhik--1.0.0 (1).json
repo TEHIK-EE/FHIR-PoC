@@ -1,17 +1,17 @@
 {
   "resourceType": "ValueSet",
-  "id": "retsept-mahu-ja-massiyhik",
+  "id": "retsept-annustamise-yhik",
   "language": "et",
   "extension": [
     {
       "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
-      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsept-mahu-ja-massiyhik"
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsept-annustamise-yhik"
     }
   ],
-  "url": "https://fhir.ee/ValueSet/retsept-mahu-ja-massiyhik",
+  "url": "https://fhir.ee/ValueSet/retsept-annustamise-yhik",
   "version": "1.0.0",
-  "name": "RetseptMahuJaMassiyhik",
-  "title": "ER_Ühikud mahu- ja massiühikud",
+  "name": "RetseptAnnustamiseYhik",
+  "title": "ER_Ühikud annustamine",
   "status": "active",
   "experimental": false,
   "publisher": "TEHIK",
@@ -42,7 +42,7 @@
     "inactive": false,
     "include": [
       {
-        "system": "https://fhir.ee/CodeSystem/retsept-mahu-ja-massiyhik",
+        "system": "https://fhir.ee/CodeSystem/retsept-annustamise-yhik",
         "version": "1.0.0"
       }
     ]

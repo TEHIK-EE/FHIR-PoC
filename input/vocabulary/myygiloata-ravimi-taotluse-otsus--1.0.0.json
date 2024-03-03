@@ -1,22 +1,22 @@
 {
   "resourceType": "CodeSystem",
-  "id": "retsepti-liik",
+  "id": "myygiloata-ravimi-taotluse-otsus",
   "language": "et",
   "extension": [
     {
       "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
-      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsepti-liik"
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/myygiloata-ravimi-taotluse-otsus"
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
       "valueCode": "executable"
     }
   ],
-  "url": "https://fhir.ee/CodeSystem/retsepti-liik",
+  "url": "https://fhir.ee/CodeSystem/myygiloata-ravimi-taotluse-otsus",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.41"
+      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.1.279"
     },
     {
       "type": {
@@ -27,13 +27,13 @@
         ]
       },
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.41.1"
+      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.1.279.1"
     }
   ],
   "version": "1.0.0",
   "versionAlgorithmString": "integer",
-  "name": "RetseptiLiik",
-  "title": "ER_Retsepti liik",
+  "name": "MyygiloataRavimiTaotluseOtsus\n",
+  "title": "Müügiloata ravimi kasutamise taotluse otsus",
   "status": "active",
   "experimental": false,
   "publisher": "TEHIK",
@@ -51,9 +51,9 @@
       ]
     }
   ],
-  "description": "Elektrooniline retsept (ER) - Meditsiiniline dokumentatsioon digitaalse retsepti koostamisel/realiseerimisel/digitaliseerimisel.",
+  "description": "Elektrooniline retsept (ER) - Müügiloata ravimi kasutamise taotluse Ravimiameti positiivne või negatiivne otsus, mida kuvatakse retseptil",
   "effectivePeriod": {
-    "start": "2008-07-10T00:00:00Z"
+    "start": "2016-01-04T00:00:00Z"
   },
   "author": [
     {
@@ -72,16 +72,12 @@
   ],
   "concept": [
     {
-      "code": "1",
-      "display": "Tavaretsept"
+      "code": "N",
+      "display": "Otsus negatiivne"
     },
     {
-      "code": "2",
-      "display": "Narkootilise ravimi retsept"
-    },
-    {
-      "code": "3",
-      "display": "Meditsiiniseadme kaart"
+      "code": "P",
+      "display": "Otsus positiivne"
     }
   ]
 }

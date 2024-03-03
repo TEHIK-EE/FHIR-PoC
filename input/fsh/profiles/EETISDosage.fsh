@@ -43,10 +43,10 @@ Description: "Annustamisjuhis. Dosage is for exact representation of what quanti
 * route ^short = "MANUSTAMISVIIS. How drug should enter body"
 * method ^short = "MEETOD. Technique for administering medication"
 * doseAndRate ^short = "ANNUS JA KIIRUS. Amount of medication administered, to be administered or typical amount to be administered"
-* doseAndRate.dose[x] from $retsept-annustamise-yhik-VS (example)
+//* doseAndRate.dose[x] from $retsept-annustamise-yhik-VS (example)
 * doseAndRate.dose[x] ^short = "RAVIMI KOGUS ANNUSE KOHTA. Amount of medication per dose"
 * doseAndRate.dose[x] ^definition = "RAVIMI KOGUS ANNUSE KOHTA. Loendis on koodid nagu näiteks TA -tablett, TK - tükk, CP- kapsel, MA - mõõtannus jne. Amount of medication per dose."
-* doseAndRate.dose[x] ^binding.description = "Annustamise ühikud loend"
+//* doseAndRate.dose[x] ^binding.description = "Annustamise ühikud loend"
 * doseAndRate.rate[x] ^short = "MANUSTAMISE KIIRUS. Amount of medication per unit of time"
 * doseAndRate.rate[x] ^definition = "MANUSTAMISE KIIRUS. Amount of medication per unit of time."
 * maxDosePerPeriod ^short = "MAKSIMAALNE ANNUS PERIOODIS. Upper limit on medication per unit of time"

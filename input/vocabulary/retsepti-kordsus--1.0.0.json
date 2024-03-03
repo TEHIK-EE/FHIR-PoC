@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "id": "retsepti-kordsus--1.0.0",
+  "id": "retsepti-kordsus",
   "language": "et",
   "extension": [
     {

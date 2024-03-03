@@ -64,7 +64,6 @@ Alias: $patient-reported = https://fhir.ee/CodeSystem/patient-reported
 Alias: $ee-date-accuracy-indicator = https://fhir.ee/CodeSystem/ee-date-accuracy-indicator
 Alias: $ee-occupation = https://fhir.ee/CodeSystem/ee-occupation
 Alias: $substitution-not-allowed = https://fhir.ee/CodeSystem/substitution-not-allowed
-Alias: $cancellation-reason = https://fhir.ee/CodeSystem/cancellation-reason
 Alias: $task-input-parameter-type = https://fhir.ee/CodeSystem/task-input-parameter-type
 Alias: $task-output-parameter-type = https://fhir.ee/CodeSystem/task-output-parameter-type
 Alias: $ee-identity-system = https://fhir.ee/ValueSet/ee-identity-system

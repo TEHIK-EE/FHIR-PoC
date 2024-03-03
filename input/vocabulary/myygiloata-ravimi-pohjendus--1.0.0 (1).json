@@ -1,17 +1,17 @@
 {
   "resourceType": "ValueSet",
-  "id": "retsepti-liik",
+  "id": "myygiloata-ravimi-pohjendus",
   "language": "et",
   "extension": [
     {
       "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
-      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsepti-liik"
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/myygiloata-ravimi-pohjendus"
     }
   ],
-  "url": "https://fhir.ee/ValueSet/retsepti-liik",
+  "url": "https://fhir.ee/ValueSet/myygiloata-ravimi-pohjendus",
   "version": "1.0.0",
-  "name": "RetseptiLiik",
-  "title": "ER_Retsepti liik",
+  "name": "MyygiloataRavimiPohjendus",
+  "title": "ER_Müügiloata taotluse põhjendus",
   "status": "active",
   "experimental": false,
   "publisher": "TEHIK",
@@ -29,9 +29,9 @@
       ]
     }
   ],
-  "description": "Elektrooniline retsept (ER) - Meditsiiniline dokumentatsioon digitaalse retsepti koostamisel/realiseerimisel/digitaliseerimisel.",
+  "description": "Elektrooniline retsept (ER) - Müügiloata ravimi kasutamise taotlemise põhjendus, mis sisestatakse retsepti koostamisel.",
   "effectivePeriod": {
-    "start": "2008-07-10T00:00:00Z"
+    "start": "2015-09-04T00:00:00Z"
   },
   "author": [
     {
@@ -42,7 +42,7 @@
     "inactive": false,
     "include": [
       {
-        "system": "https://fhir.ee/CodeSystem/retsepti-liik",
+        "system": "https://fhir.ee/CodeSystem/myygiloata-ravimi-pohjendus",
         "version": "1.0.0"
       }
     ]

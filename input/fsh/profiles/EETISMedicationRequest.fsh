@@ -24,24 +24,26 @@ Description: "Retsept. This is a prescription of a medicine."
 * basedOn ..1
 * priorPrescription ..0
 * status ^definition = "Kui tegemist on müügiloata ravimi taotlusega, on status \"on-hold\" ning extension lockStatus alt täpsustus, milline apteek retesepti broneeris. \r\n\r\nA code specifying the current state of the order.  Generally, this will be active or completed state."
-* statusReason from $retsepti-annulleerimise-pohjus (required)
+* statusReason from $retsepti-annulleerimise-pohjus-VS (required)
 * statusReason ^short = "ANNULLEERIMISE PÕHJUS. LOEND. Reason for current status"
 * statusReason ^definition = "Kui retsept annulleeritakse, kasutatakse statust \"cancelled\" ning valitakse põhjus loendist \"Annulleerimise põhjuse\".\r\n\r\nCaptures the reason for the current state of the MedicationRequest."
 * statusReason ^binding.description = "Annulleerimise põhjus"
 * intent ^definition = "Tavaline retsept on \"order\", müügiloata ravimi retsept on alguses \"proposal\". \r\n\r\nWhether the request is a proposal, plan, or an original order."
 * category ..1
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding"
+* category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category ^short = "RETSEPTI LIIK/DOK TYYP. Grouping or category of medication request"
 * category contains
     prescriptionCategory 0..1 and
     repeatCategory 0..1
-* category[prescriptionCategory] from $retsepti-liik (required)
+* category[prescriptionCategory] from $retsepti-liik-VS (required)
 * category[prescriptionCategory] ^short = "tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
+* category[prescriptionCategory].coding.system = $retsepti-liik 
 * category[prescriptionCategory] ^definition = "RETSEPTI LIIK. An arbitrary categorization or grouping of the medication request.  It could be used for indicating where meds are intended to be administered, eg. in an inpatient setting or in a patient's home, or a legal category of the medication."
 * category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND."
-* category[repeatCategory] from $retsepti-kordsus (required)
+* category[repeatCategory] from $retsepti-kordsus-VS (required)
+* category[repeatCategory].coding.system = $retsepti-kordsus
 * category[repeatCategory] ^short = "1-kordne | 2-kordne | 3-kordne| 6-kordne"
 * category[repeatCategory] ^definition = "KORDSUS. LOEND.  An arbitrary categorization or grouping of the medication request.  It could be used for indicating where meds are intended to be administered, eg. in an inpatient setting or in a patient's home, or a legal category of the medication."
 * category[repeatCategory] ^binding.description = "Retsepti kordsuse loend"
@@ -118,10 +120,10 @@ Description: "Retsept. This is a prescription of a medicine."
 //* dosageInstruction.doseAndRate.doseQuantity only Quantity
 //* dosageInstruction.doseAndRate.doseQuantity ^sliceName = "doseQuantity"
 * dosageInstruction.doseAndRate.doseQuantity ^short = "RAVIMI KOGUS ÜHE KASUTUSKORRA AJAL. Amount of medication per dose"
-* dosageInstruction.doseAndRate.doseQuantity.value 1..
-* dosageInstruction.doseAndRate.doseQuantity.unit ..0
-* dosageInstruction.doseAndRate.doseQuantity.system 1..
-* dosageInstruction.doseAndRate.doseQuantity.code 1..
+//* dosageInstruction.doseAndRate.doseQuantity.value 1..
+//* dosageInstruction.doseAndRate.doseQuantity.unit ..0
+//* dosageInstruction.doseAndRate.doseQuantity.system 1..
+//* dosageInstruction.doseAndRate.doseQuantity.code 1..
 //* dosageInstruction.doseAndRate.doseRange ..0
 //* dosageInstruction.doseAndRate.doseRange only Range
 //* dosageInstruction.doseAndRate.doseRange ^sliceName = "doseRange"

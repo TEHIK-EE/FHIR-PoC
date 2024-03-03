@@ -1,17 +1,18 @@
 {
   "resourceType": "ValueSet",
-  "id": "retsepti-liik",
+  "id": "ravimi-asendamatuse-pohjus",
   "language": "et",
   "extension": [
     {
       "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
-      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsepti-liik"
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/ravimi-asendamatuse-pohjus"
     }
   ],
-  "url": "https://fhir.ee/ValueSet/retsepti-liik",
+  "url": "https://fhir.ee/ValueSet/ravimi-asendamatuse-pohjus",
+ 
   "version": "1.0.0",
-  "name": "RetseptiLiik",
-  "title": "ER_Retsepti liik",
+  "name": "RavimiAsendamatusePohjus",
+  "title": "ER_Asendamatuse põhjus",
   "status": "active",
   "experimental": false,
   "publisher": "TEHIK",
@@ -29,9 +30,9 @@
       ]
     }
   ],
-  "description": "Elektrooniline retsept (ER) - Meditsiiniline dokumentatsioon digitaalse retsepti koostamisel/realiseerimisel/digitaliseerimisel.",
+  "description": "Elektrooniline retsept (ER) - Asendamatuse põhjus märgitakse, kui ravim kirjutatakse välja preparaadi nimetuse põhiselt.",
   "effectivePeriod": {
-    "start": "2008-07-10T00:00:00Z"
+    "start": "2016-10-10T00:00:00Z"
   },
   "author": [
     {
@@ -42,7 +43,7 @@
     "inactive": false,
     "include": [
       {
-        "system": "https://fhir.ee/CodeSystem/retsepti-liik",
+        "system": "https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus",
         "version": "1.0.0"
       }
     ]

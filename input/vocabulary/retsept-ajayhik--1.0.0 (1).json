@@ -1,17 +1,18 @@
 {
   "resourceType": "ValueSet",
-  "id": "retsepti-liik",
+  "id": "retsept-ajayhik",
   "language": "et",
   "extension": [
     {
       "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
-      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsepti-liik"
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsept-ajayhik"
     }
   ],
-  "url": "https://fhir.ee/ValueSet/retsepti-liik",
+  "url": "https://fhir.ee/ValueSet/retsept-ajayhik",
+ 
   "version": "1.0.0",
-  "name": "RetseptiLiik",
-  "title": "ER_Retsepti liik",
+  "name": "RetseptAjayhik",
+  "title": "ER_Ühikud_aja",
   "status": "active",
   "experimental": false,
   "publisher": "TEHIK",
@@ -29,9 +30,9 @@
       ]
     }
   ],
-  "description": "Elektrooniline retsept (ER) - Meditsiiniline dokumentatsioon digitaalse retsepti koostamisel/realiseerimisel/digitaliseerimisel.",
+  "description": "Elektrooniline retsept (ER) - Ajaühikud, mida kasutatakse retseptil annustusskeemi määramisel.",
   "effectivePeriod": {
-    "start": "2008-07-10T00:00:00Z"
+    "start": "2016-05-06T00:00:00Z"
   },
   "author": [
     {
@@ -42,7 +43,7 @@
     "inactive": false,
     "include": [
       {
-        "system": "https://fhir.ee/CodeSystem/retsepti-liik",
+        "system": "https://fhir.ee/CodeSystem/retsept-ajayhik",
         "version": "1.0.0"
       }
     ]

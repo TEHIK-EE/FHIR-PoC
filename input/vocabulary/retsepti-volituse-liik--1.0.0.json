@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "id": "retsepti-volituse-liik--1.0.0",
+  "id": "retsepti-volituse-liik",
   "language": "et",
   "extension": [
     {
