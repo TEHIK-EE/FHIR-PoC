@@ -19,7 +19,7 @@ Usage: #example
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
-* extension[=].valueCodeableConcept = $retsepti-volituse-liik#publik "avalik"
+* extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "avalik"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-intent"
 * extension[=].valueCode = #order
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-verification"

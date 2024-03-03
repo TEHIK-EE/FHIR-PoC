@@ -28,7 +28,7 @@ Description: "This resource is used for asking the National Health Insurance Fun
 * careTeam ..0
 * diagnosis 1..1
 * diagnosis.diagnosis[x] only CodeableConcept
-* diagnosis.diagnosis[x] from $rhk-10 (preferred)
+* diagnosis.diagnosis[x] from $rhk-10-VS (preferred)
 //* diagnosis.diagnosis[x] ^binding.description = "RHK-10"
 * procedure ..0
 * accident ..0

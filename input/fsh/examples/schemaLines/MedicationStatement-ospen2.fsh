@@ -15,7 +15,7 @@ Usage: #example
 * extension[=].valueInteger = 12
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
-* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#075 "75%"
+* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#75 "75%"
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "Soodusravimite loetelule vastav tingimus. Alla 16 aastane"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"

@@ -3,7 +3,7 @@ InstanceOf: Medication
 Usage: #example
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
-* extension[=].valueCodeableConcept = $atc-ee#N05BA12 "alprazolam"
+* extension[=].valueCodeableConcept = $atc-ee#N05BA12 "alprasolaam"
 //* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-size-of-item"
 //* extension[=].valueQuantity = 1 https://fhir.ee/CodeSystem/retsept-mahu-ja-massiyhik#MG
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
