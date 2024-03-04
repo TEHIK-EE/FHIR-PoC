@@ -1,5 +1,5 @@
 ValueSet: Ravimvormid_VS
-Id: ravimvmormid
+Id: ravimvormid
 Title: "Ravimvormid"
 Description: "Üldised ja detailsed ravimvormid, mida on lubatud kasutada digiretseptil ja ravimiskeemis."
 

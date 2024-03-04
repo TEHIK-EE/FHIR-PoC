@@ -19,7 +19,7 @@ Usage: #example
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
-* extension[=].valueCodeableConcept = $retsepti-volituse-liik#V "volitatud"
+* extension[=].valueCodeableConcept = $retsepti-volituse-liik#v "Volitatud"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-intent"
 * extension[=].valueCode = #order
 // Kas intent andmevälja võib code'iks teha nagu on MedicationRequestil?
