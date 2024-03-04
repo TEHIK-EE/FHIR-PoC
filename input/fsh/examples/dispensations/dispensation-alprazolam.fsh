@@ -1,6 +1,7 @@
 Instance: dispensation-alprazolam
 InstanceOf: MedicationDispense
 Usage: #example
+Description: "Dispensation Alprazolam - not reimbursed"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-dispense"
 * implicitRules = "https://build.fhir.org/ig/HL7EE/ig-ee-base"
 * extension.url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"

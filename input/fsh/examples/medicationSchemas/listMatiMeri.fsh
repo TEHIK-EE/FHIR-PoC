@@ -1,4 +1,4 @@
-Instance: listMatiMeri
+/*Instance: listMatiMeri
 InstanceOf: List
 Usage: #example
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-list"
@@ -24,3 +24,4 @@ Usage: #example
 * entry[+].deleted = true
 * entry[=].date = "2023-12-12"
 * entry[=].item = Reference(MedicationStatement-ospen2) "Fenoksymetyylpenitsilliin"
+*/

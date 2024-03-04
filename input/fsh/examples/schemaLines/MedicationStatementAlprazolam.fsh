@@ -21,12 +21,12 @@ Usage: #example
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#private "privaatne"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-intent"
-* extension[=].valueCoding = $medicationrequest-intent#order "order"
+* extension[=].valueCode = #order
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-verification"
 * extension[=].extension[0].url = "verificationTime"
 * extension[=].extension[=].valueDateTime = "2023-11-09"
 * extension[=].extension[+].url = "verificationAuthor"
-* extension[=].extension[=].valueString = "keegi arst"
+* extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#ü "ühekordne"
 * category[=].text = "ühekordne"

@@ -24,11 +24,11 @@ Usage: #example
 * extension[=].extension[+].url = "requestReason"
 * extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-pohjendus#ML01 "Eestis puudub haiguse/seisundi raviks müügiloaga ravim"
 * extension[=].extension[+].url = "requestStatus"
-* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-staatus#P "positiivne"
+* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-otsus#P "positiivne"
 * extension[=].extension[+].url = "requestDate"
 * extension[=].extension[=].valueDateTime = "2023-11-11"
-* extension[=].extension[+].url = "requestNegDecision"
-* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-neg-otsuse-pohjendus#ON04 "Tegelikult, kui on positiivne otsus siis negatiivset keeldumist siia ei tule ju."
+//* extension[=].extension[+].url = "requestNegDecision"
+//* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-neg-otsuse-pohjendus#ON04 
 * extension[=].extension[+].url = "requestReasonText"
 * extension[=].extension[=].valueString = "siia miskit tarka juttu"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-lock-status"
@@ -39,12 +39,12 @@ Usage: #example
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#private "privaatne"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-intent"
-* extension[=].valueCoding = $medicationrequest-intent#order "order"
+* extension[=].valueCode = #order
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-verification"
 * extension[=].extension[0].url = "verificationTime"
 * extension[=].extension[=].valueDateTime = "2023-11-09"
 * extension[=].extension[+].url = "verificationAuthor"
-* extension[=].extension[=].valueString = "keegi arst"
+* extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#ü "ühekordne"
 * category[=].text = "ühekordne"

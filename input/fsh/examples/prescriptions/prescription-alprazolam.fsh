@@ -9,7 +9,7 @@ Usage: #example
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
-* extension[=].valueCodeableConcept = $retsepti-volituse-liik#A "avalik"
+* extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * status = #active
 * statusChanged = "2014-06-10"
 * intent = #order

@@ -1,3 +1,4 @@
+/*
 Instance: listMatiMeri2
 InstanceOf: List
 Usage: #example
@@ -10,3 +11,4 @@ Usage: #example
 * entry[0].item = Reference(MedicationStatementAlprazolam)
 * entry[+].item = Reference(MedicationStatementNovorapid)
 * entry[+].item = Reference(MedicationStatement-ospen)
+*/

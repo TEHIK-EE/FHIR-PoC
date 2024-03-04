@@ -8,6 +8,6 @@ Usage: #example
 * practitioner.display = "Proviisor Kristiina Kuldkepp"
 * organization.identifier.value = "74000091"
 * organization.display = "Haigekassa"
-* code = $retsepti-volituse-liik#pharmacist "pharmacist"
+* code = $practitioner-role#pharmacist "pharmacist"
 * contact.telecom.system = #email
 * contact.telecom.value = "apteek123@tehik.ee"

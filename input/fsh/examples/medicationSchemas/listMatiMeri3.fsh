@@ -10,7 +10,7 @@ Usage: #example
 * code.text = "Medication List"
 * subject = Reference(pat1MatiMeri)
 * date = "2017-07-30"
-* source = Reference(PractRoleD12345)
+* source = Reference(PractRoleD12345) // List source peaks olema TJT?
 * entry[0].flag = $list-item-flag#01 "Unchanged"
 * entry[=].deleted = false
 * entry[=].date = "2023-06-30"

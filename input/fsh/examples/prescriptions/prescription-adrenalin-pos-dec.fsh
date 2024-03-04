@@ -9,7 +9,7 @@ Usage: #example
 //* extension[=].extension[+].url = "reimbursementReason"
 //* extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
-* extension[=].valueCodeableConcept = $retsepti-volituse-liik#A "avalik"
+* extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-lock-status"
 * extension[=].extension[0].url = "lockStatus"
 * extension[=].extension[=].valueBoolean = true
@@ -21,11 +21,11 @@ Usage: #example
 * extension[=].extension[+].url = "requestReason"
 * extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-pohjendus#ML01 "Eestis puudub haiguse/seisundi raviks müügiloaga ravim"
 * extension[=].extension[+].url = "requestStatus"
-* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-staatus#P "positiivne"
+* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-otsus#P "positiivne"
 * extension[=].extension[+].url = "requestDate"
 * extension[=].extension[=].valueDateTime = "2023-11-11"
-* extension[=].extension[+].url = "requestNegDecision"
-* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-neg-otsuse-pohjendus#ON04 "Tegelikult, kui on positiivne otsus siis negatiivset keeldumist siia ei tule ju."
+//* extension[=].extension[+].url = "requestNegDecision"
+//* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-neg-otsuse-pohjendus#ON04 "Tegelikult, kui on positiivne otsus siis negatiivset keeldumist siia ei tule ju."
 * status = #on-hold
 * statusChanged = "2023-11-07"
 * intent = #proposal

@@ -16,7 +16,7 @@ Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
 * #A11DB85 "tiamiin+püridoksiin+tsüanokobalamiin+lidokaiin"
 
 ValueSet: ATC_EE_VS
-Id: atc-ee-vs
+Id: atc-ee
 Title: "Siseriiklik ATC"
 Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
 

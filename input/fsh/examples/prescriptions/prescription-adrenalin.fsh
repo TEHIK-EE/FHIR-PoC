@@ -9,7 +9,7 @@ Usage: #example
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
-* extension[=].valueCodeableConcept = $retsepti-volituse-liik#A "avalik"
+* extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-lock-status"
 * extension[=].extension[0].url = "lockStatus"
 * extension[=].extension[=].valueBoolean = true
@@ -21,7 +21,7 @@ Usage: #example
 * extension[=].extension[+].url = "requestReason"
 * extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-pohjendus#ML01 "Eestis puudub haiguse/seisundi raviks müügiloaga ravim"
 * extension[=].extension[+].url = "requestStatus"
-* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-staatus#N "negatiivne"
+* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-otsus#N "negatiivne"
 * extension[=].extension[+].url = "requestDate"
 * extension[=].extension[=].valueDateTime = "2023-11-11"
 * extension[=].extension[+].url = "requestNegDecision"

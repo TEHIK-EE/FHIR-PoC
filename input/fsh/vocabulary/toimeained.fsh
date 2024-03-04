@@ -19,7 +19,7 @@ Description: "Ravimiameti nimekiri ravimite toimeainetest"
 * #8546 "lidokaiin"
 
 ValueSet: Toimeained_VS
-Id: toimeained-vs
+Id: toimeained
 Title: "Toimeainete loend"
 Description: "Ravimiameti nimekiri ravimite toimeainetest"
 

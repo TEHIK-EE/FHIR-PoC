@@ -1,4 +1,4 @@
-Instance: MedicationStatement-ospen
+/*Instance: MedicationStatement-ospen
 InstanceOf: MedicationStatement
 Usage: #example
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
@@ -32,3 +32,4 @@ Usage: #example
 * dosage.timing.repeat.periodUnit = #d
 * dosage.timing.repeat.boundsDuration = 7 'd' "d"
 * dosage.doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TA
+*/

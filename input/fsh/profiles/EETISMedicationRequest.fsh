@@ -29,7 +29,7 @@ Description: "Retsept. This is a prescription of a medicine."
 * statusReason ^definition = "Kui retsept annulleeritakse, kasutatakse statust \"cancelled\" ning valitakse põhjus loendist \"Annulleerimise põhjuse\".\r\n\r\nCaptures the reason for the current state of the MedicationRequest."
 * statusReason ^binding.description = "Annulleerimise põhjus"
 * intent ^definition = "Tavaline retsept on \"order\", müügiloata ravimi retsept on alguses \"proposal\". \r\n\r\nWhether the request is a proposal, plan, or an original order."
-* category ..1
+* category ..*
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
