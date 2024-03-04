@@ -21,8 +21,8 @@ Alias: $retsepti-kordsus-VS = https://fhir.ee/ValueSet/retsepti-kordsus
 Alias: $retsepti-kordsus = https://fhir.ee/CodeSystem/retsepti-kordsus
 Alias: $ravimi-asendamatuse-pohjus-VS = https://fhir.ee/ValueSet/ravimi-asendamatuse-pohjus
 Alias: $ravimi-asendamatuse-pohjus = https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus
-Alias: $myygiloata-ravimi-taotluse-pohjendus = https://fhir.ee/CodeSystem/myygiloata-ravimi-taotluse-pohjendus
-Alias: $myygiloata-ravimi-taotluse-pohjendus-VS = https://fhir.ee/ValueSet/myygiloata-ravimi-taotluse-pohjendus
+Alias: $myygiloata-ravimi-taotluse-pohjendus = https://fhir.ee/CodeSystem/myygiloata-ravimi-pohjendus
+Alias: $myygiloata-ravimi-taotluse-pohjendus-VS = https://fhir.ee/ValueSet/myygiloata-ravimi-pohjendus
 Alias: $myygiloata-ravimi-taotluse-staatus-VS = https://fhir.ee/ValueSet/myygiloata-ravimi-taotluse-staatus
 Alias: $myygiloata-ravimi-taotluse-staatus = https://fhir.ee/CodeSystem/myygiloata-ravimi-taotluse-staatus
 Alias: $myygiloata-ravimi-taotluse-otsus-VS = https://fhir.ee/ValueSet/myygiloata-ravimi-taotluse-otsus
@@ -58,7 +58,8 @@ Alias: $sct = http://snomed.info/sct
 Alias: $ee-ads = https://fhir.ee/CodeSystem/ee-ads
 Alias: $ehak = https://fhir.ee/sid/ehak
 Alias: $ee-medre-specialty = https://fhir.ee/CodeSystem/ee-medre-specialty
-
+Alias: $medre = https://fhir.ee/sid/pro/est/pho // TAM kood ee-base'ist
+Alias: $isikukood = https://fhir.ee/sid/pid/est/ni //ee-base'ist
 
 Alias: $statement-origin-category = https://fhir.ee/CodeSystem/statement-origin-category
 Alias: $statement-origin-category-VS = https://fhir.ee/ValueSet/statement-origin-category
@@ -68,7 +69,7 @@ Alias: $ee-occupation = https://fhir.ee/CodeSystem/ee-occupation
 Alias: $substitution-not-allowed = https://fhir.ee/CodeSystem/substitution-not-allowed
 Alias: $task-input-parameter-type = https://fhir.ee/CodeSystem/task-input-parameter-type
 Alias: $task-output-parameter-type = https://fhir.ee/CodeSystem/task-output-parameter-type
-Alias: $ee-identity-system = https://fhir.ee/ValueSet/ee-identity-system
+//Alias: $ee-identity-system = https://fhir.ee/ValueSet/ee-identity-system
 
 Alias: $ee-patient = https://fhir.ee/StructureDefinition/ee-patient
 Alias: $ee-organization = https://fhir.ee/StructureDefinition/ee-organization

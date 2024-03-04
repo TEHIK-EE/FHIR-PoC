@@ -21,7 +21,7 @@ Usage: #example
 * extension[=].extension[+].url = "requestReason"
 * extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-pohjendus#ML01 "Eestis puudub haiguse/seisundi raviks müügiloaga ravim"
 * extension[=].extension[+].url = "requestStatus"
-* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-otsus#P "positiivne"
+* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-taotluse-otsus#P "Otsus positiivne"
 * extension[=].extension[+].url = "requestDate"
 * extension[=].extension[=].valueDateTime = "2023-11-11"
 //* extension[=].extension[+].url = "requestNegDecision"

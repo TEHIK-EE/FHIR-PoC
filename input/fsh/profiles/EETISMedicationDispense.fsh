@@ -57,10 +57,10 @@ Description: "Väljamüük. When the medication prescribed is dispensed in pharm
 * destination ..0
 * receiver ..1
 * receiver ^short = "KUI RAVIMI OSTAB VÄLJA KEEGI TEINE KUI SEE, KELLELE RAVIM ON VÄLJAKIRJUTATUD EI KASUTATA SEDA VAID ExtensionEETISBuyerEPC.  Who collected the medication or where the medication was delivered"
-* receiver.identifier 1..
-* receiver.identifier ^short = "OSTJA ISIKUKOOD. Logical reference, when literal reference is not known"
-* receiver.identifier.system 1..
-* receiver.identifier.system = "https://fhir.ee/ValueSet/ee-patient-identity" (exactly)
+* receiver.identifier.value 1..
+* receiver.identifier.value ^short = "OSTJA ISIKUKOOD. Logical reference, when literal reference is not known"
+//* receiver.identifier.system 1..
+//* receiver.identifier.system = $isikukood (exactly)
 * note ..1
 * note ^short = "Kommentaar väljastuse kohta."
 * note ^definition = "Kommentaari saab lisada ainult see, kes teostas ravimi väljastuse apteegis. Extra information about the dispense that could not be conveyed in the other attributes."

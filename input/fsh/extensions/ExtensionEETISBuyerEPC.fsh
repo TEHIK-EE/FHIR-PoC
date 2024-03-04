@@ -9,7 +9,7 @@ Description: "Ostja. When someone other than the subject of prescription buys me
 * . ^definition = "Identity code of the buyer of medicine when the buyer is someone else than the subject of prescription."
 * value[x] 1..
 * value[x] only string or Identifier
-* value[x] from $ee-identity-system (preferred)
+//* value[x] from $ee-identity-system (preferred)
 * value[x] ^short = "Ostja isikukood."
 * value[x] ^definition = "Value can be string or identifier from EEBaseIdentitySystem."
-* value[x] ^binding.description = "Identity System"
+//* value[x] ^binding.description = "Identity System"
