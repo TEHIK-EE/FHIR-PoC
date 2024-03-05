@@ -1,6 +1,7 @@
 Instance: prescription-ospen
 InstanceOf: MedicationRequest
 Usage: #example
+Description: "Prescription of phenoxymethylpenicillin"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-request"
 //* implicitRules = "http://hl7.org/fhir/reference"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"

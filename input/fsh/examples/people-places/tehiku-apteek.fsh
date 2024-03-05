@@ -1,6 +1,7 @@
 Instance: tehiku-apteek
 InstanceOf: Location
 Usage: #example
+Description: "Location of pharmacy Tehiku apteek" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-pharmacy-location"
 //* implicitRules = "http://hl7.org/fhir/reference"
 * name = "Tehiku apteek"

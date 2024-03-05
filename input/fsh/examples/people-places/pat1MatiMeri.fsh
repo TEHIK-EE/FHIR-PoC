@@ -1,6 +1,7 @@
 Instance: pat1MatiMeri
 InstanceOf: Patient
 Usage: #example
+Description: "Patient Mati Meri"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-patient"
 * identifier[0].system = "https://fhir.ee/sid/pid/est/ni"
 * identifier[=].value = "38301105216"
