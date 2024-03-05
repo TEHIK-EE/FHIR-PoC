@@ -1,6 +1,7 @@
 Instance: listMatiMeri3
 InstanceOf: List
 Usage: #example
+Description: "List of patient Mati Meri medications"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-list"
 //* implicitRules = "http://hl7.org/fhir/reference"
 * status = #current

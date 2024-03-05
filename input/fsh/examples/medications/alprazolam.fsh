@@ -1,6 +1,7 @@
 Instance: alprazolam
 InstanceOf: Medication
 Usage: #example
+Description: "Description of medication alprazoleme"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#N05BA12 "alprasolaam"

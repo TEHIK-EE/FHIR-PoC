@@ -1,6 +1,7 @@
 Instance: D12345
 InstanceOf: Practitioner
 Usage: #example
+Description: "Doctor Mart Murakas"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-practitioner"
 * identifier[0].system = $medre
 * identifier[=].value = "D12345"

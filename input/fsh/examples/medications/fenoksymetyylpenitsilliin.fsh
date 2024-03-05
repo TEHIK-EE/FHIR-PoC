@@ -1,6 +1,7 @@
 Instance: fenoksymetyylpenitsilliin
 InstanceOf: Medication
 Usage: #example
+Description: "Description of medication phenoxymethylpenicillin"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#J01CE02 "fenoksümetüülpenitsilliin"
