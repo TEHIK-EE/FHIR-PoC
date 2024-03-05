@@ -40,7 +40,7 @@ Usage: #example
 * medication.reference = Reference(fenoksymetyylpenitsilliin)
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2023-11-07"
-* effectivePeriod.end = "2024-02-07"
+//* effectivePeriod.end = "2024-02-07"
 * reason.concept = $rhk-10#J13 "Streptococcus pneumoniae tekkene kopsupõletik e pneumoonia"
 * note.authorReference = Reference(N98765)
 * note.time = "2023-09-01"

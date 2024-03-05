@@ -38,7 +38,7 @@ Usage: #example
 * medication.reference = Reference(alprazolam)
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2023-09-01"
-* effectivePeriod.end = "2027-10-01"
+//* effectivePeriod.end = "2027-10-01"
 * reason.concept = $rhk-10#F41.0 "Paanikahäire"
 * note.authorReference = Reference(N98765)
 * note.time = "2023-09-01"
