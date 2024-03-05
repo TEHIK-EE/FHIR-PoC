@@ -15,7 +15,7 @@ Usage: #example
 //* modifierExtension.extension[0].valueDateTime = "2023-11-07"
 //* modifierExtension.extension[+].valueReference = Reference(PractRoleD98765)
 * status = #recorded
-* category[0] = $ravikuuri-tyyp#f "fikseeritud"
+* category[0] = $ravikuuri-tyyp#F "Fikseeritud"
 * category[=].text = "fikseeritud"
 * category[+] = $patient-reported#false "ei ole patsiendi ytluse põhjal"
 * medication.reference = Reference(fenoksymetyylpenitsilliin)

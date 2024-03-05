@@ -29,7 +29,7 @@ Usage: #example
 * extension[=].extension[+].url = "verificationAuthor"
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
-* category[0] = $ravikuuri-tyyp#p "pidev"
+* category[0] = $ravikuuri-tyyp#P "Pidev"
 * category[=].text = "pidev"
 * category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
 * category[+] = $retsepti-liik#1 "tavaretsept"

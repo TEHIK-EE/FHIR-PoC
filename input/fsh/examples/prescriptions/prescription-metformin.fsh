@@ -20,7 +20,7 @@ Description: "Prescription of metformin with substitution NOT allowed and reason
 * subject = Reference(pat1MatiMeri)
 * authoredOn = "2023-11-07"
 * reason.concept = $rhk-10#E12 "Väärtoitumussuhkurtõbi"
-* courseOfTherapyType = $ravikuuri-tyyp#p "pidev"
+* courseOfTherapyType = $ravikuuri-tyyp#P "Pidev"
 * dosageInstruction[0].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
 * dosageInstruction[=].timing.repeat.periodUnit = #d

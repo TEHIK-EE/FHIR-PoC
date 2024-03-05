@@ -20,7 +20,7 @@ Description: "Prescription of dexamethasone with complex dosaging"
 * subject = Reference(pat1MatiMeri)
 * authoredOn = "2023-11-07"
 * reason.concept = $rhk-10#C71 "Peaaju pahaloomuline kasvaja"
-* courseOfTherapyType = $ravikuuri-tyyp#f "fikseeritud"
+* courseOfTherapyType = $ravikuuri-tyyp#F "Fikseeritud"
 * dosageInstruction[0].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
 * dosageInstruction[=].timing.repeat.periodUnit = #d

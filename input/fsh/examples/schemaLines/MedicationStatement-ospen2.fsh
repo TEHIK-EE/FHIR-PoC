@@ -30,7 +30,7 @@ Usage: #example
 * extension[=].extension[+].url = "verificationAuthor"
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
-* category[0] = $ravikuuri-tyyp#f "fikseeritud"
+* category[0] = $ravikuuri-tyyp#F "Fikseeritud"
 * category[=].text = "fikseeritud"
 * category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
 * category[+] = $retsepti-liik#1 "tavaretsept"

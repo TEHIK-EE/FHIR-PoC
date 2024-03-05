@@ -20,7 +20,7 @@ Description: "Prescription of phenoxymethylpenicillin"
 * subject = Reference(pat1MatiMeri)
 * authoredOn = "2023-11-07"
 * reason.concept = $rhk-10#J20.2 "Streptokokitekkene äge bronhiit"
-* courseOfTherapyType = $ravikuuri-tyyp#f "fikseeritud"
+* courseOfTherapyType = $ravikuuri-tyyp#F "Fikseeritud"
 * dosageInstruction.timing.repeat.frequency = 3
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d

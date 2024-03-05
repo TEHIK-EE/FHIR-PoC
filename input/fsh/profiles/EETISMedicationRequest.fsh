@@ -76,8 +76,8 @@ Description: "Retsept. This is a prescription of a medicine."
 * reason ^binding.description = "RHK-10"
 //* reason.reference ..0
 * courseOfTherapyType from $ravikuuri-tyyp-VS (required)
-* courseOfTherapyType ^short = "pidev | fikseeritud | vajadusel | muutuv | ühekordne"
-* courseOfTherapyType ^definition = "Loend retseptikeskusest, mis kirjeldab ravikuuri tüüpi. \r\n\r\nThe description of the overall pattern of the administration of the medication to the patient."
+* courseOfTherapyType ^short = "Väärtus loendist pidev | fikseeritud | vajadusel | muutuv | ühekordne"
+* courseOfTherapyType ^definition = "The description of the overall pattern of the administration of the medication to the patient."
 * courseOfTherapyType ^binding.description = "RAVIKUURI TÜÜP"
 * courseOfTherapyType.coding ^short = "pidev | fikseeritud | vajadusel | muutuv | ühekordne"
 * insurance ..0

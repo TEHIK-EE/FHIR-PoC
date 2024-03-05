@@ -1,19 +1,18 @@
 {
   "resourceType": "ValueSet",
-  "id": "myygiloata-ravimi-taotluse-otsus",
+  "id": "ravikuuri-tyyp",
   "language": "et",
   "extension": [
     {
       "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
-      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/myygiloata-ravimi-taotluse-otsus"
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/ravikuuri-tyyp"
     }
   ],
-  "url": "https://fhir.ee/ValueSet/myygiloata-ravimi-taotluse-otsus",
-  
+  "url": "https://fhir.ee/ValueSet/ravikuuri-tyyp",
   "version": "1.0.0",
-  "name": "MyygiloataRavimiTaotluseOtsus",
-  "title": "Müügiloata ravimi kasutamise taotluse otsus",
-  "status": "active",
+  "name": "RavikuuriTyyp",
+  "title": "ER_Ravikuuritüüp",
+  "status": "draft",
   "experimental": false,
   "publisher": "TEHIK",
   "contact": [
@@ -30,9 +29,9 @@
       ]
     }
   ],
-  "description": "Elektrooniline retsept (ER) - Müügiloata ravimi kasutamise taotluse Ravimiameti positiivne või negatiivne otsus, mida kuvatakse retseptil",
+  "description": "Elektrooniline retsept (ER) - Kasutatakse ravimi väljakirjutamisel, kus määratakse loendist ravikuuri tüüp.",
   "effectivePeriod": {
-    "start": "2016-01-04T00:00:00Z"
+    "start": "2018-04-05T00:00:00Z"
   },
   "author": [
     {
@@ -43,7 +42,7 @@
     "inactive": false,
     "include": [
       {
-        "system": "https://fhir.ee/CodeSystem/myygiloata-ravimi-taotluse-otsus",
+        "system": "https://fhir.ee/CodeSystem/ravikuuri-tyyp",
         "version": "1.0.0"
       }
     ]
