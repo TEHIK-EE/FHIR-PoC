@@ -1,6 +1,7 @@
 Profile: EETISMedicationInteraction
 Parent: ClinicalUseDefinition
 Id: ee-tis-medication-interaction
+Description: "This profile is for the representation of the interactions between medication A and medication B in order to display warnings related to medications."  
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-22T14:32:30.0668499+00:00"

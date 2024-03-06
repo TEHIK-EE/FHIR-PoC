@@ -1,6 +1,7 @@
 Profile: EETISMedicationList
 Parent: List
 Id: ee-tis-medication-list
+Description: "This profile gathers patient's medications in one list for better overview of the whole medication schema"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-01-19T13:17:15.4473399+00:00"

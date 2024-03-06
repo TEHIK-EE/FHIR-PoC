@@ -1,7 +1,7 @@
 Instance: MedicationStatement-metformin
 InstanceOf: MedicationStatement
 Usage: #example
-Description: "Schema line for metformin" 
+Description: "Ravimiskeemi rida. Schema line for metformin" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-substitution-allowed"
 * extension[=].extension[0].url = "substitutionAllowed"

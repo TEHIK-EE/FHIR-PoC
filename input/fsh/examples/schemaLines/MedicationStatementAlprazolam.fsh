@@ -1,6 +1,7 @@
 Instance: MedicationStatementAlprazolam
 InstanceOf: MedicationStatement
 Usage: #example
+Description: "Ravimiskeemi rida. Schema line for alprazolam"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-substitution-allowed"
 * extension[=].extension[0].url = "substitutionAllowed"
