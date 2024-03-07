@@ -9,7 +9,7 @@ Description: "Prescription of phenoxymethylpenicillin"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#50 "50%"
 //* extension[=].extension[+].url = "reimbursementReason"
 //* extension[=].extension[=].valueString = "nii on"
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * status = #active
 * statusChanged = "2023-11-09"

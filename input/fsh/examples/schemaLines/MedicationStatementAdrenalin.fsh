@@ -3,7 +3,7 @@ InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
-* extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-substitution-allowed"
+* extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-substitution"
 * extension[=].extension[0].url = "substitutionAllowed"
 * extension[=].extension[=].valueBoolean = true
 * extension[=].extension[+].url = "substitutionAllowedReason"
@@ -12,14 +12,14 @@ Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * extension[=].valueInteger = 5
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
 * extension[=].valueDateTime = "2023-11-07"
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-left"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-remainder"
 * extension[=].valueInteger = 5
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#50 "50%"
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "nii on"
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-marketing-request"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-unauthorized-product-request"
 * extension[=].extension[0].url = "requestNumber"
 * extension[=].extension[=].valueId = "123456"
 * extension[=].extension[+].url = "requestReason"
@@ -37,7 +37,7 @@ Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * extension[=].extension[=].valueBoolean = true
 * extension[=].extension[+].url = "lockOwner"
 * extension[=].extension[=].valueString = "Tehiku Apteek"
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#private "Privaatne"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-intent"
 * extension[=].valueCode = #order

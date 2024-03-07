@@ -1,4 +1,4 @@
-Profile: EETISClaimForReimbursement
+/*Profile: EETISClaimForReimbursement
 Parent: Claim
 Id: ee-tis-claim-for-reimbursement
 Description: "This resource is used for asking the National Health Insurance Fund reimbursement for prescription medication. The percent of the reimbursement depends on the medication, age, diagnose etc."
@@ -32,3 +32,4 @@ Description: "This resource is used for asking the National Health Insurance Fun
 //* diagnosis.diagnosis[x] ^binding.description = "RHK-10"
 * procedure ..0
 * accident ..0
+*/

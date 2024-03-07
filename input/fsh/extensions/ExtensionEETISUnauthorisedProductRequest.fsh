@@ -1,5 +1,5 @@
-Extension: ExtensionEETISMarketingRequest
-Id: ee-tis-marketing-request
+Extension: ExtensionEETISUnauthorizedProductRequest
+Id: ee-tis-unauthorized-product-request
 Description: "Müügiloata ravimi taotlus. Used for requesting marketing permit for unauthorized medication."
 * ^status = #draft
 * ^date = "2024-02-21T12:14:43.6691324+00:00"

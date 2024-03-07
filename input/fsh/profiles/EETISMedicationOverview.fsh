@@ -1,7 +1,7 @@
 Profile: EETISMedicationOverview
 Parent: Bundle
 Id: ee-tis-medication-overview
-Description: "Ravimiskeem. Medication Overview gathers together all resources related to patient's prescribed and dispensed medication."
+Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication Overview gathers together all resources related to patient's prescribed and dispensed medication."
 * ^version = "1.0.0"
 * ^status = #retired
 * ^experimental = true
@@ -23,10 +23,10 @@ Description: "Ravimiskeem. Medication Overview gathers together all resources re
     medicationEntry 0..* and
     pharmacyLocationEntry 0..*
 * entry[medicationsStatementEntry].resource only EETISMedicationStatement
-* entry[compositionEntry].resource only EETISDeviceTJT
+* entry[compositionEntry].resource only Device
 * entry[practitionerEntry].resource only EETISPractitioner
 * entry[practitionerRoleEntry].resource only EETISPractitionerRole
 * entry[organizationEntry].resource only EETISOrganization
 * entry[patientEntry].resource only EETISPatient
-* entry[deviceEntry].resource only EETISDeviceTJT
+* entry[deviceEntry].resource only Device
 * entry[medicationEntry].resource only EETISMedicationEPC

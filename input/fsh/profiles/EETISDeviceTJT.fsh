@@ -1,4 +1,4 @@
-Profile: EETISDeviceTJT
+/*Profile: EETISDeviceTJT
 Parent: Device
 Id: ee-tis-device-tjt
 Description: "Tervisejuhtimise töölaud (TJT). TJT as a device resource represents the software (microservice) where data is formed/exchanged independently without human intervention."
@@ -31,3 +31,4 @@ Description: "Tervisejuhtimise töölaud (TJT). TJT as a device resource represe
 * gateway ..0
 * safety ..0
 * parent ..0
+*/

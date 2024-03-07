@@ -9,7 +9,7 @@ Description: "Prescription of metformin with substitution NOT allowed and reason
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#90 "90%"
 * extension[=].extension[+].url = "reimbursementReason"
 * extension[=].extension[=].valueString = "nii on"
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-authorization"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * status = #active
 * statusChanged = "2014-06-10"

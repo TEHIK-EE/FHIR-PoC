@@ -9,14 +9,14 @@ Description: "Retsept. This is a prescription of a medicine."
 * meta.lastUpdated ^example.valueInstant = "2023-09-25T12:12:12+00:01"
 * contained ..0
 * extension contains
-    ExtensionEETISPrescriptionAuthorization named prescriptionAuthorization 0..* and
+    ExtensionEETISDispensationAuthorization named dispensationAuthorization 0..* and
     ExtensionEETISLockStatus named lockStatus 0..* and
-    ExtensionEETISMarketingRequest named extensionEETISMarketingRequest 0..* and
+    ExtensionEETISUnauthorizedProductRequest named extensionEETISUnauthorizedProductRequest 0..* and
     ExtensionEETISTotalPrescribedAmount named extensionEETISTotalPrescribedAmount 0..* and
     ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..*
 * extension[lockStatus] ^short = "Broneeritud müügiloata ravimi taotluse jaoks."
 * extension[lockStatus] ^definition = "Kasutatakse AINULT müügiloata ravimi taotluse retsepti broneerimise puhul."
-* extension[extensionEETISMarketingRequest] ^short = "Müügiloata ravimi taotluse tarvis."
+* extension[extensionEETISUnauthorizedProductRequest] ^short = "Müügiloata ravimi taotluse tarvis."
 * identifier ..1
 * identifier ^short = "Retsepti number."
 * identifier ^definition = "Retsepti unikaalne identifikaator. Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server."

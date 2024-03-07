@@ -1,5 +1,5 @@
-Extension: ExtensionEETISPrescriptionAuthorization
-Id: ee-tis-prescription-authorization
+Extension: ExtensionEETISDispensationAuthorization
+Id: ee-tis-dispensation-authorization
 Description: "Volituse liik. Defines the authorization of the prescription."
 * ^status = #draft
 * ^date = "2024-02-21T12:23:02.5700529+00:00"

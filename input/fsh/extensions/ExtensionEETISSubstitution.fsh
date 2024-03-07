@@ -1,5 +1,5 @@
-Extension: ExtensionEETISSubstitutionAllowed
-Id: ee-tis-substitution-allowed
+Extension: ExtensionEETISSubstitution
+Id: ee-tis-substitution
 Description: "Asendamine lubatud. Reason for not allowing the substitution of medication."
 * ^status = #draft
 * ^date = "2024-02-21T07:24:08.5899288+00:00"
@@ -8,8 +8,8 @@ Description: "Asendamine lubatud. Reason for not allowing the substitution of me
 * . ^short = "Asendamise mitte-lubamine"
 * . ^definition = "Reason for not allowing the substitution of medication."
 * extension contains
-    substitutionAllowed 0..* and
-    substitutionAllowedReason 0..*
+    substitutionAllowed 0..1 and
+    substitutionAllowedReason 0..1
 * extension[substitutionAllowed].value[x] 1..
 * extension[substitutionAllowed].value[x] only boolean
 * extension[substitutionAllowed].value[x] ^definition = "Substitution is by default allowed (true). If substitution is not allowed the reason must be defined."

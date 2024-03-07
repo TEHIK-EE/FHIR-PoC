@@ -10,5 +10,5 @@ Description: "Väljakirjutatud kogus. How much in total there is medication pres
 * ^context[=].expression = "MedicationRequest"
 * . ^short = "RAVIMI KOGUHULK ja ÜHIK"
 * . ^definition = "Kui palju on ravimit koguseliselt välja kirutatud - näiteks 120 tabletti. Selle pealt saab arvutada JÄÄKI.  \r\nVäljakirjutatud kogus. \r\nHow much in total there is medication prescribed on one Medication Request. Used for calculating the current status of how much medication is left on one Medication Statement row."
-* value[x] only integer
+* value[x] only SimpleQuantity
 * value[x] ^short = "Koguhulk ja ühik."

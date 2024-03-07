@@ -8,20 +8,20 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * text ^short = "MedicationStatement is part of MedicationOverview representing one treatmentline"
 * contained ..0
 * extension contains
-    ExtensionEETISPrescriptionValidityTime named extensionEETISPrescriptionValidityTime 0..* and
-    ExtensionEETISMedicationLeft named extensionEETISMedicationLeft 0..* and
-    ExtensionEETISTotalPrescribedAmount named extensionEETISTotalPrescribedAmount 0..* and
-    ExtensionEETISLockStatus named extensionEETISLockStatus 0..* and
-    ExtensionEETISPrescriptionAuthorization named extensionEETISPrescriptionAuthorization 0..* and
-    ExtensionEETISCancelledStatusReason named extensionEETISCancelledStatusReason 0..* and
-    ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..* and
-    ExtensionEETISMarketingRequest named extensionEETISMarketingRequest 0..* and
-    ExtensionEETISSubstitutionAllowed named extensionEETISSubstitutionAllowed 0..1 and
+    ExtensionEETISPrescriptionValidityTime named extensionEETISPrescriptionValidityTime 0..1 and
+    ExtensionEETISMedicationRemainder named extensionEETISMedicationRemainder 0..1 and
+    ExtensionEETISTotalPrescribedAmount named extensionEETISTotalPrescribedAmount 0..* and //reaalselt RKs 0..1 võimalik
+//    ExtensionEETISLockStatus named extensionEETISLockStatus 0..* and
+    ExtensionEETISDispensationAuthorization named extensionEETISDispensationAuthorization 0..1 and
+    ExtensionEETISCancelledStatusReason named extensionEETISCancelledStatusReason 0..1 and // täidetakse ainult ravimiskeemi rea kustutamisel
+    ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..1 and //selected Reimbursement rate
+    ExtensionEETISUnauthorizedProductRequest named extensionEETISUnauthorizedProductRequest 0..1 and //Ravimiametilt küsida nimi
+    ExtensionEETISSubstitution named extensionEETISSubstitution 0..1 and
     ExtensionEETISVerification named extensionEETISVerification 0..* and
     ExtensionEETISPrescriptionIntent named extensionEETISPrescriptionIntent 0..*
 * extension[extensionEETISVerification] ^definition = "SIIN ON VÄGIVALDSELT PANDUD REFERENTSI ASEMEL STRING ET SERVERIGA KOOSTÖÖD TEHA.Optional Extension Element - found in all resources."
 * partOf only Reference(MedicationStatement)
-* status ^definition = "KINNITATUD | KINNITAMATA | A code representing the status of recording the medication statement."
+* status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptide põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud. A code representing the status of recording the medication statement."
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

@@ -1,5 +1,5 @@
-Extension: ExtensionEETISMedicationLeft
-Id: ee-tis-medication-left
+Extension: ExtensionEETISMedicationRemainder
+Id: ee-tis-medication-remainder
 Description: "Jääk. Extension describing how much medication is left on prescription."
 * ^version = "1.0.0"
 * ^status = #draft

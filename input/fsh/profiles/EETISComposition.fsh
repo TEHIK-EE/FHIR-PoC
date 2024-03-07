@@ -1,7 +1,7 @@
 Profile: EETISComposition
 Parent: Composition
 Id: ee-tis-composition
-Description: "Kokkuvõte. This resource gathers together all resources needed to form a document for Medication Overview bundle."
+Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This resource gathers together all resources needed to form a document for Medication Overview bundle. Currently replaced with List."
 * ^url = "https://fhir.ee/StructureDefinition/ee-tis-composition"
 * ^version = "1.0.0"
 * ^status = #draft
@@ -11,7 +11,7 @@ Description: "Kokkuvõte. This resource gathers together all resources needed to
 * subject ^type.aggregation = #referenced
 * encounter ..0
 * useContext ..0
-* author only Reference(EETISDeviceTJT)
+* author only Reference(Device)
 * author ^type.aggregation = #contained
 * title ^short = "Ravimiskeem"
 * note.author[x] 1..
@@ -54,5 +54,5 @@ Description: "Kokkuvõte. This resource gathers together all resources needed to
 * section.entry[organizationEntry] only Reference(EETISOrganization)
 * section.entry[relatedPersonEntry] only Reference(EETISRelatedPerson)
 * section.entry[pharmacyLocationEntry] only Reference(EETISPharmacyLocation)
-* section.entry[deviceEntry] only Reference(EETISDeviceTJT)
+* section.entry[deviceEntry] only Reference(Device)
 * section.section ..0

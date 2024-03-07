@@ -17,7 +17,7 @@ Description: "This profile gathers patient's medications in one list for better 
 * subject ^type.aggregation = #referenced
 * encounter ..0
 * source 1..
-* source only Reference(EETISDeviceTJT or EETISPractitioner or EETISPractitionerRole)
+* source only Reference(EETISPractitioner or EETISPractitionerRole)
 * source ^type.aggregation = #referenced
 * entry.item only Reference(EETISMedicationStatement)
 * entry.item ^type.aggregation = #referenced
