@@ -9,7 +9,7 @@ Description: "Ravimiskeemi rida. Schema line for metformin"
 * extension[=].extension[+].url = "substitutionAllowedReason"
 * extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP08 "Patsiendil on diagnoositud kaasuv psüühika- või käitumishäire"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-total-prescribed-amount"
-* extension[=].valueInteger = 100
+* extension[=].valueQuantity = 100
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
 * extension[=].valueDateTime = "2023-11-07"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-remainder"
