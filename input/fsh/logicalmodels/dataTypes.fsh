@@ -85,11 +85,6 @@ Description: "Date"
 * . ^short = "Date"
 * . ^definition = "Date"
 
-Profile: dateTime
-Parent: Element
-Description: dateTime
-* . ^short = "A date, date-time or partial date"
-* . ^definition = "A date, date-time or partial date (e.g. just year or year + month) as used in human communication."
 
 Profile: RTO //RTO-QTY-QTY
 Parent: Element
