@@ -38,7 +38,7 @@ Description: "Ravimiskeemi rida. Schema line for alprazolam"
 * category[=].text = "1-kordne"
 * medication.reference = Reference(alprazolam)
 * subject = Reference(pat1MatiMeri)
-* effectivePeriod.start = "2023-09-01"
+* effectiveDateTime = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2027-10-01"
 * reason.concept = $rhk-10#F41.0 "Paanikahäire"
 * note.authorReference = Reference(N98765)

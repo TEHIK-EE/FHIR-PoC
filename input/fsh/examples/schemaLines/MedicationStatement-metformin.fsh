@@ -38,7 +38,7 @@ Description: "Ravimiskeemi rida. Schema line for metformin"
 //* category[=].text = "3-kordne"
 * medication.reference = Reference(metformin)
 * subject = Reference(pat1MatiMeri)
-* effectivePeriod.start = "2023-11-07"
+* effectiveDateTime = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2024-02-07"
 * reason.concept.coding = $rhk-10#E12 "Väärtoitumussuhkurtõbi"
 * note.authorReference = Reference(N98765)

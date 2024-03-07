@@ -51,8 +51,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * subject only Reference(EETISPatient)
 * subject ^type.aggregation = #referenced
 * encounter ..0
-* effective[x] only Period
-* effective[x] ^short = "Ravimiskeemi rea kehtivus"
+* effective[x] only dateTime
+* effective[x] ^short = "Ravimiskeemi rea kehtivuse algus"
 * informationSource only Reference(EETISPractitioner or EETISPractitionerRole)
 * informationSource ^short = "Ravimiskeemi rea (algne) koostaja"
 * informationSource ^definition = "AUTOR KES KOOSTAB RAVIMISKEEMI REA (arst). Initial author of the MedicationStatement. The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest."

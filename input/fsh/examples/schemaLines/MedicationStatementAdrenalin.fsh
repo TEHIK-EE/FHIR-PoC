@@ -56,7 +56,7 @@ Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * category[=].text = "1-kordne"
 * medication.reference = Reference(adrenalin)
 * subject = Reference(pat1MatiMeri)
-* effectivePeriod.start = "2023-09-01"
+* effectiveDateTime = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2027-10-01"
 * derivedFrom = Reference(prescription-adrenalin-pos-dec)
 * reason.concept = $rhk-10#D89.8 "Immuunmehhanismi hõlmavad mujal klassifitseerimata muud täpsustatud haigusseisundid"
