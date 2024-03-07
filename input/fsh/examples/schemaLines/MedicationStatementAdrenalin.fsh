@@ -9,7 +9,7 @@ Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * extension[=].extension[+].url = "substitutionAllowedReason"
 * extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP09 "Tegemist on müügiloata/erisoodustusega ravimiga"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-total-prescribed-amount"
-* extension[=].valueQuantity = 5
+* extension[=].valueQuantity.value = 5
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
 * extension[=].valueDateTime = "2023-11-07"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-remainder"
