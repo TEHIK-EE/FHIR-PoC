@@ -39,7 +39,7 @@ Description: "Ravimiskeemi rida. Schema line for aspart-insulin"
 * category[=].text = "3-kordne"
 * medication.reference = Reference(novorapid)
 * subject = Reference(pat1MatiMeri)
-* effectiveDateTime = "2015-02-07T13:28:17-05:00"
+* effectivePeriod.start = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2027-10-01"
 * reason.concept = $rhk-10#E10.9 "Insuliinisõltuv suhkurtõbi tüsistusteta"
 * note.authorReference = Reference(N98765)
