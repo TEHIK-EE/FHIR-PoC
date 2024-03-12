@@ -3,7 +3,7 @@ Title: "Medication for clinical workflowsTJT"
 Description: "Medication information. "
 
 * identifier 1..* Class "Business identifier for this medication." "Ravimi identifikaator."
-   * packagedProductIdentifier 0..* II "Identifier at the package level, can be PCID or national" "Pakendi kood näiteks pakendipõhisel retseptil."
+  * packagedProductIdentifier 0..* II "Identifier at the package level, can be PCID or national" "Pakendi kood näiteks pakendipõhisel retseptil."
 * classification 0..1 Class "Code for the product that is actually being specified, in established terminologies" "Ravimi klassifikatsioon."
   * classificationATC 0..1 CD "ATC code" "ATC klassifikatsioon"
   * classificationOther 0..* CD "Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)" "Teine klassifikatsioon."
@@ -26,7 +26,7 @@ Description: "Medication information. "
         * strength 1..1 RTO "Concentration or presentation strength of the precise active ingredient" "Ravimi tugevus ühe toodetud üksuse kohta või konsentratsioon"
         * strengthType 0..1 CD "Type of strength that is expressed"
         * strengthSubstance 0..1 CD "Substance that the strength refers to, if different from the main substance"
-*packedProduct 1..1 Class "A medically related item or items of any type, in a container or package." "Ravim välimises pakendis." 
+* packedProduct 1..1 Class "A medically related item or items of any type, in a container or package." "Ravim välimises pakendis." 
   * packSize 0..* PQ "Overall amount of product in one package." "Ravimi koguhulk."
  
 
