@@ -2,7 +2,7 @@ Logical: MedicationOverviewTJT
 Title: "Medication OverviewTJT - logical model"
 Description: "A model for the whole medication overview (medication schema)"
 * patient 1..1 Reference(PatientTJT) "Patsient"
-* medicationTreatmentLine 0..* Reference "List item in the list of all current medication based treatments. Each line can be verified or unverified." "Ravimiskeemi rida"
+* medicationTreatmentLine 0..* Reference(MedicationTreatmentLineTJT) "List item in the list of all current medication based treatments. Each line can be verified or unverified." "Ravimiskeemi rida"
 * verification 0..1 Class "Verification of overview" "Ravimiskeemi kinnitamine"
   * practicioner 1..1 Reference(PractitionerTJT) "HCP verifying the treatments/overview"
   * verificationTime 1..1 DT "Time of the verification of the overview" "Kinnitamise aeg"
