@@ -1,6 +1,6 @@
 Logical: MedicationTJT
 Title: "Medication for clinical workflowsTJT"
-Description: "Medication information. "
+Description: "Medication information."
 
 * identifier 1..* Class "Business identifier for this medication." "Ravimi identifikaator."
   * packagedProductIdentifier 0..* II "Identifier at the package level, can be PCID or national" "Pakendi kood näiteks pakendipõhisel retseptil."
