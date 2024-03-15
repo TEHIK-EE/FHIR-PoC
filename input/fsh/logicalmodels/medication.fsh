@@ -1,5 +1,5 @@
 Logical: MedicationTJT
-Title: "Medication for clinical workflowsTJT"
+Title: "Medication TJT - logical model"
 Description: "Medication information."
 
 * identifier 1..* Class "Business identifier for this medication." "Ravimi identifikaator."
@@ -28,6 +28,7 @@ Description: "Medication information."
         * strengthSubstance 0..1 CD "Substance that the strength refers to, if different from the main substance"
 * packedProduct 1..1 Class "A medically related item or items of any type, in a container or package." "Ravim välimises pakendis." 
   * packSize 0..* PQ "Overall amount of product in one package." "Ravimi koguhulk."
+* marketingAuthorization 0..1 Reference(MarketingAuthorizationTJT) "Market Authorization relating to a Medicinal Product." "Ravimi müügiluba."
  
 
 

@@ -1,5 +1,5 @@
 Logical: TelecomTJT
-Title: "TelecomTJT"
+Title: "Telecom TJT - logical model"
 Description: "Contact phone or email aadress"
 * phone 0..* INT "Phone number" "Telefoninumber"
 * phoneType 0..1 CD "Contact point phone type" "Telefoni tüüp"

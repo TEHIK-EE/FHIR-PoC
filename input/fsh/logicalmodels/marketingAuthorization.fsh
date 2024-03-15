@@ -1,0 +1,11 @@
+Logical: MarketingAuthorizationTJT
+Title: "Marketing Authorization TJT - logical model"
+Description: "A model for the Market Authorization relating to a Medicinal Product."
+* medication 1..1 Reference(MedicationTJT) "Medication that is connected to this marketing authorization." "Ravim, mis on seotud selle müügiloaga."
+* identifier 0..1 ST "Marketing authorisation number." "Müügiloa number."
+* type 0..1 CD "Shows that this product is approved, type of regulatory entitlement." "Milline on müügiloa tüüp."
+* region 0..1 CD "Region where document is valid." "Riik, kus on kehtiv müügiluba."
+* status 0..1 CD "Wether or not the authorisation is valid." "Milline on müügiloa staatus, näiteks kehtiv."
+* holder 0..1 Class "Marketing authorisation holder." "Müügiloa asutus või organisatsioon."
+  * holderIdentifier 0..1 CD "Marketing authorisation holder." "Müügiloa asutus või organisatsioon."
+  * holderName 0..1 ST "Marketing authorisation holder name." "Müügiloa hoidja asutuse nimi." 

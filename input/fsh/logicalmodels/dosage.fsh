@@ -1,5 +1,5 @@
 Logical: DosagingTJT
-Title: "DosagingTJT"
+Title: "Dosaging TJT - logical model"
 Description: "Instructions about requested administration of the product."
 
 * sequence 0..1 INT "Order of the dosage instruction, in case one treatment consists of several dosaging schemes." "Ravimi annustamise järjekord."

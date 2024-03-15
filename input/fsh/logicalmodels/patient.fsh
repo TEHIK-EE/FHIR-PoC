@@ -1,5 +1,5 @@
 Logical: PatientTJT
-Title: "PatientTJT"
+Title: "Patient TJT - logical model"
 Description: "Basic patient data relevant for this use case"
 * identifier 1..* II "An identifier for this patient." "Patsiendi identifikaator"
 * name 1..* EN "Patient's name, incl first name, last name, or any other relevant name parts" "Patsiendi nimi"
