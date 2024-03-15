@@ -66,7 +66,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 //* reason.reference ..0
 * note ^definition = "Provides extra information about the Medication Statement that is not conveyed by the other attributes.\r\nSiia saab kirjutada märkusi ravimiskeemi rea kohta."
 * note.author[x] 1..
-* note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner or EETISOrganization or EEBasePatient or EETISRelatedPerson)
+* note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
 * relatedClinicalInformation ..0
 * dosage only EETISDosage
 * dosage ^definition = "Indicates how the medication is/was or should be taken by the patient.\r\nANNUSTAMISEJUHIS"
