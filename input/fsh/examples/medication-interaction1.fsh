@@ -1,7 +1,7 @@
 Instance: medication-interaction1
 InstanceOf: ClinicalUseDefinition
 Usage: #example
-Description: "Example of medication interaction between drug A and B" 
+Description: "Example of a medication interaction between drug A and B" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-interaction"
 * status = #active
 * type = #interaction
