@@ -1,4 +1,4 @@
-Profile: EETISMedicationRequest
+Profile: EETISPrescription
 Parent: MedicationRequest
 Id: ee-tis-medication-request
 Description: "Retsept. This is a prescription of a medicine."

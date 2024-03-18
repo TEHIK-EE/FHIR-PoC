@@ -56,7 +56,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * informationSource only Reference(EETISPractitioner or EETISPractitionerRole)
 * informationSource ^short = "Ravimiskeemi rea (algne) koostaja"
 * informationSource ^definition = "AUTOR KES KOOSTAB RAVIMISKEEMI REA (arst). Initial author of the MedicationStatement. The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest."
-* derivedFrom only Reference(EETISMedicationRequest)
+* derivedFrom only Reference(EETISPrescription)
 * derivedFrom ^short = "SEOTUD RETSEPTID. Link to information used to derive the MedicationStatement"
 * derivedFrom ^type.aggregation = #referenced
 * reason ^definition = "A concept, Condition or observation that supports why the medication is being/was taken.\r\nDIAGNOOSIKOOD retseptikeskusest"

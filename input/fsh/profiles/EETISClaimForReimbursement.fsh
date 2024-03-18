@@ -17,7 +17,7 @@ Description: "This resource is used for asking the National Health Insurance Fun
 * priority ..0
 * fundsReserve ..0
 * prescription 1..
-* prescription only Reference(EETISMedicationRequest)
+* prescription only Reference(EETISPrescription)
 * originalPrescription ..0
 * payee ..0
 * referral ..0

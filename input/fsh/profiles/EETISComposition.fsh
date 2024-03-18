@@ -46,7 +46,7 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
     deviceEntry 0..*
 * section.entry[medicationStatementEntry] only Reference(EETISMedicationStatement)
 * section.entry[medicationDispenseEntry] only Reference(EETISMedicationDispense)
-* section.entry[medicationRequestEntry] only Reference(EETISMedicationRequest)
+* section.entry[medicationRequestEntry] only Reference(EETISPrescription)
 * section.entry[patientEntry] only Reference(EETISPatient)
 * section.entry[medicationEntry] only Reference(EETISMedicationEPC)
 * section.entry[practitionerEntry] only Reference(EETISPractitioner)

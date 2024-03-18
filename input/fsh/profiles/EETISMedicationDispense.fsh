@@ -39,7 +39,7 @@ Description: "Väljamüük. When the medication prescribed is dispensed in pharm
 * location ^definition = "APTEEK ja SELLE KOOD KUS RAVIM VÄLJASTATI. The principal physical location where the dispense was performed."
 * location.identifier ^short = "APTEEGI TEGEVUSKOHA KOOD. Logical reference, when literal reference is not known"
 * authorizingPrescription 1..
-* authorizingPrescription only Reference(EETISMedicationRequest)
+* authorizingPrescription only Reference(EETISPrescription)
 * authorizingPrescription ^short = "Retsept, mille alusel ravim väljastati patsiendile."
 * type ..0
 * quantity 1..
