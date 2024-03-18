@@ -2,7 +2,7 @@ Instance: prescription-adrenalin-pos-dec
 InstanceOf: MedicationRequest
 Usage: #example
 Description: "Unauthorized medication adrenaline with positive decision for marketing request and permission to form prescription"
-* meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-request"
+* meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-prescription"
 //* implicitRules = "http://hl7.org/fhir/reference"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"

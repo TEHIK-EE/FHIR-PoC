@@ -1,6 +1,6 @@
 Profile: EETISPrescription
 Parent: MedicationRequest
-Id: ee-tis-medication-request
+Id: ee-tis-prescription
 Description: "Retsept. This is a prescription of a medicine."
 * ^version = "1.0.0"
 * ^status = #draft
