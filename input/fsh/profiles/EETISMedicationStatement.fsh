@@ -22,6 +22,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * extension[extensionEETISVerification] ^definition = "SIIN ON VÄGIVALDSELT PANDUD REFERENTSI ASEMEL STRING ET SERVERIGA KOOSTÖÖD TEHA.Optional Extension Element - found in all resources."
 * partOf only Reference(MedicationStatement)
 * status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptide põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud. A code representing the status of recording the medication statement."
+* . ^short = "recorded = KINNITATUD; draft = KINNITAMATA"
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
