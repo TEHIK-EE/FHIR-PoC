@@ -10,7 +10,7 @@ Description: "List of patient's medications verified by D12345"
 * code = $list-example-codes#medications "Medication List"
 * code.text = "Medication List"
 * subject = Reference(pat1MatiMeri)
-* date = "2017-07-30"
+* date = "2024-01-19T13:17:15.4473399+00:00"
 * source = Reference(PractRoleD12345) // List source peaks olema TJT?
 * entry[0].flag = $list-item-flag#01 "Unchanged"
 * entry[=].deleted = false

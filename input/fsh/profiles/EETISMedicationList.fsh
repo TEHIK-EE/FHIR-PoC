@@ -22,4 +22,7 @@ Description: "This profile gathers patient's medications in one list for better 
 * source only Reference(EETISPractitioner or EETISPractitionerRole)
 * source ^type.aggregation = #referenced
 * entry.item only Reference(EETISMedicationStatement)
+* entry.deleted ..0
+* entry.date ^short = "When entry flag is unchanged entry date does not change. When entry flag is something else than ´unchanged´ the entry date is also changed"
 * entry.item ^type.aggregation = #referenced
+* emptyReason ..0
