@@ -1,12 +1,12 @@
 Instance: listMatiMeri3
 InstanceOf: List
 Usage: #example
-Description: "List of patient Mati Meri medications"
+Description: "List of patient's medications verified by D12345"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-list"
 //* implicitRules = "http://hl7.org/fhir/reference"
 * status = #current
 * mode = #snapshot
-* title = "Mati Meri ravimiskeem"
+* title = "Ravimiskeem, kinnitatud D12345 poolt"
 * code = $list-example-codes#medications "Medication List"
 * code.text = "Medication List"
 * subject = Reference(pat1MatiMeri)
