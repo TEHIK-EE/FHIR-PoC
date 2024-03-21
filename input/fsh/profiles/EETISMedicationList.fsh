@@ -24,5 +24,6 @@ Description: "This profile gathers patient's medications in one list for better 
 * entry.item only Reference(EETISMedicationStatement)
 * entry.deleted ..0
 * entry.date ^short = "When entry flag is unchanged entry date does not change. When entry flag is something else than ´unchanged´ the entry date is also changed"
+* entry.date ^definition = "Entry.date kuupäev näitab seda kuupäeva, millal muudatus jõudis sinna seisu kus ta täna on. Entry.date displays the date when the entry changed."
 * entry.item ^type.aggregation = #referenced
 * emptyReason ..0

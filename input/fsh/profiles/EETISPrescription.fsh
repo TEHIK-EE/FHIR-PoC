@@ -56,7 +56,7 @@ Description: "Retsept. This is a prescription of a medicine."
 * subject only Reference(EETISPatient)
 * subject ^short = "Patsient, kellele retsept on välja kirjutatud"
 * subject ^type.aggregation = #referenced
-* informationSource only Reference(EETISPatient or EETISPractitioner or EETISPractitionerRole or EETISOrganization or EETISRelatedPerson)
+* informationSource ..0
 * encounter ..0
 * authoredOn 1..
 * authoredOn ^short = "Koostamise aeg"

@@ -1,6 +1,6 @@
-Profile: EETISMedicationDispense
+Profile: EETISPrescriptionDispense
 Parent: MedicationDispense
-Id: ee-tis-medication-dispense
+Id: ee-tis-prescription-dispense
 Description: "Väljamüük. When the medication prescribed is dispensed in pharmacy."
 * ^version = "1.0.0"
 * ^status = #draft
