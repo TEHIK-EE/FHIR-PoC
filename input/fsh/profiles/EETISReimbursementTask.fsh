@@ -10,7 +10,7 @@ Description: "Task is for the practitioner to ask reimbursement rates for prescr
 * input.value[x] only Reference(EETISMedicationStatement)
 //* input.value[x] = Reference(EETISMedicationStatement)
 //* input.value[x] ^fixedReference.type = "StructureDefinition"
-* output.value[x] only Reference
-* output.value[x] = Reference(https://fhir.ee/StructureDefinition/ee-tis-reimbursement-task-response-parameters) "Soodusmäära vastus" (exactly)
-* output.value[x] ^short = "Response with different values"
-* output.value[x] ^fixedReference.type = "StructureDefinition"
+* output.value[x] only Reference(EETISReimbursementTaskResponseParameters)
+//* output.value[x] = Reference(https://fhir.ee/StructureDefinition/ee-tis-reimbursement-task-response-parameters) "Soodusmäära vastus" (exactly)
+* output.value[x] ^short = "Soodusmäära vastus. Response with different values"
+//* output.value[x] ^fixedReference.type = "StructureDefinition"
