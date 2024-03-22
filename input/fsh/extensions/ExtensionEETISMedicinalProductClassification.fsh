@@ -24,7 +24,7 @@ Description: "Classification of the product, e.g. ATC."
 //* value[x] ^slicing.discriminator.path = "$this"
 //* value[x] ^slicing.rules = #open
 //* valueCodeableConcept only CodeableConcept
-* valueCodeableConcept from $atc-ee-VS (preferred)
+* valueCodeableConcept from $atc-ee-VS
 //* valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^short = "ATC klassifikatsioon"
 * valueCodeableConcept ^definition = "Medication classified according to ATC system."
