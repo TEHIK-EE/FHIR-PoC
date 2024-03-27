@@ -21,12 +21,16 @@ Description: "This profile is for the representation of the interactions between
 * category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
 * category[sliceScientificDocumentation].text ^short = "0 | 1 | 2 | 3 | 4"
 * subject 1..
-* subject only Reference(EETISMedicationEPC)
+//* subject only Reference(EETISMedicationEPC)
 * subject ^short = "Drug A"
+* subject.identifier ..1
+* subject.identifier ^short = "siia tuleb referents toimeainete loendile?"
+* subject.display = "toimeaine kood voi nimetus?"
 * contraindication ..0
 * indication ..0
-* interaction.interactant.item[x] only Reference(EETISMedicationEPC)
-* interaction.interactant.item[x] ^short = "Drug B"
+//* interaction.interactant.item[x] only Reference(EETISMedicationEPC)
+* interaction.interactant.item[x] from $toimeained-VS (required)
+* interaction.interactant.item[x] ^short = "substance B"
 * interaction.type = $interaction-type#drug-drug "drug to drug interaction" (exactly)
 * interaction.type ^fixedCodeableConcept.text = "drug to drug interaction"
 * interaction.effect ^short = "Consequences (SYNBASE VÄLJUNDIS)"
