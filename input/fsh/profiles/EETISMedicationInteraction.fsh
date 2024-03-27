@@ -29,7 +29,7 @@ Description: "This profile is for the representation of the interactions between
 * contraindication ..0
 * indication ..0
 //* interaction.interactant.item[x] only Reference(EETISMedicationEPC)
-* interaction.interactant.item[x] from $toimeained-VS (required)
+* interaction.interactant.itemCodeableConcept from $toimeained-VS (required)
 * interaction.interactant.item[x] ^short = "substance B"
 * interaction.type = $interaction-type#drug-drug "drug to drug interaction" (exactly)
 * interaction.type ^fixedCodeableConcept.text = "drug to drug interaction"
