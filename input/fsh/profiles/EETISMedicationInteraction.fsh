@@ -21,11 +21,11 @@ Description: "This profile is for the representation of the interactions between
 * category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
 * category[sliceScientificDocumentation].text ^short = "0 | 1 | 2 | 3 | 4"
 * subject 1..
-//* subject only Reference(EETISMedicationEPC)
-* subject ^short = "Drug A"
+* subject only Reference(Substance)
+* subject ^short = "substance A"
 * subject.identifier ..1
-* subject.identifier ^short = "siia tuleb referents toimeainete loendile?"
-* subject.display = "toimeaine kood voi nimetus?"
+* subject.identifier ^short = "siia tuleb referents toimeainete loendile? https://fhir.ee/CodeSystem/toimeained"
+* subject.display = "siia toimeaine kood voi nimetus?"
 * contraindication ..0
 * indication ..0
 //* interaction.interactant.item[x] only Reference(EETISMedicationEPC)
