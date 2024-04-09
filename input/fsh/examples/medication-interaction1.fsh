@@ -1,15 +1,15 @@
 Instance: medication-interaction1
 InstanceOf: ClinicalUseDefinition
 Usage: #example
-Description: "Example of a medication interaction between substance A and B" 
+Description: "Example of a medication interaction between medication A and B" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-interaction"
 * status = #active
 * type = #interaction
 * category[0] = $clinical-importance-category-VS#4 "Kliiniliselt oluline koostoime, mida saab juhtida n&#228;iteks annuse kohandamisega"
 * category[+] = $scientific-documentation-category-VS#4 "Andmed on saadud asjakohase patsiendir&#252;hma seas korraldatud kontrollitud uuringutest"
-* subject = Reference(substance)
+* subject = Reference(metformin)
 //* subject.identifier.valueIdentifier = "11354"
-* interaction.interactant.itemReference = Reference(substance)
+* interaction.interactant.itemReference = Reference(adrenalin)
 //* interaction.interactant.itemCodeableConcept = "10355"
 * interaction.type = $interaction-type#drug-drug "drug to drug interaction"
 * interaction.type.text = "drug to drug interaction"
