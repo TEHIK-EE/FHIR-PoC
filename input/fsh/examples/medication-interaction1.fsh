@@ -9,10 +9,10 @@ Description: "Example of a medication interaction between medication A and B"
 * type = #interaction
 //* category[0] = $clinical-importance-category-VS#4 
 * category[clinicalImportance] ^short = "Clinical importance category"
-* category[clinicalImportance].text = "Kliiniliselt oluline koostoime, mida saab juhtida n&#228;iteks annuse kohandamisega"
+* category[clinicalImportance].text = "D. Kliiniliselt oluline koostoime, mida saab juhtida n&#228;iteks annuse kohandamisega"
 * category[scientificDocumentation] ^short = "Scientific documentation category"
 //* category[+] = $scientific-documentation-category-VS#4 
-* category[scientificDocumentation].text = "Andmed on saadud asjakohase patsiendir&#252;hma seas korraldatud kontrollitud uuringutest"
+* category[scientificDocumentation].text = "0. Andmed on saadud asjakohase patsiendir&#252;hma seas korraldatud kontrollitud uuringutest"
 * subject = Reference(metformin)
 //* subject.identifier.valueIdentifier = "11354"
 * interaction.interactant.itemReference = Reference(adrenalin)
