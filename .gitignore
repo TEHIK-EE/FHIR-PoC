@@ -22,3 +22,7 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+hs_err_pid2908.log
+hs_err_pid2908.mdmp
+hs_err_pid16412.log
+hs_err_pid16412.mdmp
