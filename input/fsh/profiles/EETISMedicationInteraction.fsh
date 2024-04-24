@@ -13,15 +13,15 @@ Description: "This profile is for the representation of the interactions between
 * category ^slicing.rules = #open
 * category ^short = "Koostoime väljendamine tähe ja numbriga"
 * category contains
-    sliceClinicalImportance 0..* and
-    sliceScientificDocumentation 0..*
+    ClinicalImportance 0..* and
+    ScientificDocumentation 0..*
 //* category[sliceClinicalImportance] from $clinical-importance-category-VS (required)
-* category[sliceClinicalImportance] ^short = "LOEND VÕI TEKST Synbase? A categorisation of the issue, primarily for dividing warnings into subject heading areas such as \"Pregnancy\", \"Overdose\""
+* category[ClinicalImportance] ^short = "LOEND VÕI TEKST Synbase? A categorisation of the issue, primarily for dividing warnings into subject heading areas such as \"Pregnancy\", \"Overdose\""
 //* category[sliceClinicalImportance] ^binding.description = "Clinical importance code (ABCD)"
-* category[sliceClinicalImportance].text ^short = "A | B | C | D"
+* category[ClinicalImportance].text ^short = "A | B | C | D"
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
 //* category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
-* category[sliceScientificDocumentation].text ^short = "0 | 1 | 2 | 3 | 4"
+* category[ScientificDocumentation].text ^short = "0 | 1 | 2 | 3 | 4"
 * subject 1..
 * subject only Reference(Medication)
 * subject ^short = "medication A"

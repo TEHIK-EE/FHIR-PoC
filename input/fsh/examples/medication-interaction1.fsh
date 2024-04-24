@@ -8,9 +8,9 @@ Description: "Example of a medication interaction between medication A and B"
 * contained[+] = adrenalin
 * type = #interaction
 //* category[0] = $clinical-importance-category-VS#4 
-//* category[clinicalImportance] ^short = "Clinical importance category"
+//* category[ClinicalImportance] ^short = "Clinical importance category"
 * category[0].text = "D. Kliiniliselt oluline koostoime, mida saab juhtida n&#228;iteks annuse kohandamisega"
-//* category[scientificDocumentation] ^short = "Scientific documentation category"
+//* category[ScientificDocumentation] ^short = "Scientific documentation category"
 //* category[+] = $scientific-documentation-category-VS#4 
 * category[+].text = "0. Andmed on saadud asjakohase patsiendir&#252;hma seas korraldatud kontrollitud uuringutest"
 * subject.reference = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc#metformin"
