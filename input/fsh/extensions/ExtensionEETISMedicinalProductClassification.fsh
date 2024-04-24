@@ -18,7 +18,7 @@ Description: "Classification of the product, e.g. ATC."
 * ^context.type = #element
 * ^context.expression = "Medication"
 * . ^short = "Klassifikatsioon"
-* . ^definition = "Classification of the product, e.g. ATC."
+* . ^definition = "Classifications of the product, e.g ATC, narcotic/psychotropic, orphan drug, etc."
 * value[x] only CodeableConcept
 //* value[x] ^slicing.discriminator.type = #type
 //* value[x] ^slicing.discriminator.path = "$this"
