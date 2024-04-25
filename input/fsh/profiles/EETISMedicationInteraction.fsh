@@ -6,7 +6,7 @@ Description: "This profile is for the representation of the interactions between
 * ^status = #draft
 * ^date = "2024-02-22T14:32:30.0668499+00:00"
 * contained 2..2
-* contained only Medication
+* contained only EETISMedicationEPC
 * type = #interaction (exactly)
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
@@ -23,14 +23,14 @@ Description: "This profile is for the representation of the interactions between
 //* category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
 * category[ScientificDocumentation].text ^short = "0 | 1 | 2 | 3 | 4"
 * subject 1..
-* subject only Reference(Medication)
+* subject only Reference(EETISMedicationEPC)
 * subject ^short = "medication A"
 * subject.identifier ..1
 * subject.identifier ^short = "siia tuleb referents toimeainete loendile?"
 * subject.display = "siia toimeaine kood voi nimetus?"
 * contraindication ..0
 * indication ..0
-* interaction.interactant.item[x] only Reference(Medication)
+* interaction.interactant.item[x] only Reference(EETISMedicationEPC)
 //* interaction.interactant.item ^type.aggregation = #contained
 //* interaction.interactant.itemCodeableConcept from $toimeained-VS (required)
 * interaction.interactant.item[x] ^short = "medication B"
