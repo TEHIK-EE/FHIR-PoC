@@ -9,7 +9,7 @@ Description: "This profile is for the representation of the interactions between
 * contained only EETISMedicationEPC
 * type = #interaction (exactly)
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
+* category ^slicing.discriminator.path = "value" //katsetus - enne oli $this
 * category ^slicing.rules = #open
 * category ^short = "Koostoime väljendamine tähe ja numbriga"
 * category contains
@@ -18,11 +18,11 @@ Description: "This profile is for the representation of the interactions between
 //* category[sliceClinicalImportance] from $clinical-importance-category-VS (required)
 * category[ClinicalImportance] ^short = "A | B | C | D "
 //* category[sliceClinicalImportance] ^binding.description = "Clinical importance code (ABCD)"
-* category[ClinicalImportance] from $ravimvormid //meelega vale katsetamiseks//
+//* category[ClinicalImportance] only text //meelega vale katsetamiseks//
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
 //* category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
 * category[ScientificDocumentation] ^short = "0 | 1 | 2 | 3 | 4"
-* category[ScientificDocumentation] from $ravikuuri-tyyp
+//* category[ScientificDocumentation] only text
 * subject 1..
 * subject only Reference(EETISMedicationEPC)
 * subject ^short = "medication A"
