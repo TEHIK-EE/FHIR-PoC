@@ -128,4 +128,7 @@ Description: "Integration PoC"
     * maxDosePerPeriod 0..* RTO "Upper limit on medication per unit of time" "Ravimite ülempiir ajaühiku kohta. Ravimi maksimaalne annus ühes/antud perioodis."
     * maxDosePerAdministration 0..1 PQ "Upper limit on medication per one administration" "Ravimite ülempiir ühe annustamise kohta kohta. Ravimi maksimaalne annus ühe annustamise kohta."
     * maxDosePerLifetime 0..1 PQ "Upper limit on medication per lifetime of the patient" "Ravimite ülempiir patsiendi elu jooksul. Ravimi maksimaalne annus patsiendi eluaja jooksul."
+ * immunization 0..* Class "Data about the immunization if the medication refers to a vaccine" "Immuniseerimise info, kui  viidetaud ravim on vaktsiin"
+  * vaccineAgainst 1..* CD "Prevention of which pathology" "Mille vastu vaktsineeriti"
+  * amountOfAdministration 1..1 INT "Amount of administered medication" "Manustatud annuse kordsus"
 
