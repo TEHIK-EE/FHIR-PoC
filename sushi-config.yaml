@@ -125,6 +125,8 @@ dependencies:
 pages:
   index.md:
     title: Home
+  operations.md:
+    title: Operations  
   downloads.xml:
     title: Downloads
 
@@ -152,6 +154,7 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
+  Operations: operations.html
   Downloads: downloads.html
 #  Changes: changes.html
 #  History: ../history.html
