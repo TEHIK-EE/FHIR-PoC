@@ -27,8 +27,8 @@ Description: "This profile is for the representation of the interactions between
 * subject only Reference(EETISMedicationEPC)
 * subject ^short = "medication A"
 * subject.identifier ..1
-* subject.identifier ^short = "siia tuleb referents toimeainete loendile?"
-* subject.display = "siia toimeaine kood voi nimetus?"
+//* subject.identifier ^short = "siia tuleb referents toimeainete loendile?"
+* subject.display = "siia toimeaine nimetus"
 * contraindication ..0
 * indication ..0
 * interaction.interactant.item[x] only Reference(EETISMedicationEPC)
