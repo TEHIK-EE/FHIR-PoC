@@ -13,9 +13,9 @@ Description: "Example of a medication interaction between medication A and B"
 //* category[ScientificDocumentation] ^short = "Scientific documentation category"
 //* category[+] = $scientific-documentation-category-VS#4 
 * category[+].text = "0. Andmed on saadud asjakohase patsiendiryhma seas korraldatud kontrollitud uuringutest"
-* subject.reference = "#metformin"
+* subject.reference = "Medication/metformin" //enne oli #metformin
 //* subject.identifier.valueIdentifier = "11354"
-* interaction.interactant.itemReference.reference = "#adrenalin"
+* interaction.interactant.itemReference.reference = "Medication/adrenalin" //enne oli #adrenalin
 //* interaction.interactant.itemCodeableConcept = "10355"
 * interaction.type = $interaction-type#drug-drug "drug to drug interaction"
 * interaction.type.text = "drug to drug interaction"

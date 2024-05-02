@@ -9,7 +9,7 @@ Description: "This profile is for the representation of the interactions between
 * contained only EETISMedicationEPC
 * type = #interaction (exactly)
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "item.resolve()" //katsetus - enne oli $this ja value
+* category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
 * category ^slicing.rules = #open
 * category ^short = "Koostoime väljendamine tähe ja numbriga"
 * category contains
