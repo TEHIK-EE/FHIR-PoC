@@ -26,7 +26,7 @@ Description: "Medication resource as it is presented today in Estonian e-Prescri
    // ExtensionEETISMedicinalProductClassification named narcotic 0..1 and
     ExtensionEETISSizeOfItem named sizeOfItem 0..1 and
     ExtensionEETISMedicinalProductName named name 0..1
-* extension[atc].valueCodeableConcept from $atc-ee 
+//* extension[atc].valueCodeableConcept from $atc-ee 
 // * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
 * identifier ..1
 * identifier ^short = "Pakendi kood (pakendipõhisel retseptil)"
