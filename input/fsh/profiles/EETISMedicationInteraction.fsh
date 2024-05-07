@@ -8,20 +8,20 @@ Description: "This profile is for the representation of the interactions between
 * contained 2..2
 * contained only Medication
 * type = #interaction (exactly)
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
-* category ^slicing.rules = #open
-* category ^short = "Koostoime väljendamine tähe ja numbriga"
-* category contains
-    ClinicalImportance 0..* and
-    ScientificDocumentation 0..*
+// * category ^slicing.discriminator.type = #value
+// * category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
+// * category ^slicing.rules = #open
+// * category ^short = "Koostoime väljendamine tähe ja numbriga"
+// * category contains
+//    ClinicalImportance 0..* and
+//    ScientificDocumentation 0..*
 //* category[sliceClinicalImportance] from $clinical-importance-category-VS (required)
-* category[ClinicalImportance] ^short = "A | B | C | D "
+// * category[ClinicalImportance] ^short = "A | B | C | D "
 //* category[sliceClinicalImportance] ^binding.description = "Clinical importance code (ABCD)"
 //* category[ClinicalImportance] only text //meelega vale katsetamiseks//
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
 //* category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
-* category[ScientificDocumentation] ^short = "0 | 1 | 2 | 3 | 4"
+// * category[ScientificDocumentation] ^short = "0 | 1 | 2 | 3 | 4"
 //* category[ScientificDocumentation] only text
 * subject 1..
 * subject only Reference(Medication)
