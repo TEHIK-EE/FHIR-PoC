@@ -20,7 +20,7 @@ Description: "Medication resource as it is presented today in Estonian e-Prescri
 * meta.versionId ^example.valueId = "1"
 * meta.lastUpdated = "2024-02-13T09:25:49.780106+00:00"
 //* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
+// * extension ^slicing.rules = #open
 * extension contains
     ExtensionEETISMedicinalProductClassification named atc 0..1 and
    // ExtensionEETISMedicinalProductClassification named narcotic 0..1 and
