@@ -8,6 +8,8 @@ Description: "This profile is for the representation of the interactions between
 * contained 2..2
 * contained only Medication
 * type = #interaction (exactly)
+* extension contains
+    ExtensionEETISAffectedMedicationStatements named affected 0..*
 // * category ^slicing.discriminator.type = #value
 // * category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
 // * category ^slicing.rules = #open

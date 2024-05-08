@@ -6,18 +6,19 @@ This is a development build and should be considered as “work in progress”. 
 
 ## Purpose
 
-Medication Overviw (ravimiskeem) is part of practitioner's new software (TJT) where he/she can easily get an accurate and up-to-date overview of patient's medication. Practitioner can add or remove medications and issue prescriptions. 
+Medication Overview (ravimiskeem) is part of practitioner's new software (TJT) where he/she can easily get an accurate and up-to-date overview of patient's medication. Practitioner can add or remove medications and issue prescriptions. Currently patient may have several duplicating prescriptions and it is difficult for a healthcare proffessional to have a proper overview of patient's medication. 
 
 ### In scope:
 
 -	Medication statement
 -	Medication request
 -	Medication dispensation
+-   Clinical use definition
 
 ### Out of scope:
 
 -	Medication administration (will be part of hospital medication IG in near future)
--	Coverage – reinbursement of patient’s medication is arranged from EHK side and not relevant in practitioner’s software view.
+-	Coverage – reinbursement of patient’s medication is arranged from Estonian Health Insurance Fund side and not relevant in practitioner’s software view.
 
 ## Background
 
