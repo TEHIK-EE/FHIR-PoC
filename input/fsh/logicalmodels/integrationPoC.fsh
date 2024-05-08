@@ -2,6 +2,11 @@ Logical: IntegrationTJT
 Title: "Integration TJT - logical model"
 Description: "Integration PoC"
 
+
+
+* medicationTreatmentLine 0..* Class "Treatment line representing some sort of medication." "Ravimiskeemi rida."
+  * identifier 0..* II "Unique business identifier(s) for the medication treatment line." "Ravimiskeemi rea unikaalne identifikaator."
+  * status 1..1 CD "A code representing the status of recording the medication statement, recorded or draft." "Ravimiskeemi rea staatus."
 * medication 1..* Class "Medicinal product" "Ravim"
   * identifierMedication 1..* Class "Business identifier for this medication." "Ravimi identifikaator."
     * packagedProductIdentifier 0..* II "Identifier at the package level, can be PCID or national" "Pakendi kood näiteks pakendipõhisel retseptil."
