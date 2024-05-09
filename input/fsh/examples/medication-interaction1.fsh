@@ -6,6 +6,10 @@ Description: "Example of a medication interaction between medication A and B"
 * status = #active
 * contained[0] = metformin
 * contained[+] = adrenalin
+* extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-affected-medication-statements"
+* extension[=].valueReference = Reference(MedicationStatement-metformin)
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-affected-medication-statements"
+* extension[=].valueReference = Reference(MedicationStatementAdrenalin)
 * type = #interaction
 //* category[0] = $clinical-importance-category-VS#4 
 //* category[ClinicalImportance] ^short = "Clinical importance category"
