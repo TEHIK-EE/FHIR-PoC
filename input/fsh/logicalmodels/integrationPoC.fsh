@@ -3,7 +3,6 @@ Title: "Integration TJT - logical model"
 Description: "Integration PoC"
 
 * metadata 1..1 Class "Metadata about the medication schema" "Ravimiskeemi metaandmestik"
-  * parent 0..* Reference(Medication) "Parent profile of the integration model" "Mudeli vanem profiil"
   * id 1..1 II "Identifier" "Identifitseeriv tunnus"
   * description 0..* ST "Description of the model" "mudeli kirjeldus"
   * version 0..1 ST "Version of the model" "mudeli versioon"
