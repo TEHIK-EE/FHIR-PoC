@@ -3,7 +3,7 @@ Title: "Integration TJT - logical model"
 Description: "Integration PoC"
 
 * metadata 1..1 Class "Metadata about the medication schema" "Ravimiskeemi metaandmestik"
-  * id 1..1 ST "name of the resource" "Ressursi nimi."
+  * resourceName 1..1 ST "name of the resource." "Ressursi nimi."
   * description 0..* ST "Description of the model" "mudeli kirjeldus"
   * version 0..1 ST "Version of the model" "mudeli versioon"
   * status 1..1 CD "Status" "Staatus"
