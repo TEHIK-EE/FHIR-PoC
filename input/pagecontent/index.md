@@ -1,6 +1,8 @@
 ## About
 
-> NB! This is just for testing and trying things out. Please do not use any parts of this IG.
+>
+> **NB! This is just for testing and trying things out. Please do not use any parts of this IG.**
+>
 
 This is a development build and should be considered as “work in progress”. The content changes on a daily basis. This is not an official product release yet.
 
@@ -10,14 +12,14 @@ Medication Overview (ravimiskeem) is part of practitioner's new software (TJT) w
 
 ### In scope:
 
--	Medication statement
--	Medication request
--	Medication dispensation
--   Clinical use definition
+-	MedicationStatement
+-	MedicationRequest
+-	MedicationDispensation
+-   ClinicalUseDefinition
 
 ### Out of scope:
 
--	Medication administration (will be part of hospital medication IG in near future)
+-	MedicationAdministration (will be part of hospital medication IG in near future)
 -	Coverage – reinbursement of patient’s medication is arranged from Estonian Health Insurance Fund side and not relevant in practitioner’s software view.
 
 ## Background

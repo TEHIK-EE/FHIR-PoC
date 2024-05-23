@@ -125,6 +125,8 @@ dependencies:
 pages:
   index.md:
     title: Home
+  guidance.md:
+    title: Guidance
   operations.md:
     title: Operations  
   downloads.xml:
@@ -153,6 +155,7 @@ pages:
 # include a `menu.xml` file in input/includes.
 menu:
   Home: index.html
+  Guidance: guidance.html
   Artifacts: artifacts.html
   Operations: operations.html
   Downloads: downloads.html
