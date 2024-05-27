@@ -7,5 +7,5 @@ Description: "This extension is used in EETISMedicationInteraction profile to id
 * ^context.type = #element
 * ^context.expression = "ClinicalUseDefinition"
 * value[x] only Reference(EETISMedicationStatement)
-* value[x] ^short = "MedicationStatement including medication which interacts with other medication"
+* value[x] ^short = "_MedicationStatement_ including medication which interacts with other ==medication=="
 * value[x] ^definition = "Ravimiskeemi rida, millel on koostoime"
