@@ -6,8 +6,8 @@ Description: "Jääk. Extension describing how much medication is left on prescr
 * ^date = "2023-10-03T10:47:00.9373224+00:00"
 * ^context.type = #element
 * ^context.expression = "MedicationStatement"
-* . ^short = "Jääk."
-* . ^definition = "Jääk. Extension describing how much medication is left on prescription."
+* . ^short = "How much medication is left on prescription."
+* . ^definition = "Jääk. "
 * value[x] only integer
-* value[x] ^short = "Ravimi jääk ravimiskeemi real."
-* value[x] ^definition = "How much medication is left on one MedicationStatement. Value is to be calculated."
+* value[x] ^short = "How much medication is left on one MedicationStatement. Value is to be calculated."
+* value[x] ^definition = "Ravimi jääk ravimiskeemi real."
