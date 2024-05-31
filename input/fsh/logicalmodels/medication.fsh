@@ -28,6 +28,10 @@ Description: "Medication information."
         * strengthSubstance 0..1 CD "Substance that the strength refers to, if different from the main substance"
 * packedProduct 1..1 Class "A medically related item or items of any type, in a container or package." "Ravim välimises pakendis." 
   * packSize 0..* PQ "Overall amount of product in one package." "Ravimi koguhulk."
+  * productCode 0..* ST "Product code on the package of packaged product.""Tootekood. Võimaldab tuvastada ravimi nimetuse, ravimvormi, toimeaine ja selle sisalduse, ravimipakendi suuruse ja selle tüübi."
+  * serialNumber 0..* ST "Serial number on the medication package." "Seerianumber. Unikaalne kood ravimi pakendil"
+  * batchNumber 0..* ST "Batch number on the medication package. The assigned lot number of a batch of the specified product. " "Partiinumber, mis on ravimi pakendil."
+  * expirationDate 0..* DT "When this specific batch of product will expire." "Ravimi kõlblikkuse aeg, näitab, millal konkreetne partii ravimit aegub."
 * marketingAuthorization 0..1 Reference(MarketingAuthorizationTJT) "Market Authorization relating to a Medicinal Product." "Ravimi müügiluba."
  
 
