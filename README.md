@@ -1,4 +1,4 @@
-UPTIS FHIR Proof of Concept
+UPTIS FHIR Proof of Concept (RETIRED!)
 ---
 >**NB! NO LONGER IN USE! use ig-ee-medication-scheme https://github.com/TEHIK-EE/ig-ee-medication-scheme instead!
 >All open issues have been transferred to the new project.**
