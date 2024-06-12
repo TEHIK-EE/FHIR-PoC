@@ -21,7 +21,7 @@ Description: "Prototype of integration model with FHIR datatypes in order to mak
     * classification 0..1 BackboneElement "Code for the product that is actually being specified, in established terminologies" "Ravimi klassifikatsioon."
       * classificationATC 0..1 code "ATC code" "ATC klassifikatsioon"
       * classificationOther 0..* CodeableConcept "Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)" "Teine klassifikatsioon."
-  * productName 0..* Backbonelement "Name of the product (full name, invented name, other)." "Ravimi nimetus."
+  * productName 0..* BackboneElement "Name of the product (full name, invented name, other)." "Ravimi nimetus."
     * name 0..1 string "Name that is relevant for the users." "Ravimi nimi pakendil."
   * patientPersonalMedication 0..1 boolean "Whether the administered medication was patient's own or given by a healthcare professional." "Tõeväärtus, mis näitab, kas manustatav ravim on patsiendi isiklik või antud ühekordsena tervishoiu töötaja poolt - Kiirabikaardil manustatud ravimite sektsioonis" 
   * routeOfAdministration 0..* CodeableConcept "The path by which the product is taken into or makes contact with the body." "Manustamisviis või manustamistee."
