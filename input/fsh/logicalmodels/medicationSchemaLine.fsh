@@ -24,13 +24,8 @@ Description: "A model for representing a Medication Treatment Line."
   * patientReported 0..1 BL "The treatment line has been documented according to patient's." "Kas ravimiskeemi rea raporteerija on patsient."
   * authorResponsible 0..1 Reference(PractitionerTJT) "HCP who takes the clinical decision for the medication treatment line."  "Ravimiskeemi rea sisestaja."
   * authoringTime 0..1 DT "The time the decision was made." "Aeg, millal ravimiskeemi rida sisestati"
- 
 * informationSource 0..* Class "Initial author of the MedicationStatement." "Ravimiskeemi rea põhjus, immuniseerimine, retsept, ravimi väljastamine, "
   * initialAuthor 0..* Reference(PractitionerTJT) "Initial author of the medication schema line." "Ravimiskeemi rea algne koostaja."
-  // relatedRequest 0..* Reference "Prescriptions that have been authored based on the verified treatment line, or which have been the source for creating the unverified treatment line"
-  // relatedStatement 0..* Reference "Medication-related statements from patients, pharmacists, or other HCPs, that are related to the verified treatment line or are the source for creating the unverified treatment line"
-  // relatedDispensation 0..* Reference "Related dispensations that are NOT related to existing prescriptions/requests/statements. Allowing this is very implemenation-specific."
-  // relatedAdministration 0..* Reference "Related administrations that are NOT related to existing prescriptions/requests/statements. This might be relevant for hospital/home nursing use cases." 
 
 * prescriptionAdditional 0..* Class "Type of medication statement (for example, drug classification like ATC, where meds would be administered, legal category of the medication.)" "Ravimiskeemi rea retseptiga seotud info."
   * courseOfTherapyType 0..* CD "Type of medication statement (for example, drug classification like ATC, where meds would be administered, legal category of the medication.)" "pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
