@@ -11,6 +11,6 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-patient",
+  "baseDefinition": "https://fhir.ee/base/StructureDefinition/ee-patient",
   "derivation": "constraint"
 }
