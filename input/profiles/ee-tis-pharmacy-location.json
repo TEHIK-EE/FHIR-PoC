@@ -11,7 +11,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Location",
-  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-location",
+  "baseDefinition": "https://fhir.ee/base/StructureDefinition/ee-location",
   "derivation": "constraint",
   "differential": {
     "element": [
