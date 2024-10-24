@@ -11,6 +11,6 @@
   "kind": "resource",
   "abstract": false,
   "type": "Organization",
-  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-organization",
+  "baseDefinition": "https://fhir.ee/base/StructureDefinition/ee-organization",
   "derivation": "constraint"
 }
