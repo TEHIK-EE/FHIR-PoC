@@ -170,5 +170,5 @@ Description: "Integration PoC"
   * maxDose 0..* Class "Maximum dose for the patient" "Maksimaalsed annused ajaühikus, elu jooksul ja ühe annuse kohta."
     * maxDosePerPeriod 0..* RTO "Upper limit on medication per unit of time" "Ravimite ülempiir ajaühiku kohta. Ravimi maksimaalne annus ühes/antud perioodis."
     * maxDosePerAdministration 0..1 PQ "Upper limit on medication per one administration" "Ravimite ülempiir ühe annustamise kohta kohta. Ravimi maksimaalne annus ühe annustamise kohta."
-    * maxDosePerLifetime 0..1 PQ "Upper limit on medication per lifetime of the patient" "Ravimite ülempiir patsiendi elu jooksul. Ravimi maksimaalne annus patsiendi eluaja jooksul."
+    * maxDosePerLifetime 1..1 PQ "Upper limit on medication per lifetime of the patient" "Ravimite ülempiir patsiendi elu jooksul. Ravimi maksimaalne annus patsiendi eluaja jooksul."
 
