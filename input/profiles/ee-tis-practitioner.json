@@ -11,6 +11,6 @@
   "kind": "resource",
   "abstract": false,
   "type": "Practitioner",
-  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-practitioner",
+  "baseDefinition": "https://fhir.ee/base/StructureDefinition/ee-practitioner",
   "derivation": "constraint"
 }
