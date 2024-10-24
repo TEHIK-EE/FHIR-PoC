@@ -11,6 +11,6 @@
   "kind": "resource",
   "abstract": false,
   "type": "PractitionerRole",
-  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-practitioner-role",
+  "baseDefinition": "https://fhir.ee/base/StructureDefinition/ee-practitioner-role",
   "derivation": "constraint"
 }
