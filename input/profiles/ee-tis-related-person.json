@@ -11,7 +11,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "RelatedPerson",
-  "baseDefinition": "https://fhir.ee/StructureDefinition/ee-related-person",
+  "baseDefinition": "https://fhir.ee/base/StructureDefinition/ee-related-person",
   "derivation": "constraint",
   "differential": {
     "element": [
