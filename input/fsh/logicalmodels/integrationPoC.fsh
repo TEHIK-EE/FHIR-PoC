@@ -1,5 +1,5 @@
 Logical: IntegrationTJT
-Parent: https://fhir.ee/StructureDefinition/IntegrationTJT
+Parent: "https://fhir.ee/StructureDefinition/IntegrationTJT"
 Title: "Integration TJT - logical model"
 Description: "Integration PoC"
 
