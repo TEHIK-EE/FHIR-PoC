@@ -1,5 +1,5 @@
 Logical: IntegrationTJT
-Parent: "https://fhir.ee/StructureDefinition/IntegrationTransormTJT"
+Parent: "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
 Title: "Integration TJT - logical model"
 Description: "Integration PoC"
 
